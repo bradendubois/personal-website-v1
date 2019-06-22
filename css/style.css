@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: grey;
+  width: 100%;
+  display: inline-block;
+}
+
+.header .me {
+  float: left;
+}
+
+.header .jump-tags {
+  float: right;
+}
+
+.header .jump-tags a {
+  border: 1px black solid;
+}
+
+.content {
+
+}
+
+/******************** Me ********************/
+
+#me {
+  background: lightblue;
+}
+
+.content #me .descriptionLine {
+  display: inline-block;
+}
+
+/******************** Education ********************/
+
+#education {
+  background: grey;
+}
+
+#education .entry {
+
+}
+
+#education .entry .institution {
+
+}
+
+#education .entry .program {
+
+}
+
+#education .entry .coursework {
+
+}
+
+#education .entry .major {
+
+}
+
+#education .entry ul {
+
+}
+
+#education .entry li {
+  list-style-type: circle;
+}
+
+/******************** Projects ********************/
+
+#projects {
+  background: teal;
+}
+
+/******************** Hobbies ********************/
+
+#hobbies {
+  background: darkgrey;
+}
+
+/******************** Work ********************/
+
+#work {
+  background: cyan;
+}
+
+/******************** Footer ********************/
+
+.footer {
+
+}
