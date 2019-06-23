@@ -18,9 +18,13 @@ function changeDescriptorLabels() {
   var labelNumber = messageArea.getAttribute("label");
   var loops = messageArea.getAttribute("loops");
 
-  if (loops >= 3) {
+  // Change to add a restart button
+
+  if (loops >= 3 && messageArea.getAttribute("hired") === "false") {
+
     messageArea.href = "https://www.linkedin.com/in/braden-dubois-2453b8149/";
     messageArea.innerHTML = "open to offers";
+
     return;
   }
 

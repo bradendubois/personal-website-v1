@@ -3,11 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Braden Dubois</title>
+    <title>Braden Dubois | Developer</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="bunny.jpg">
+    <style>
 
+
+    ul {
+      list-style-type: circle;
+    }
+    </style>
 
   </head>
   <body onload="initializeInfo()">
@@ -18,112 +25,188 @@
           <div class="jump-tags">
               <a href="#me">Me</a>
               <a href="#education">Education</a>
+              <a href="#skills">Skills</a>
               <a href="#projects">Projects</a>
-              <a href="#hobbies">Hobbies</a>
               <a href="#work">Work</a>
+              <a href="#hobbies">Hobbies</a>
           </div>
           <br>
       </div>
+
       <div class="content">
         <div id="me">
-            <h1>Me</h1>
-            <p class="descriptionLine" id="description-self">I am a developer</p>
-            <p class="descriptionLine" id="description-plus"></p>
-            <a class="descriptionLine" id="description-appended" label=0 loops=0></a>
+            <div class="me-content">
+              <h1>Me</h1>
+              <p class="descriptionLine" id="description-self">I am a developer</p>
+              <p class="descriptionLine" id="description-plus"></p>
+              <a class="descriptionLine" id="description-appended" hired="false" label=0 loops=0></a>
 
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
 
+
+            </div>
         </div>
         <div id="education">
+          <div class="education-content">
+
             <h1>Education</h1>
 
+            <!-- one specific entry : undergrad, certificate, masters, etc -->
             <div class="entry">
 
-              <p class="institution">University of Saskatchewan</p>
-              <p class="program">Computer Science, Philosophy - B.Sc. Double Honours - High Honours</p>
+              <!-- the header of main information : logo, program, year(s) -->
+              <div class="entry-main-information">
 
-              <p class="coursework">Relevant Courses</p>
+                <!-- logo / photo / emblem of the institution -->
+                <img src="bunny.jpg" alt="logo of the University of Saskatchewan">
 
-              <p class="major">Computer Science</p>
-              <ul>
-                <li>Mathematical Logic and Computing</li>
-                <li>Developing Object-Oriented Systems</li>
-                <li>Programming Principles and Practice</li>
-                <li>Computer Organization and Architecture</li>
-                <li>Intermediate Data Structures and Algorithms</li>
-                <li>Artificial Intelligence</li>
-                <li>Machines and Algorithms</li>
-                <li>Formal Languages and Automata</li>
-                <li>Intermediate Software Engineering</li>
-                <li>Operating Systems</li>
-                <li>Information Visualization</li>
-                <li>Full-Stack Web Programming</li>
-                <li>Machine Learning</li>
-                <li>Full-Stack Web Programming</li>
-              </ul>
+                <!-- name of the institution & program -->
+                <div class="entry-title">
+                  <p class="institution">University of Saskatchewan</p>
+                  <p class="program">B.Sc. Double Honours - High Honours</p>
+                  <p class="major-title">Computer Science, Philosophy</p>
+                </div>
 
-              <p class="major">Philosophy</p>
-              <ul>
-                <li>Professional Ethics in CS</li>
-                <li>Philosophy of Technology</li>
-                <li>Ethical Theory</li>
-                <li>Metaethics</li>
-                <li>Aristotle on Rhetoric</li>
-                <li>Knowledge, Mind, and Existence</li>
-                <li>Philosophy of Emotions</li>
-              </ul>
+                <!-- year + location -->
+                <div class="timeframe">
+                  <p class="year">2017-2022</p>
+                  <p class="location">Saskatoon, SK</p>
+                </div>
+              </div>
+
+              <div class="detailed-course-info">
+
+                <div class="courses">
+                  <p class="coursework">Relevant Courses</p>
+                  <p class="major">Computer Science</p>
+                    <ul>
+                      <li>Mathematical Logic and Computing</li>
+                      <li>Developing Object-Oriented Systems</li>
+                      <li>Programming Principles and Practice</li>
+                      <li>Computer Organization and Architecture</li>
+                      <li>Intermediate Data Structures and Algorithms</li>
+                      <li>Artificial Intelligence</li>
+                      <li>Machines and Algorithms</li>
+                      <li>Formal Languages and Automata</li>
+                      <li>Intermediate Software Engineering</li>
+                      <li>Operating Systems</li>
+                      <li>Information Visualization</li>
+                      <li>Full-Stack Web Programming</li>
+                      <li>Machine Learning</li>
+                    </ul>
+
+                  <p class="major">Philosophy</p>
+                    <ul>
+                      <li>Professional Ethics in CS</li>
+                      <li>Philosophy of Technology</li>
+                      <li>Law and Morality</li>
+                      <li>Metaethics</li>
+                      <li>Aristotle on Rhetoric</li>
+                      <li>Ethical Theory</li>
+                      <li>Knowledge, Mind, and Existence</li>
+                      <li>Philosophy of Emotions</li>
+                    </ul>
+                </div>
+                <div class="additional-program-info">
+                    <p>Undergraduate Info</p>
+                </div>
+              </div>
 
             </div>
+
+            <!-- one specific entry : undergrad, certificate, masters, etc -->
             <div class="entry">
-              <p class="institution">University of Saskatchewan</p>
-              <p class="program">Certificate in Ethics, Justice, Law</p>
-              <p class="coursework">Courses</p>
-              <ul>
-                <li>Introduction to Ethics and Values</li>
-                <li>Ethical Theory</li>
-                <li>Philosophy of Technology</li>
-                <li>Law and Morality</li>
-                <li>Metaethics</li>
-              </ul>
+
+              <!-- the header of main information : logo, program, year(s) -->
+              <div class="entry-main-information">
+
+                <!-- logo / photo / emblem of the institution -->
+                <img src="bunny.jpg" alt="logo of the University of Saskatchewan">
+
+                <!-- name of the institution & program -->
+                <div class="entry-title">
+                  <p class="institution">University of Saskatchewan</p>
+                  <p class="program">Certificate</p>
+                  <p class="major-title">Ethics, Justice, Law</p>
+                </div>
+
+                <!-- year + location -->
+                <div class="timeframe">
+                  <p class="year">2017-2019</p>
+                  <p class="location">Saskatoon, SK</p>
+                </div>
+              </div>
+
+              <div class="detailed-course-info">
+
+                <div class="courses">
+                  <p class="coursework">Courses</p>
+                  <ul>
+                    <li>Introduction to Ethics and Values</li>
+                    <li>Ethical Theory</li>
+                    <li>Philosophy of Technology</li>
+                    <li>Law and Morality</li>
+                    <li>Metaethics</li>
+                  </ul>
+                </div>
+                <div class="additional-program-info">
+                    <p>Certificate Info</p>
+                </div>
+              </div>
+
             </div>
 
-
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
             <br>
 
         </div>
+      </div>
+      <div id="skills">
+        <div class="skills-content">
+
+            <h1>Skills</h1>
+
+
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+          </div>
+        </div>
         <div id="projects">
+          <div class="projects-content">
+
             <h1>Projects</h1>
 
 
@@ -147,14 +230,45 @@
             <br>
             <br>
 
+          </div>
+        </div>
+
+        <div id="work">
+          <div class="work-content">
+
+            <h1>Work</h1>
+
+
+
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+          </div>
         </div>
         <div id="hobbies">
+          <div class="hobbies-content">
+
             <h1>Hobbies</h1>
 
 
 
-
-
             <br>
             <br>
             <br>
@@ -173,35 +287,14 @@
             <br>
             <br>
 
-        </div>
-        <div id="work">
-            <h1>Work Experience</h1>
-
-
-
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
+          </div>
         </div>
     </div>
     <div class="footer">
+    </div>
 
-  
+
+
 
 
     <!-- T

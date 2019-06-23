@@ -4,26 +4,49 @@
   box-sizing: border-box;
 }
 
+ul {
+  margin-left: 10px;
+  list-style-type: circle;
+  list-style-position: inside;
+  background-color: green;
+}
+
+ul li {
+  color: blue;
+  padding-left: 10px;
+}
+
+.content div div {
+  position: relative;
+  margin: auto;
+  width: 60%;
+  align: center;
+}
+
+/******************** Header ********************/
+
 .header {
+
   background-color: grey;
   width: 100%;
   display: inline-block;
 }
 
 .header .me {
+  padding: 15px 10px;
   float: left;
 }
 
 .header .jump-tags {
   float: right;
+  padding: 10px 10px;
 }
 
 .header .jump-tags a {
+  font-family: monospace;
+  font-size: 22pt;
+  padding: 5px 10px;
   border: 1px black solid;
-}
-
-.content {
-
 }
 
 /******************** Me ********************/
@@ -32,7 +55,15 @@
   background: lightblue;
 }
 
-.content #me .descriptionLine {
+.me-content {
+  background: darkblue;
+  position: relative;
+  margin: auto;
+  width: 60%;
+  align: center;
+}
+
+.me-content .descriptionLine {
   display: inline-block;
 }
 
@@ -42,32 +73,92 @@
   background: grey;
 }
 
+.education-content {
+  background: darkgrey;
+}
+
 #education .entry {
-
+  padding: 5px;
+  position: relative;
+  width: auto;
+  margin: 25px 0px;
+  background-color: red;
 }
 
-#education .entry .institution {
-
+#education .entry-main-information {
+  width: 100%;
+  background: orange;
+  margin-bottom: 5px;
 }
 
-#education .entry .program {
-
+#education img {
+  max-width: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  background: pink;
+  vertical-align: top;
 }
 
-#education .entry .coursework {
-
+#education .entry-title {
+  background: yellow;
+  display: inline-block;
+  max-width: 600px;
 }
 
-#education .entry .major {
 
+#education .institution {
+  background: lightgreen;
 }
 
-#education .entry ul {
-
+#education .program {
+  background: darkgrey;
 }
 
-#education .entry li {
-  list-style-type: circle;
+#education .major-title {
+  background: red;
+}
+
+#education .timeframe {
+  background: green;
+  display: inline-block;
+  width: auto;
+  float: right;
+}
+
+#education .detailed-course-info {
+  width: auto;
+  background: cyan;
+  margin: 0px 100px 5px 105px;
+}
+
+
+#education .additional-program-info {
+  background: purple;
+  width: auto;
+  display: inline-block;
+  float: right;
+}
+
+#education .coursework {
+  background: yellow;
+}
+
+#education .major {
+  background: gold;
+  margin-left: 10px;
+}
+
+#education .courses {
+  background: grey;
+  width: 45%;
+  max-width: 50%;
+  display: inline-block;
+}
+
+/******************** Skills ********************/
+
+#skills {
+  background: pink;
 }
 
 /******************** Projects ********************/
@@ -76,17 +167,18 @@
   background: teal;
 }
 
+/******************** Work ********************/
+
+#work {
+  background: cyan;
+}
+
 /******************** Hobbies ********************/
 
 #hobbies {
   background: darkgrey;
 }
 
-/******************** Work ********************/
-
-#work {
-  background: cyan;
-}
 
 /******************** Footer ********************/
 
