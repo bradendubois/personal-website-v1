@@ -1,117 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Braden Dubois | Developer</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="bunny.jpg">
-    <style>
-
-
-    ul {
-      list-style-type: circle;
-    }
-    </style>
-
-  </head>
-  <body onload="initializeInfo()">
-      <div class="header">
-          <div class="me">
-              <p>Me</p>
+    <link rel="icon" href="img/bunny.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Scope+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Vesper+Libre&display=swap" rel="stylesheet">
+</head>
+<body onload="initializeInfo()">
+    <div class="header">
+        <div class="me">
+            <p>Me</p>
+        </div>
+        <div class="jump-tags">
+            <a href="#me"><div>Me</div></a>
+            <a href="#education"><div>Education</div></a>
+            <a href="#skills"><div>Skills</div></a>
+            <a href="#projects"><div>Projects</div></a>
+            <a href="#work"><div>Work</div></a>
+            <a href="#hobbies"><div>Hobbies</div></a>
           </div>
-          <div class="jump-tags">
-              <a href="#me">Me</a>
-              <a href="#education">Education</a>
-              <a href="#skills">Skills</a>
-              <a href="#projects">Projects</a>
-              <a href="#work">Work</a>
-              <a href="#hobbies">Hobbies</a>
-          </div>
-          <br>
-      </div>
-
-      <div class="content">
+        <br>
+    </div>
+    <div class="content">
         <div id="me">
             <div class="me-content">
-              <h1>Me</h1>
-              <p class="descriptionLine" id="description-self">I am a developer</p>
-              <p class="descriptionLine" id="description-plus"></p>
-              <a class="descriptionLine" id="description-appended" hired="false" label=0 loops=0></a>
-
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-
-
+                <h1>Me</h1>
+                <p class="descriptionLine" id="description-self">I am a developer</p>
+                <p class="descriptionLine" id="description-plus"></p>
+                <a class="descriptionLine" id="description-appended" hired="false" label=0 loops=0></a>
             </div>
         </div>
         <div id="education">
-          <div class="education-content">
-
-            <h1>Education</h1>
-
-            <!-- one specific entry : undergrad, certificate, masters, etc -->
-            <div class="entry">
-
-              <!-- the header of main information : logo, program, year(s) -->
-              <div class="entry-main-information">
-
-                <!-- logo / photo / emblem of the institution -->
-                <img src="bunny.jpg" alt="logo of the University of Saskatchewan">
-
-                <!-- name of the institution & program -->
+            <div class="education-content">
+                <h1>Education</h1>
+                <!-- one specific entry : undergrad, certificate, masters, etc -->
+                <div class="entry" id="undergrad">
+                    <hr>
+                    <a class="entry-logo" href="https://www.usask.ca" target="_blank"><img src="img/bunny.jpg" alt="logo of the University of Saskatchewan"></a>
                 <div class="entry-title">
-                  <p class="institution">University of Saskatchewan</p>
-                  <p class="program">B.Sc. Double Honours - High Honours</p>
-                  <p class="major-title">Computer Science, Philosophy</p>
+                  <span class="institution">University of Saskatchewan</span>
+                  <br>
+                  <span class="program">B.Sc. Double Honours - High Honours</span>
+                  <br>
+                  <span class="major-title">Computer Science, Philosophy</span>
                 </div>
-
-                <!-- year + location -->
                 <div class="timeframe">
-                  <p class="year">2017-2022</p>
-                  <p class="location">Saskatoon, SK</p>
+                    <span class="year">2017-2022</span>
+                    <br>
+                    <span class="location">Saskatoon, SK</span>
                 </div>
-              </div>
-
-              <div class="detailed-course-info">
-
                 <div class="courses">
-                  <p class="coursework">Relevant Courses</p>
-                  <p class="major">Computer Science</p>
+                    <p class="coursework">Relevant Courses</p>
+                    <p class="major">Computer Science</p>
                     <ul>
-                      <li>Mathematical Logic and Computing</li>
-                      <li>Developing Object-Oriented Systems</li>
-                      <li>Programming Principles and Practice</li>
-                      <li>Computer Organization and Architecture</li>
-                      <li>Intermediate Data Structures and Algorithms</li>
-                      <li>Artificial Intelligence</li>
-                      <li>Machines and Algorithms</li>
-                      <li>Formal Languages and Automata</li>
-                      <li>Intermediate Software Engineering</li>
-                      <li>Operating Systems</li>
-                      <li>Information Visualization</li>
-                      <li>Full-Stack Web Programming</li>
-                      <li>Machine Learning</li>
+                        <li>Mathematical Logic and Computing</li>
+                        <li>Developing Object-Oriented Systems</li>
+                        <li>Programming Principles and Practice</li>
+                        <li>Computer Organization and Architecture</li>
+                        <li>Intermediate Data Structures and Algorithms</li>
+                        <li>Artificial Intelligence</li>
+                        <li>Machines and Algorithms</li>
+                        <li>Formal Languages and Automata</li>
+                        <li>Intermediate Software Engineering</li>
+                        <li>Operating Systems</li>
+                        <li>Information Visualization</li>
+                        <li>Full-Stack Web Programming</li>
+                        <li>Machine Learning</li>
                     </ul>
 
-                  <p class="major">Philosophy</p>
+                    <p class="major">Philosophy</p>
                     <ul>
                       <li>Professional Ethics in CS</li>
                       <li>Philosophy of Technology</li>
@@ -124,37 +89,30 @@
                     </ul>
                 </div>
                 <div class="additional-program-info">
-                    <p>Undergraduate Info</p>
+                    <span class="description-title">Undergraduate Info</span>
+                    <br>
+                    <span class="description-info">Lorem Ipsum</span>
                 </div>
-              </div>
 
             </div>
 
+            <!-- TODO Fix formatting for this certificate entry, since it's been changed. See: undergrad -->
             <!-- one specific entry : undergrad, certificate, masters, etc -->
-            <div class="entry">
-
-              <!-- the header of main information : logo, program, year(s) -->
-              <div class="entry-main-information">
-
-                <!-- logo / photo / emblem of the institution -->
-                <img src="bunny.jpg" alt="logo of the University of Saskatchewan">
-
-                <!-- name of the institution & program -->
+            <div class="entry" id="certificate">
+                <hr>
+                <img class="entry-logo" src="img/bunny.jpg" alt="logo of the University of Saskatchewan">
                 <div class="entry-title">
-                  <p class="institution">University of Saskatchewan</p>
-                  <p class="program">Certificate</p>
-                  <p class="major-title">Ethics, Justice, Law</p>
+                  <span class="institution">University of Saskatchewan</span>
+                  <br>
+                  <span class="program">Certificate</span>
+                  <br>
+                  <span class="major-title">Ethics, Justice, Law</span>
                 </div>
-
-                <!-- year + location -->
                 <div class="timeframe">
-                  <p class="year">2017-2019</p>
-                  <p class="location">Saskatoon, SK</p>
+                  <span class="year">2017-2019</span>
+                  <br>
+                  <span class="location">Saskatoon, SK</span>
                 </div>
-              </div>
-
-              <div class="detailed-course-info">
-
                 <div class="courses">
                   <p class="coursework">Courses</p>
                   <ul>
@@ -166,23 +124,36 @@
                   </ul>
                 </div>
                 <div class="additional-program-info">
-                    <p>Certificate Info</p>
-                </div>
+                  <span class="description-title">Certificate Info</span>
+                  <br>
+                  <span class="description-info">Lorem Ipsum</span>
               </div>
-
             </div>
 
             <br>
 
         </div>
       </div>
-      <div id="skills">
+        <div id="skills">
         <div class="skills-content">
-
             <h1>Skills</h1>
 
+            <main id="skills_grid">
 
+              <div id="languages">
+                Languages
+              </div>
+              <div id="technologies">
+                Technologies
+              </div>
+              <div id="concepts">
+                Concepts
+              </div>
+              <div id="soft_skills">
+                Soft Skills
+              </div>
 
+            </main>
 
             <br>
             <br>
@@ -205,34 +176,33 @@
           </div>
         </div>
         <div id="projects">
-          <div class="projects-content">
+            <div class="projects-content">
 
             <h1>Projects</h1>
 
 
 
 
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
 
-          </div>
+            </div>
         </div>
-
         <div id="work">
           <div class="work-content">
 
@@ -292,10 +262,6 @@
     </div>
     <div class="footer">
     </div>
-
-
-
-
 
     <!-- T
 

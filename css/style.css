@@ -8,59 +8,75 @@ ul {
   margin-left: 10px;
   list-style-type: circle;
   list-style-position: inside;
-  background-color: green;
 }
 
 ul li {
-  color: blue;
   padding-left: 10px;
+}
+
+hr {
+    border-top: 1px solid #8c8b8b;
 }
 
 .content div div {
   position: relative;
   margin: auto;
-  width: 60%;
-  align: center;
+  width: 65%;
+}
+
+@media(max-width: 1000px) {
+  .content div div {
+    width: 95%;
+  }
 }
 
 /******************** Header ********************/
 
 .header {
-
-  background-color: grey;
-  width: 100%;
-  display: inline-block;
+    background-color: #6d6d6d;
+    width: 100%;
+    display: inline-block;
 }
 
 .header .me {
-  padding: 15px 10px;
-  float: left;
+    padding: 15px 10px;
+    float: left;
 }
 
 .header .jump-tags {
-  float: right;
-  padding: 10px 10px;
+    float: right;
+    padding: 10px 10px;
+    display: flex;
+}
+
+.header .jump-tags div {
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.header .jump-tags div:hover {
+    background: #525252;
 }
 
 .header .jump-tags a {
-  font-family: monospace;
-  font-size: 22pt;
-  padding: 5px 10px;
-  border: 1px black solid;
+    font-family: 'Montserrat', serif;
+    color: lightgrey;
+    font-size: 22pt;
+    padding: 5px 10px;
+    text-decoration: none;
+    /** border: 1px black solid; **/
 }
 
 /******************** Me ********************/
 
 #me {
-  background: lightblue;
+    background: lightgrey;
 }
 
 .me-content {
-  background: darkblue;
   position: relative;
   margin: auto;
   width: 60%;
-  align: center;
 }
 
 .me-content .descriptionLine {
@@ -70,95 +86,292 @@ ul li {
 /******************** Education ********************/
 
 #education {
-  background: grey;
+    background: #BFBFBF;
 }
 
-.education-content {
-  background: darkgrey;
+.education-content h1 {
+    text-align: center;
+    font-family: 'Vesper Libre', serif;
+    font-size: 24pt;
 }
 
 #education .entry {
-  padding: 5px;
-  position: relative;
+    font-family: 'Montserrat', sans-serif;
   width: auto;
-  margin: 25px 0px;
-  background-color: red;
-}
-
-#education .entry-main-information {
-  width: 100%;
-  background: orange;
-  margin-bottom: 5px;
+  margin: 25px 0;
+    align-items: start;
 }
 
 #education img {
-  max-width: 100px;
   border-radius: 50%;
-  display: inline-block;
-  background: pink;
-  vertical-align: top;
+  border: 1px solid white;
+  max-width: 90px;
 }
 
 #education .entry-title {
-  background: yellow;
-  display: inline-block;
-  max-width: 600px;
+    font-family: 'Nunito', serif;
+    font-size: 14pt;
+    font-weight: 600;
 }
 
 
 #education .institution {
-  background: lightgreen;
+
 }
 
 #education .program {
-  background: darkgrey;
+
 }
 
 #education .major-title {
-  background: red;
+
 }
 
 #education .timeframe {
-  background: green;
-  display: inline-block;
-  width: auto;
-  float: right;
+    text-align: right;
+    font-weight: 600;
+    font-size: 12pt;
+    vertical-align: top;
+}
+
+#education .year {
+}
+
+#education .location {
+}
+
+#education * {
+    /** outline: 1px solid black; **/
 }
 
 #education .detailed-course-info {
-  width: auto;
-  background: cyan;
-  margin: 0px 100px 5px 105px;
-}
 
-
-#education .additional-program-info {
-  background: purple;
-  width: auto;
-  display: inline-block;
-  float: right;
-}
-
-#education .coursework {
-  background: yellow;
-}
-
-#education .major {
-  background: gold;
-  margin-left: 10px;
 }
 
 #education .courses {
-  background: grey;
-  width: 45%;
-  max-width: 50%;
-  display: inline-block;
+    outline: 1px solid black;
+}
+
+#education .additional-program-info {
+    align-self: start;
+}
+
+#education .description-title {
+
+}
+
+#education .description-info {
+
+}
+
+#education .coursework {
+
+}
+
+#education .major {
+  margin-left: 10px;
+}
+
+
+#education .entry {
+    display: grid;
+
+    grid-template-columns: 130px 3fr 2fr 200px;
+    grid-template-rows: 3vh 10vh auto;
+
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+    align-items: start;
+    align-self: start;
+    align-content: start;
+}
+
+@media screen and (max-width: 500px) {
+
+    .entry {
+        display: grid;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 3vh repeat(3, auto);
+        grid-gap: 15px;
+
+        margin: 0 auto;
+    }
+}
+
+/** Undergrad Entry **/
+#undergrad hr {
+    grid-area: hr;
+}
+
+#undergrad .entry-logo {
+  grid-area: undergrad_logo;
+}
+
+#undergrad .entry-title {
+  grid-area: undergrad_title;
+}
+
+#undergrad .timeframe {
+  grid-area: undergrad_timeframe;
+}
+
+#undergrad .courses {
+  grid-area: undergrad_courses;
+}
+
+#undergrad .additional-program-info {
+  grid-area: undergrad_detail;
+}
+
+#undergrad {
+    grid-template-areas:
+            ". hr hr hr"
+            "undergrad_logo undergrad_title undergrad_title undergrad_timeframe"
+            ". undergrad_courses undergrad_detail ."
+}
+
+@media screen and (max-width: 500px) {
+    #undergrad_logo #undergrad_timeframe {
+        display: none;
+    }
+
+    #undergrad {
+        grid-template-areas:
+                "hr"
+                "undergrad_title"
+                "undergrad_courses"
+                "undergrad_detail"
+    }
+}
+
+/** Certificate Entry **/
+#certificate hr {
+    grid-area: hr;
+}
+
+#certificate .entry-logo {
+  grid-area: certificate_logo;
+}
+
+#certificate .entry-title {
+  grid-area: certificate_title;
+}
+
+#certificate .timeframe {
+  grid-area: certificate_timeframe;
+}
+
+#certificate .courses {
+  grid-area: certificate_courses;
+}
+
+#certificate .additional-program-info {
+  grid-area: certificate_detail;
+}
+
+#certificate {
+    grid-template-areas:
+        ". hr hr hr"
+        "certificate_logo certificate_title certificate_title certificate_timeframe"
+        ". certificate_courses certificate_detail ."
+}
+
+@media screen and (max-width: 500px) {
+    #certificate_logo #certificate_timeframe {
+        display: none;
+    }
+
+    #certificate {
+        grid-template-areas:
+                "hr"
+                "certificate_title"
+                "certificate_courses"
+                "certificate_detail"
+    }
 }
 
 /******************** Skills ********************/
 
 #skills {
   background: pink;
+}
+
+.skills-content {
+  background: lightpink;
+}
+
+#skills_grid div {
+  background: grey;
+}
+
+#languages {
+  grid-area: languages;
+  background: blue;
+}
+
+#technologies {
+  grid-area: technologies;
+}
+
+#concepts {
+  grid-area: concepts;
+}
+
+#soft_skills {
+  grid-area: soft_skills;
+}
+
+@media screen and (min-width: 1100px) {
+  #skills_grid {
+    width: 90%;
+    max-width: 800px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+    margin: 0 auto;
+
+    grid-template-areas:
+      "languages technologies concepts soft_skills"
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #skills_grid {
+    width: 90%;
+    max-width: 800px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30vh 30vh;
+    grid-gap: 15px;
+
+    margin: 0 auto;
+
+    grid-template-areas:
+      "languages technologies"
+      "concepts soft_skills"
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #skills_grid {
+    width: 90%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80vh 80vh 80vh 80vh;
+    grid-gap: 15px;
+    margin: 0 auto;
+
+    grid-template-areas:
+      "languages"
+      "technologies"
+      "concepts"
+      "soft_skills"
+  }
 }
 
 /******************** Projects ********************/
@@ -185,3 +398,5 @@ ul li {
 .footer {
 
 }
+
+/********************  ********************/
