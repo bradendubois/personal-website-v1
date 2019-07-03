@@ -8,7 +8,11 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- icon used for page tab -->
     <link rel="icon" href="img/bunny.jpg">
+
+    <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Scope+One&display=swap" rel="stylesheet">
@@ -24,7 +28,7 @@
             <a href="#education"><div>Education</div></a>
             <a href="#skills"><div>Skills</div></a>
             <a href="#projects"><div>Projects</div></a>
-            <a href="#work"><div>Work</div></a>
+            <a href="#experience"><div>Experience</div></a>
             <a href="#hobbies"><div>Hobbies</div></a>
           </div>
         <br>
@@ -32,33 +36,45 @@
     <div class="content">
         <div id="me">
             <div class="me-content">
-                <h1>Me</h1>
-                <p class="descriptionLine" id="description-self">I am a developer</p>
-                <p class="descriptionLine" id="description-plus"></p>
-                <a class="descriptionLine" id="description-appended" hired="false" label=0 loops=0></a>
+                <h1 class="section-title">Me</h1>
+                <div style="text-align: center;">
+                    <p class="descriptionLine" id="description-self">I am a developer</p>
+                    <p class="descriptionLine" id="description-plus"></p>
+                    <a class="descriptionLine" id="description-appended" hired="false" label=0 loops=0></a>
+                    <button class="descriptionLine" id="resetButton" onclick="resetLoop()">reset</button>
+                </div>
+                <div class="profile-image-row">
+                    <a href="https://github.com/drab3n/" target="_blank"><img class="profile-image" src="img/bunny.jpg" alt="placeholder"></a>
+                    <a href="https://www.linkedin.com/in/braden-dubois-2453b8149/" target="_blank"><img class="profile-image" src="img/bunny.jpg" alt="placeholder"></a>
+                    <a href="mailto:braden.dubois@usask.ca" target="_blank"><img class="profile-image" src="img/bunny.jpg" alt="placeholder"></a>
+                </div>
             </div>
         </div>
         <div id="education">
             <div class="education-content">
-                <h1>Education</h1>
+                <h1 class="section-title">Education</h1>
+
+                <!-- TODO - Add a tablet/mid-size layout with both undergrad major course blocks being horizontal and the additional info below -->
+
                 <!-- one specific entry : undergrad, certificate, masters, etc -->
                 <div class="entry" id="undergrad">
                     <hr>
-                    <a class="entry-logo" href="https://www.usask.ca" target="_blank"><img src="img/bunny.jpg" alt="logo of the University of Saskatchewan"></a>
-                    <div class="entry-title">
-                        <span class="institution">University of Saskatchewan</span>
-                        <br>
-                        <span class="program">B.Sc. Double Honours - High Honours</span>
-                        <br>
-                        <span class="major-title">Computer Science, Philosophy</span>
+                    <div class="entry-logo entry-item">
+                        <a href="https://www.usask.ca" target="_blank">
+                            <img src="img/bunny.jpg" alt="logo of the University of Saskatchewan">
+                        </a>
                     </div>
-                    <div class="timeframe">
-                        <span class="year">2017-2022</span>
-                        <br>
-                        <span class="location">Saskatoon, SK</span>
+                    <div class="entry-title entry-item">
+                        <p class="institution">University of Saskatchewan</p>
+                        <p class="program">B.Sc. Double Honours - High Honours</p>
+                        <p class="major-title">Computer Science, Philosophy</p>
                     </div>
-                    <div class="courses">
-                        <p class="coursework">Relevant Courses</p>
+                    <div class="timeframe entry-item">
+                        <p class="year">2017-2022</p>
+                        <p class="location">Saskatoon, SK</p>
+                    </div>
+                    <div class="courses entry-item">
+                        <p class="education-content-title">Relevant Courses</p>
                         <p class="major">Computer Science</p>
                         <ul>
                             <li>Mathematical Logic and Computing</li>
@@ -75,6 +91,7 @@
                             <li>Full-Stack Web Programming</li>
                             <li>Machine Learning</li>
                         </ul>
+                        <br>
                         <p class="major">Philosophy</p>
                         <ul>
                             <li>Professional Ethics in CS</li>
@@ -87,32 +104,50 @@
                             <li>Philosophy of Emotions</li>
                         </ul>
                     </div>
-                    <div class="additional-program-info">
-                        <span class="description-title">Undergraduate Info</span>
+                    <div class="additional-program-info entry-item">
+                        <p class="education-content-title">Undergraduate Info</p>
+                        <ul>
+                            <li class="description-info" style="text-align: justify;">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</li>
+                        </ul>
                         <br>
-                        <span class="description-info">Lorem Ipsum</span>
+
+                        <p class="education-content-title">Work</p>
+                        <ul>
+                            <li class="description-info">Work as a TA for labs</li>
+                            <li class="description-info">Work as a marker for classes</li>
+                        </ul>
+                        <br>
+
+                        <p class="education-content-title">Volunteer Experience</p>
+                        <ul>
+                            <li class="description-info">Arts and Science Students' Union</li>
+                            <ul>
+                                <li class="description-info-detail">Technical Manager</li>
+                                <li class="description-info-detail">Sept. 2017 - Present</li>
+                            </ul>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- TODO Fix formatting for this certificate entry, since it's been changed. See: undergrad -->
                 <!-- one specific entry : undergrad, certificate, masters, etc -->
                 <div class="entry" id="certificate">
                     <hr>
-                    <img class="entry-logo" src="img/bunny.jpg" alt="logo of the University of Saskatchewan">
-                    <div class="entry-title">
-                        <span class="institution">University of Saskatchewan</span>
-                        <br>
-                        <span class="program">Certificate</span>
-                        <br>
-                        <span class="major-title">Ethics, Justice, Law</span>
+                    <div class="entry-logo entry-item" >
+                        <a href="https://www.usask.ca" target="_blank">
+                            <img src="img/bunny.jpg" alt="logo of the University of Saskatchewan">
+                        </a>
                     </div>
-                    <div class="timeframe">
-                        <span class="year">2017-2019</span>
-                        <br>
-                        <span class="location">Saskatoon, SK</span>
+                    <div class="entry-title entry-item">
+                        <p class="institution">University of Saskatchewan</p>
+                        <p class="program">Certificate</p>
+                        <p class="major-title">Ethics, Justice, Law</p>
                     </div>
-                    <div class="courses">
-                        <p class="coursework">Courses</p>
+                    <div class="timeframe entry-item">
+                        <p class="year">2017-2019</p>
+                        <p class="location">Saskatoon, SK</p>
+                    </div>
+                    <div class="courses entry-item">
+                        <p class="education-content-title" style="margin-bottom: 3px;">Courses</p>
                         <ul>
                             <li>Introduction to Ethics and Values</li>
                             <li>Ethical Theory</li>
@@ -121,70 +156,105 @@
                             <li>Metaethics</li>
                         </ul>
                     </div>
-                    <div class="additional-program-info">
-                        <span class="description-title">Certificate Info</span>
-                        <br>
-                        <span class="description-info">Lorem Ipsum</span>
+                    <div class="additional-program-info entry-item">
+                        <p class="education-content-title">Certificate Info</p>
+                        <ul>
+                            <li class="description-info" style="text-align: justify;">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</li>
+                        </ul>
                     </div>
                 </div>
-                <br>
             </div>
         </div>
         <div id="skills">
             <div class="skills-content">
-                <h1>Skills</h1>
-
+                <h1 class="section-title">Skills</h1>
                 <div id="skills-grid">
                     <div class="skill-box" id="languages">
                         <div class="skill-title">Languages</div>
-                        <img class="skill-photo" src="img/bunny.jpg" alt="placeholder">
-                        <div class="skill-description">Lorem Ipsum summary of this particular skill box - placeholder placeholder placeholder</div>
+                        <ul class="skill-description">
+                            <li id="java">Java</li>
+                            <li id="objective-c">Objective-C</li>
+                            <li id="python-3">Python 3</li>
+                            <li id="javascript">JavaScript</li>
+                            <li id="html5">HTML 5 & CSS 3</li>
+                            <li id="php">PHP</li>
+                            <li id="shell">Shell Scripting</li>
+                        </ul>
                     </div>
                     <div class="skill-box" id="technologies">
-                        <p class="skill-title">Technologies</p>
-                        <img class="skill-photo" src="img/bunny.jpg" alt="placeholder">
-                        <p class="skill-description">Lorem Ipsum summary of this particular skill box - placeholder placeholder placeholder </p>
+                        <div class="skill-title">Technologies</div>
+                        <ul class="skill-description">
+                            <li></li>
+                        </ul>
                     </div>
                     <div class="skill-box" id="concepts">
-                        <p class="skill-title">Concepts</p>
-                        <img class="skill-photo" src="img/bunny.jpg" alt="placeholder">
-                        <p class="skill-description">Lorem Ipsum summary of this particular skill box - placeholder placeholder placeholder </p>
+                        <div class="skill-title">Concepts</div>
+                        <ul class="skill-description">
+                            <li>Object-Oriented Programming</li>
+                            <li>Front-End Web Design</li>
+                        </ul>
                     </div>
                     <div class="skill-box" id="soft-skills">
-                        <p class="skill-title">Soft Skills</p>
-                        <img class="skill-photo" src="img/bunny.jpg" alt="placeholder">
-                        <p class="skill-description">Lorem Ipsum summary of this particular skill box - placeholder placeholder placeholder </p>
+                        <div class="skill-title">Soft Skills</div>
+                        <ul class="skill-description">
+                            <li>Time-Management</li>
+                        </ul>
                     </div>
-
                 </div>
-
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-
           </div>
         </div>
         <div id="projects">
             <div class="projects-content">
+                <h1 class="section-title">Projects</h1>
 
-            <h1>Projects</h1>
+                <div class="project-grid">
+
+                    <!-- Tic-Tac-Toe project -->
+                    <div class="project-entry">
+                        <div class="project-info">
+                            <div class="project-title">
+                                <p>Tic-Tac-Toe Bot</p>
+                            </div>
+                            <div class="detail-hidden-by-image">
+                                <img src="img/bunny.jpg" alt="placeholder">
+                            </div>
+                            <div class="project-description">
+                                <p>Description of the project</p>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <p class="project-tag java-tag">Java</p>
+                            <p class="project-tag git-tag">Git</p>
+                        </div>
+                    </div>
+
+                    <!-- Tic-Tac-Toe project -->
+                    <div class="project-entry">
+                        <div class="project-info">
+                            <div class="project-title">
+                                <p>Tic-Tac-Toe Bot</p>
+                            </div>
+                            <div class="detail-hidden-by-image">
+                                <img src="img/bunny.jpg" alt="placeholder">
+                            </div>
+                            <div class="project-description">
+                                <p>Description of the project</p>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <p class="project-tag java-tag">Java</p>
+                            <p class="project-tag git-tag">Git</p>
+                        </div>
+                    </div>
+
+                </div>
 
 
-
+            </div>
+        </div>
+        <div id="experience">
+            <div class="experience-content">
+                <h1 class="section-title">Experience</h1>
 
                 <br>
                 <br>
@@ -206,64 +276,33 @@
 
             </div>
         </div>
-        <div id="work">
-          <div class="work-content">
-
-            <h1>Work</h1>
-
-
-
-
-
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
-          </div>
-        </div>
         <div id="hobbies">
-          <div class="hobbies-content">
+            <div class="hobbies-content">
+                <h1 class="section-title">Hobbies</h1>
 
-            <h1>Hobbies</h1>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
 
-
-
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
-          </div>
+            </div>
         </div>
     </div>
     <div class="footer">
+        <p>&copy;2019 - designed by <a href="https://www.bradendubois.dev">me</a></p>
     </div>
 
     <!-- T
@@ -272,11 +311,9 @@
 
     <!-- JavaScript -->
 
-    <script type="text/javascript" src="js/initializeDescriptorLabels.js"></script>
-    <script type="text/javascript" src="js/buttonClickTextSwap.js"></script>
     <script type="text/javascript" src="js/incrementTextDisplayed.js"></script>
-
     <script type="text/javascript" src="js/initializeInfo.js"></script>
+    <script type="text/javascript" src="js/selfDescription.js"></script>
 
     <!-- BootStrap JS -->
 

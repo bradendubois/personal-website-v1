@@ -1,22 +1,20 @@
 
 function initializeInfo() {
-
   setTimeout(showPlus, 750);
-  setInterval(changeDescriptorLabels, 1500);
+  setTimeout(changeDescriptorLabels, 1500);
 
   //window.onload = initializeInfo;
 }
 
 function showPlus() {
-  var messageArea = document.getElementById("description-plus");
+  let messageArea = document.getElementById("description-plus");
   messageArea.innerHTML = " + ";
 }
 
 function changeDescriptorLabels() {
-
-  var messageArea = document.getElementById("description-appended");
-  var labelNumber = messageArea.getAttribute("label");
-  var loops = messageArea.getAttribute("loops");
+  let messageArea = document.getElementById("description-appended");
+  let labelNumber = parseInt(messageArea.getAttribute("label"));
+  let loops = parseInt(messageArea.getAttribute("loops"));
 
   // Change to add a restart button
 
@@ -25,16 +23,20 @@ function changeDescriptorLabels() {
     messageArea.href = "https://www.linkedin.com/in/braden-dubois-2453b8149/";
     messageArea.innerHTML = "open to offers";
 
+    let resetButton = document.getElementById("resetButton");
+    resetButton.setAttribute("display", "block");
+
     return;
   }
 
-  var labels = ["designer", "thing", "other-thing"];
+  let labels = ["designer", "thing", "other-thing"];
 
   messageArea.innerHTML = labels[labelNumber];
 
-  messageArea.setAttribute("label", (labelNumber + 1)  % labels.length);
+  messageArea.setAttribute("label", ((labelNumber + 1)  % labels.length).toString());
 
-  if (labelNumber == 0) {
+  if (labelNumber === 0) {
     messageArea.setAttribute("loops", loops + 1);
   }
+  setTimeout(changeDescriptorLabels, 1500);
 }

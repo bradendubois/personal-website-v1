@@ -1,39 +1,51 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 ul {
-  margin-left: 10px;
-  list-style-type: circle;
-  list-style-position: inside;
+    margin-left: 10px;
+    list-style-type: circle;
+    list-style-position: inside;
 }
 
 ul li {
-  padding-left: 10px;
+    padding-left: 10px;
 }
 
 hr {
     border-top: 1px solid #8c8b8b;
 }
 
+.section-title {
+    text-align: center;
+    /* font-family: 'Vesper Libre', serif; */
+    font-family: 'Scope One', serif;
+    font-size: 24pt;
+    padding: 30px 20px 20px 20px;
+}
+
+.content div {
+    padding: 5px;
+}
+
 .content div div {
-  position: relative;
-  margin: auto;
-  width: 65%;
+    position: relative;
+    margin: auto;
+    width: 65%;
 }
 
 @media(max-width: 1000px) {
-  .content div div {
-    width: 95%;
-  }
+    .content div div {
+        width: 95%;
+    }
 }
 
 /******************** Header ********************/
 
 .header {
-    background-color: #6d6d6d;
+    background: #346c85;
     width: 100%;
     display: inline-block;
 }
@@ -55,14 +67,14 @@ hr {
 }
 
 .header .jump-tags div:hover {
-    background: #525252;
+    background: #2d5e74;
+    border-radius: 5px;
 }
 
 .header .jump-tags a {
-    font-family: 'Montserrat', serif;
+    font-family: 'Montserrat', 'Calibri', sans-serif;
     color: lightgrey;
     font-size: 22pt;
-    padding: 5px 10px;
     text-decoration: none;
     /** border: 1px black solid; **/
 }
@@ -70,17 +82,41 @@ hr {
 /******************** Me ********************/
 
 #me {
-    background: lightgrey;
+    background: #b4bcd3;
 }
 
 .me-content {
-  position: relative;
-  margin: auto;
-  width: 60%;
+    position: relative;
+    width: 100%;
+    outline: 1px solid black;
+    text-align: center;
 }
 
 .me-content .descriptionLine {
-  display: inline-block;
+    display: inline-block;
+    outline: 1px solid black;
+}
+
+.profile-image-row {
+    outline: 1px solid black;
+    margin: auto;
+    align-content: center;
+    align-self: center;
+
+    padding: 0;
+    display: inline;
+}
+
+.profile-image {
+    border: 1px solid grey;
+    border-radius: 50%;
+    max-width: 12vw;
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#resetButton {
+    display: none;
 }
 
 /******************** Education ********************/
@@ -89,58 +125,73 @@ hr {
     background: #BFBFBF;
 }
 
-.education-content h1 {
-    text-align: center;
-    font-family: 'Vesper Libre', serif;
-    font-size: 24pt;
-}
-
 #education .entry {
     font-family: 'Montserrat', sans-serif;
-  width: auto;
-  margin: 25px 0;
+    width: auto;
+    margin: 25px 0;
     align-items: start;
 }
 
 #education img {
-  border-radius: 50%;
-  border: 1px solid white;
-  max-width: 90px;
+    border-radius: 50%;
+    border: 1px solid white;
+    max-width: 90px;
+    box-shadow: 0 0 3px black;
+}
+
+#education .entry .entry-logo {
+
 }
 
 #education .entry-title {
     font-family: 'Nunito', serif;
     font-size: 14pt;
     font-weight: 600;
+    vertical-align: middle;
+
 }
 
+#education .entry-item {
+    width: 100%;
+    height: 100%;
+}
 
 #education .institution {
-
+    margin: 0;
+    padding: 0;
 }
 
 #education .program {
-
+    margin: 0;
+    padding: 0;
 }
 
 #education .major-title {
-
+    margin: 0;
+    padding: 0;
 }
 
 #education .timeframe {
     text-align: right;
-    font-weight: 600;
+    font-weight: 500;
+    font-style: italic;
     font-size: 12pt;
     vertical-align: top;
+
 }
 
 #education .year {
+    margin: 0;
+    padding: 0;
 }
 
 #education .location {
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
 }
 
-#education * {
+#education {
     /** outline: 1px solid black; **/
 }
 
@@ -149,46 +200,65 @@ hr {
 }
 
 #education .courses {
-    outline: 1px solid black;
+
 }
 
 #education .additional-program-info {
-    align-self: start;
+
 }
 
-#education .description-title {
-
+#education .education-content-title {
+    font-weight: 500;
+    font-size: 14pt;
+    margin: 5px 0;
 }
 
 #education .description-info {
-
+    list-style-type: circle;
+    list-style-position: inside;
+    font-size: 12pt;
 }
 
-#education .coursework {
-
+#education .description-info-detail {
+    list-style-type: disc;
+    font-size: 11pt;
+    margin-left: 8px;
 }
 
 #education .major {
-  margin-left: 10px;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-bottom: 3px;
+    font-size: 13pt;
 }
 
+#education ul {
+
+}
+
+#education ul li {
+
+}
+
+.entry img {
+
+}
+
+.entry div {
+
+}
 
 #education .entry {
     display: grid;
 
-    grid-template-columns: 130px 3fr 2fr 200px;
-    grid-template-rows: 3vh 10vh auto;
+    grid-template-columns: 130px 4fr 3fr auto;
+    grid-template-rows: 3vh auto auto;
 
-    grid-column-gap: 10px;
+    grid-column-gap: 5px;
     grid-row-gap: 10px;
-
-    align-items: start;
-    align-self: start;
-    align-content: start;
 }
 
 @media screen and (max-width: 500px) {
-
     .entry {
         display: grid;
 
@@ -200,30 +270,43 @@ hr {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .entry {
+        display: grid;
+
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 3vh auto;
+
+        grid-column-gap: 15px;
+        grid-row-gap: 100px;
+
+        margin: 0 auto;
+    }
+}
+
 /** Undergrad Entry **/
 #undergrad hr {
     grid-area: hr;
 }
 
 #undergrad .entry-logo {
-  grid-area: undergrad_logo;
+    grid-area: undergrad_logo;
 }
 
 #undergrad .entry-title {
-  grid-area: undergrad_title;
+    grid-area: undergrad_title;
 }
 
 #undergrad .timeframe {
-    background: black;
-  grid-area: undergrad_timeframe;
+    grid-area: undergrad_timeframe;
 }
 
 #undergrad .courses {
-  grid-area: undergrad_courses;
+    grid-area: undergrad_courses;
 }
 
 #undergrad .additional-program-info {
-  grid-area: undergrad_detail;
+    grid-area: undergrad_detail;
 }
 
 #undergrad {
@@ -247,29 +330,38 @@ hr {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    #undergrad {
+        grid-template-areas:
+                "hr hr hr hr"
+                "undergrad_logo undergrad_title undergrad_title undergrad_timeframe"
+                "undergrad_courses undergrad_courses undergrad_detail undergrad_detail"
+    }
+}
+
 /** Certificate Entry **/
 #certificate hr {
     grid-area: hr;
 }
 
 #certificate .entry-logo {
-  grid-area: certificate_logo;
+    grid-area: certificate_logo;
 }
 
 #certificate .entry-title {
-  grid-area: certificate_title;
+    grid-area: certificate_title;
 }
 
 #certificate .timeframe {
-  grid-area: certificate_timeframe;
+    grid-area: certificate_timeframe;
 }
 
 #certificate .courses {
-  grid-area: certificate_courses;
+    grid-area: certificate_courses;
 }
 
 #certificate .additional-program-info {
-  grid-area: certificate_detail;
+    grid-area: certificate_detail;
 }
 
 #certificate {
@@ -293,72 +385,93 @@ hr {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    #certificate {
+        grid-template-areas:
+                "hr hr hr hr"
+                "certificate_logo certificate_title certificate_title certificate_timeframe"
+                "certificate_courses certificate_courses certificate_detail certificate_detail"
+    }
+}
+
 /******************** Skills ********************/
 
 #skills {
-  background: pink;
+    background: #eaeaea;
 }
 
 .skills-content {
-  background: lightgrey;
+
 }
 
-.skill-box {
-    background: grey;
-    padding: 3px;
-    max-width: 300px;
+#skills-grid {
+    margin-top: 40px;
 }
 
-.skill-box .skill-title {
-    background: darkgrey;
+#skills-grid .skill-box {
+    background: #dfdfdf;
+    margin: 0 auto auto auto;
+    max-width: 500px;
     width: 100%;
-    padding: 10px;
-    margin: 0;
+
+    border: 1px solid #222222; /* */
+    box-shadow: 0 0 1px black;
+    font-family: 'Monospace', sans-serif;
+    font-weight: 500;
+    padding: 0;
+}
+
+#skills-grid .skill-title {
+    background: #2d8bb7;
+    width: 100%;
     text-align: center;
-}
-
-.skill-box .skill-photo {
-    width: 100%;
-    /* outline: 2px solid grey; */
-}
-
-.skill-box .skill-description {
-    width: 100%;
+    font-weight: 600;
     margin: 0;
+    font-size: 14pt;
+    padding: 3px;
+}
+
+#skills-grid .skill-description {
+    text-align: left;
     padding: 5px;
-    background: darkgrey;
+    width: 100%;
+}
+
+#skills-grid .skill-description li {
+    margin: 3px 0;
 }
 
 #languages {
-  grid-area: languages;
+    grid-area: languages;
 }
 
 #technologies {
-  grid-area: technologies;
+    grid-area: technologies;
 }
 
 #concepts {
-  grid-area: concepts;
+    grid-area: concepts;
 }
 
 #soft-skills {
-  grid-area: soft_skills;
+    grid-area: soft_skills;
 }
 
 
 #skills-grid {
-    width: 90%;
-    max-width: 900px;
+    width: 100%;
 
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
 
-    grid-row-gap: 30px;
+    grid-row-gap: 70px;
 
-    margin: 0 auto;
+    align-content: start;
 
-    grid-template-areas: "languages technologies" "concepts soft_skills"
+    grid-template-areas:
+            "languages technologies"
+            "concepts soft_skills"
 }
 
 @media screen and (max-width: 500px) {
@@ -382,26 +495,135 @@ hr {
 /******************** Projects ********************/
 
 #projects {
-  background: teal;
+    background: #585858;
 }
 
-/******************** Work ********************/
+#projects .projects-content {
+    width: 80%;
+}
 
-#work {
-  background: cyan;
+#projects .project-grid {
+    margin-top: 40px;
+    display: inline-flex;
+}
+
+#projects .project-grid * {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#projects .project-entry {
+    font-family: 'Nunito', serif;
+    width: 100%;
+    max-width: 400px;
+    margin: 30px;
+}
+
+#projects .project-info {
+    border: 2px solid black;
+    margin-bottom: 7px;
+    padding: 0;
+}
+
+#projects .project-title {
+    text-align: center;
+    background: #9ab9d0;
+    padding: 5px;
+    font-weight: 600;
+}
+
+#projects .detail-hidden-by-image {
+    width: 100%;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+#projects .detail-hidden-by-image :hover {
+    opacity: 100%;
+    transition: .5s;
+}
+
+#projects .project-description {
+    padding: 7px;
+    background: lightgrey;
+}
+
+#projects .project-tags {
+    display: flex;
+    padding: 3px 6px;
+}
+
+#projects .project-tag {
+    border: 1px solid;
+    padding: 6px 10px;
+    border-radius: 5px;
+    background: #585858;
+    color: #b4bcd3;
+    margin: 0 4px;
+    font-size: 10pt;
+    width: min-content;
+    text-transform: uppercase;
+    font-family: "monospace", serif;
+}
+
+#projects .java-tag {
+    border-color: deepskyblue;
+}
+
+#projects .objective-c-tag {
+    border-color: white;
+}
+
+#projects .python-tag {
+    border-color: darkblue;
+}
+
+#projects .javascript-tag {
+    border-color: yellow;
+}
+
+#projects .html-css-tag {
+    border-color: orange;
+}
+
+#projects .php-tag {
+    border-color: rebeccapurple    ;
+}
+
+#projects .shell-tag {
+    border-color: grey;
+}
+
+#projects .git-tag {
+    border-color: orangered;
+}
+
+/******************** Experience ********************/
+
+#experience {
+    background: lightgrey;
 }
 
 /******************** Hobbies ********************/
 
 #hobbies {
-  background: darkgrey;
+  background: #BFBFBF;
 }
 
 
 /******************** Footer ********************/
 
 .footer {
+    background: darkgrey;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+}
 
+.footer p {
+    margin: auto;
+    padding: 5px 0;
 }
 
 /********************  ********************/
