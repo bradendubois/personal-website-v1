@@ -18,10 +18,26 @@ hr {
     border-top: 1px solid #8c8b8b;
 }
 
+@font-face {
+    font-family: 'BebasNeue-Bold';
+    src: url("../fonts/bebas_neue/BebasNeue-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'BebasNeue-Regular';
+    src:url("../fonts/bebas_neue/BebasNeue-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Aileron-Regular';
+    src:url("../fonts/aileron/Aileron-Regular.otf");
+}
+
 .section-title {
     text-align: center;
     /* font-family: 'Vesper Libre', serif; */
-    font-family: 'Scope One', serif;
+    font-family: 'BebasNeue-Regular', 'Times New Roman', sans-serif;
+    font-weight: 500;
     font-size: 24pt;
     padding: 30px 20px 20px 20px;
 }
@@ -48,6 +64,7 @@ hr {
     background: #346c85;
     width: 100%;
     display: inline-block;
+    box-shadow: 0 3px 5px #295062;
 }
 
 .header .me {
@@ -85,16 +102,92 @@ hr {
     background: #b4bcd3;
 }
 
-.me-content {
+#me .me-content {
     position: relative;
-    width: 100%;
+    width: 80%;
     outline: 1px solid black;
     text-align: center;
 }
 
 .me-content .descriptionLine {
     display: inline-block;
+    text-decoration: none;
     outline: 1px solid black;
+}
+
+#me .description {
+    outline: 1px solid pink;
+    overflow: hidden;
+    width: 100%;
+}
+
+#me .neofetch-block {
+    width: auto;
+    height: auto;
+    margin: 0 20px 0 0;
+    float: left;
+    display: inline-block;
+    background: #1f1f1f;
+    padding: 40px;
+    overflow: hidden;
+}
+
+#me .neofetch-image {
+    margin: auto;
+    padding: 0;
+    float: left;
+    width: auto;
+    display: inline-block;
+    outline: 1px solid green;
+}
+
+#me .neofetch-image img {
+    vertical-align: middle;
+    max-width: 300px;
+}
+
+#me .neofetch-content {
+    display: inline-block;
+    margin: 0 40px;
+    padding: 0;
+    /* float: left; */
+    width: auto;
+    text-align: left;
+    outline: 1px solid pink;
+    color: #d0d4cf;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#me .title {
+    color: #fff6c0;
+}
+
+#me .attribute::after {
+    content: ": ";
+}
+
+#me .value {
+    color: #d0d4cf;
+}
+
+#me .self-description-block {
+    display: inline-block;
+    float: right;
+    width: auto;
+    margin: 0 20px;
+    outline: 1px solid red;
+}
+
+.me #description-self {
+
+}
+
+.me #description-plus {
+
+}
+
+.me #description-appended {
+
 }
 
 .profile-image-row {
@@ -119,7 +212,9 @@ hr {
     display: none;
 }
 
+/**************************************************/
 /******************** Education ********************/
+/**************************************************/
 
 #education {
     background: #BFBFBF;
@@ -174,7 +269,6 @@ hr {
 #education .timeframe {
     text-align: right;
     font-weight: 500;
-    font-style: italic;
     font-size: 12pt;
     vertical-align: top;
 
@@ -188,6 +282,7 @@ hr {
 #education .location {
     font-weight: 400;
     margin: 0;
+    font-style: italic;
     padding: 0;
 }
 
@@ -394,7 +489,9 @@ hr {
     }
 }
 
+/**************************************************/
 /******************** Skills ********************/
+/**************************************************/
 
 #skills {
     background: #eaeaea;
@@ -416,8 +513,9 @@ hr {
 
     border: 1px solid #222222; /* */
     box-shadow: 0 0 1px black;
-    font-family: 'Monospace', sans-serif;
-    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 13pt;
     padding: 0;
 }
 
@@ -492,10 +590,16 @@ hr {
     }
 }
 
+/**************************************************/
 /******************** Projects ********************/
+/**************************************************/
 
 #projects {
-    background: #585858;
+    background: #494949;
+}
+
+#projects .section-title {
+    color: lightgrey;
 }
 
 #projects .projects-content {
@@ -514,34 +618,68 @@ hr {
 }
 
 #projects .project-entry {
-    font-family: 'Nunito', serif;
+    font-family: 'Montserrat', serif;
+    font-size: 14pt;
     width: 100%;
-    max-width: 400px;
-    margin: 30px;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 #projects .project-info {
-    border: 2px solid black;
-    margin-bottom: 7px;
+    border: 2px solid #202020;
+    margin-bottom: 5px;
     padding: 0;
 }
 
 #projects .project-title {
     text-align: center;
-    background: #9ab9d0;
+    background: #5f7c6c;
     padding: 5px;
     font-weight: 600;
 }
 
-#projects .detail-hidden-by-image {
+.external-project-link {
+    position: relative;
+}
+
+.cover-image {
+    top: 0;
+    left: 0;
     width: 100%;
+    position: absolute;
+    margin: auto;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
 }
 
-#projects .detail-hidden-by-image :hover {
-    opacity: 100%;
-    transition: .5s;
+#projects .hidden-content {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: transparent;
+    position: absolute;
+    transition: .1s;
+    opacity: 0;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+#projects .hidden-content:hover {
+    opacity: .8;
+    transition: .2s;
+    height: 100%;
+    background: #e8f3f9;
+    color: black;
+    position: absolute;
+    padding: 60px 10px;
+}
+
+#projects .hidden-content img {
+    max-width: 75px;
+    border-radius: 5px;
 }
 
 #projects .project-description {
@@ -550,22 +688,29 @@ hr {
 }
 
 #projects .project-tags {
-    display: flex;
-    padding: 3px 6px;
+    height: auto;
+    padding: 0 6px;
+    overflow: hidden;
 }
 
 #projects .project-tag {
     border: 1px solid;
+    overflow: hidden;
+    float: left;
     padding: 6px 10px;
+    vertical-align: middle;
     border-radius: 5px;
     background: #585858;
     color: #b4bcd3;
-    margin: 0 4px;
+    margin: 5px 4px;
     font-size: 10pt;
-    width: min-content;
+    width: max-content;
     text-transform: uppercase;
-    font-family: "monospace", serif;
+    font-family: 'BebasNeue-Regular', serif;
+    font-weight: 600;
 }
+
+/*********** Project Tag Colors ***********/
 
 #projects .java-tag {
     border-color: deepskyblue;
@@ -583,7 +728,11 @@ hr {
     border-color: yellow;
 }
 
-#projects .html-css-tag {
+#projects .html-tag {
+    border-color: orange;
+}
+
+#projects .css-tag {
     border-color: orange;
 }
 
@@ -599,20 +748,75 @@ hr {
     border-color: orangered;
 }
 
-/******************** Experience ********************/
+/*********** Project Grid Tags ***********/
 
-#experience {
-    background: lightgrey;
+#projects #personal-website {
+    grid-area: personal_website;
 }
 
+#projects #tic-tac-toe {
+    grid-area: tic_tac_toe;
+}
+
+#projects #sandbox {
+    grid-area: sandbox;
+}
+
+#projects .project-grid {
+
+    width: 100%;
+    display: grid;
+    margin: 25px auto;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(1, auto);
+
+    grid-row-gap: 70px;
+
+    grid-template-areas:
+            "personal_website tic_tac_toe sandbox"
+}
+
+@media screen and (max-width: 500px) {
+    #projects .project-grid {
+        width: 90%;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-row-gap: 15px;
+        margin: 0;
+
+        grid-template-areas:
+                "personal_website"
+                "tic-tac-toe"
+                "sandbox"
+    }
+}
+
+/**************************************************/
+/******************** Experience ********************/
+/**************************************************/
+
+#experience {
+    background: #181818;
+}
+
+#experience .section-title {
+    color: white;
+}
+
+/**************************************************/
 /******************** Hobbies ********************/
+/**************************************************/
 
 #hobbies {
   background: #BFBFBF;
 }
 
-
+/**************************************************/
 /******************** Footer ********************/
+/**************************************************/
 
 .footer {
     background: darkgrey;
@@ -622,8 +826,9 @@ hr {
 }
 
 .footer p {
+    font-family: 'Aileron-Regular', serif;
     margin: auto;
-    padding: 5px 0;
+    padding: 20px 10px;
 }
 
 /********************  ********************/

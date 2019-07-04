@@ -6,7 +6,6 @@
 
     <title>Braden Dubois | Developer</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- icon used for page tab -->
@@ -17,6 +16,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Scope+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Vesper+Libre&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+
 </head>
 <body onload="initializeInfo()">
     <div class="header">
@@ -37,12 +39,46 @@
         <div id="me">
             <div class="me-content">
                 <h1 class="section-title">Me</h1>
-                <div style="text-align: center;">
-                    <p class="descriptionLine" id="description-self">I am a developer</p>
-                    <p class="descriptionLine" id="description-plus"></p>
-                    <a class="descriptionLine" id="description-appended" hired="false" label=0 loops=0></a>
-                    <button class="descriptionLine" id="resetButton" onclick="resetLoop()">reset</button>
+                <div class="description">
+                    <div class="neofetch-block">
+                        <div class="neofetch-image">
+                            <img src="img/bunny.jpg" alt="placeholder">
+                        </div>
+                        <div class="neofetch-content">
+                            <p class="title">braden@earth</p>
+                            <p style="color: #d0d4cf">---------</p>
+                            <p><span class="title attribute">OS</span><span class="value">Human Male</span></p>
+                            <p><span class="title attribute">Host</span><span class="value">Body</span></p>
+                            <p><span class="title attribute">Uptime</span><span class="value" id="uptime"></span></p>
+                            <p><span class="title attribute">Packages</span><span class="value">206</span></p>
+                            <p><span class="title attribute">Shell</span><span class="value">Text</span></p>
+                            <p><span class="title attribute">Resolution</span><span class="value">Corrected</span></p>
+                            <p><span class="title attribute">WM</span><span class="value">Text</span></p>
+                            <p><span class="title attribute">WM Theme</span><span class="value">Text</span></p>
+                            <p><span class="title attribute">Theme</span><span class="value">Text</span></p>
+                            <p><span class="title attribute">Icons</span><span class="value">Text</span></p>
+                            <p><span class="title attribute">Terminal</span><span class="value">Text</span></p>
+                            <p><span class="title attribute">Terminal Font</span><span class="value">Text</span></p>
+                            <p><span class="title attribute">CPU</span><span class="value">Brain</span></p>
+                            <p><span class="title attribute">GPU</span><span class="value">Eyes</span></p>
+                            <p><span class="title attribute">Memory</span><span class="value">Pretty Good</span></p>
+                        </div>
+                    </div>
+                    <div class="self-description-block">
+                        <p class="descriptionLine" id="description-self">I am a developer</p>
+                        <p class="descriptionLine" id="description-plus"></p>
+                        <a class="descriptionLine" id="description-appended" hired="false" label=0 loops=0></a>
+                        <button class="descriptionLine" id="resetButton" onclick="resetLoop()">reset</button>
+                    </div>
                 </div>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
                 <div class="profile-image-row">
                     <a href="https://github.com/drab3n/" target="_blank"><img class="profile-image" src="img/bunny.jpg" alt="placeholder"></a>
                     <a href="https://www.linkedin.com/in/braden-dubois-2453b8149/" target="_blank"><img class="profile-image" src="img/bunny.jpg" alt="placeholder"></a>
@@ -61,7 +97,7 @@
                     <hr>
                     <div class="entry-logo entry-item">
                         <a href="https://www.usask.ca" target="_blank">
-                            <img src="img/bunny.jpg" alt="logo of the University of Saskatchewan">
+                            <img src="img/usask.jpg" alt="logo of the University of Saskatchewan">
                         </a>
                     </div>
                     <div class="entry-title entry-item">
@@ -134,7 +170,7 @@
                     <hr>
                     <div class="entry-logo entry-item" >
                         <a href="https://www.usask.ca" target="_blank">
-                            <img src="img/bunny.jpg" alt="logo of the University of Saskatchewan">
+                            <img src="img/usask.jpg" alt="logo of the University of Saskatchewan">
                         </a>
                     </div>
                     <div class="entry-title entry-item">
@@ -208,15 +244,53 @@
                 <h1 class="section-title">Projects</h1>
 
                 <div class="project-grid">
+                    <!-- Personal Website -->
+                    <div class="project-entry" id="personal-website">
+                        <div class="project-info">
+                            <div class="project-title">
+                                <p>Personal Website</p>
+                            </div>
+                            <div class="external-project-link">
+                                <div class="cover-image">
+                                    <img src="img/bunny.jpg" alt="placeholder">
+                                </div>
+                                <div class="hidden-content">
+                                    <!-- TODO change to include github logo as the clickable part -->
+                                    <a href="https://github.com/drab3n/PersonalWebsite/" target="_blank">
+                                        <p>View this project on Github</p>
+                                    </a>
+                                    <p>(this project is ongoing!)</p>
+                                </div>
+                            </div>
+                            <div class="project-description">
+                                <p>Description of the project</p>
+                            </div>
+                        </div>
+                        <div class="project-tags">
+                            <p class="project-tag html-tag">HTML</p>
+                            <p class="project-tag css-tag">(S)CSS</p>
+                            <p class="project-tag javascript-tag">JS</p>
+                            <p class="project-tag git-tag">Git</p>
+                        </div>
+                    </div>
 
                     <!-- Tic-Tac-Toe project -->
-                    <div class="project-entry">
+                    <div class="project-entry" id="tic-tac-toe">
                         <div class="project-info">
                             <div class="project-title">
                                 <p>Tic-Tac-Toe Bot</p>
                             </div>
-                            <div class="detail-hidden-by-image">
-                                <img src="img/bunny.jpg" alt="placeholder">
+                            <div class="external-project-link">
+                                <div class="cover-image">
+                                    <img src="img/bunny.jpg" alt="placeholder">
+                                </div>
+                                <div class="hidden-content">
+                                    <p>View this project on Github</p>
+                                    <p>(this project is ongoing!)</p>
+                                    <a href="https://github.com/drab3n/TicTacToeBot/" target="_blank">
+                                        <img src="img/bunny.jpg" alt="placeholder">
+                                    </a>
+                                </div>
                             </div>
                             <div class="project-description">
                                 <p>Description of the project</p>
@@ -228,14 +302,22 @@
                         </div>
                     </div>
 
-                    <!-- Tic-Tac-Toe project -->
-                    <div class="project-entry">
+                    <!-- Coding Sandbox -->
+                    <div class="project-entry" id="sandbox">
                         <div class="project-info">
                             <div class="project-title">
-                                <p>Tic-Tac-Toe Bot</p>
+                                <p>Coding Sandbox</p>
                             </div>
-                            <div class="detail-hidden-by-image">
-                                <img src="img/bunny.jpg" alt="placeholder">
+                            <div class="external-project-link">
+                                <div class="cover-image">
+                                    <img src="img/bunny.jpg" alt="placeholder">
+                                </div>
+                                <div class="hidden-content">
+                                    <a href="https://github.com/drab3n/TicTacToeBot/" target="_blank">
+                                        <p>View this project on Github</p>
+                                        <p>(this project is ongoing!)</p>
+                                    </a>
+                                </div>
                             </div>
                             <div class="project-description">
                                 <p>Description of the project</p>
@@ -243,7 +325,7 @@
                         </div>
                         <div class="project-tags">
                             <p class="project-tag java-tag">Java</p>
-                            <p class="project-tag git-tag">Git</p>
+                            <p class="project-tag python-tag">Python 3</p>
                         </div>
                     </div>
 
@@ -300,9 +382,10 @@
 
             </div>
         </div>
+        <!-- TODO - Add a contact me / buy me a coffee/sponsor thing section -->
     </div>
     <div class="footer">
-        <p>&copy;2019 - designed by <a href="https://www.bradendubois.dev">me</a></p>
+        <p>&copy;2019 - designed and developed by <a href="https://www.bradendubois.dev">me</a></p>
     </div>
 
     <!-- T
@@ -311,15 +394,9 @@
 
     <!-- JavaScript -->
 
+    <script type="text/javascript" src="js/uptimeBirthdate.js"></script>
     <script type="text/javascript" src="js/incrementTextDisplayed.js"></script>
     <script type="text/javascript" src="js/initializeInfo.js"></script>
     <script type="text/javascript" src="js/selfDescription.js"></script>
-
-    <!-- BootStrap JS -->
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
   </body>
 </html>

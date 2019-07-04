@@ -2,7 +2,7 @@
 function initializeInfo() {
   setTimeout(showPlus, 750);
   setTimeout(changeDescriptorLabels, 1500);
-
+  displayUptime();
   //window.onload = initializeInfo;
 }
 
