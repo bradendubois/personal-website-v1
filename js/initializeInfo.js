@@ -1,6 +1,10 @@
 
 function initializeInfo() {
   setTimeout(showPlus, 750);
+
+  // TODO - Hide all of these lines until it's been loaded
+  document.getElementById("description-appended").innerText = "\&nbsp";
+  document.getElementById("description-appended").setAttribute("style", "color: transparent");
   setTimeout(changeDescriptorLabels, 1500);
   displayUptime();
   //window.onload = initializeInfo;
@@ -18,7 +22,7 @@ function changeDescriptorLabels() {
 
   // Change to add a restart button
 
-  if (loops >= 3 && messageArea.getAttribute("hired") === "false") {
+  if (loops >= 2 && messageArea.getAttribute("hired") === "false") {
 
     messageArea.href = "https://www.linkedin.com/in/braden-dubois-2453b8149/";
     messageArea.innerHTML = "open to offers";
@@ -29,14 +33,15 @@ function changeDescriptorLabels() {
     return;
   }
 
-  let labels = ["designer", "thing", "other-thing"];
+  let labels = ["designer", "student", "computer science major", "avid reader", "philosophy student", "coffee-snob    " + '\u2615'];
 
   messageArea.innerHTML = labels[labelNumber];
+  messageArea.setAttribute("style", "color: revert");
 
   messageArea.setAttribute("label", ((labelNumber + 1)  % labels.length).toString());
 
   if (labelNumber === 0) {
     messageArea.setAttribute("loops", loops + 1);
   }
-  setTimeout(changeDescriptorLabels, 1500);
+  setTimeout(changeDescriptorLabels, 3000);
 }

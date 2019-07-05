@@ -105,20 +105,31 @@ hr {
 #me .me-content {
     position: relative;
     width: 80%;
-    outline: 1px solid black;
     text-align: center;
 }
 
 .me-content .descriptionLine {
     display: inline-block;
     text-decoration: none;
-    outline: 1px solid black;
 }
 
 #me .description {
-    outline: 1px solid pink;
     overflow: hidden;
     width: 100%;
+    margin-top: 75px;
+}
+
+#me .quick-intro {
+    width: 100%;
+    clear: both;
+    font-weight: bold;
+
+}
+
+#me .self-description-block p {
+    margin: 10px 0;
+    text-align: justify;
+    font-size: 12pt;
 }
 
 #me .neofetch-block {
@@ -130,6 +141,7 @@ hr {
     background: #1f1f1f;
     padding: 40px;
     overflow: hidden;
+    font-family: 'Roboto Mono', monospace;
 }
 
 #me .neofetch-image {
@@ -138,7 +150,6 @@ hr {
     float: left;
     width: auto;
     display: inline-block;
-    outline: 1px solid green;
 }
 
 #me .neofetch-image img {
@@ -148,18 +159,42 @@ hr {
 
 #me .neofetch-content {
     display: inline-block;
-    margin: 0 40px;
+    margin: 0 60px;
     padding: 0;
     /* float: left; */
     width: auto;
     text-align: left;
-    outline: 1px solid pink;
     color: #d0d4cf;
-    font-family: 'Roboto Mono', monospace;
+    font-size: 11pt;
+}
+
+#me .color-row {
+    width: auto;
+    margin-top: 30px;
+    margin-left: 10px;
+    clear: right;
+    float: left;
+    display: inline-flex;
+    padding: 0;
+}
+
+#me .color-box {
+    margin: 0;
+    padding: 0;
+    width: 27px;
+    height: 18px;
+}
+
+#me .neofetch-command {
+    clear: both;
+    float: left;
+    margin-top: 20px;
+    text-align: left;
+    padding: 0;
 }
 
 #me .title {
-    color: #fff6c0;
+    color: #76daff;
 }
 
 #me .attribute::after {
@@ -167,15 +202,16 @@ hr {
 }
 
 #me .value {
-    color: #d0d4cf;
+    color: #d48dd3;
 }
 
 #me .self-description-block {
     display: inline-block;
     float: right;
     width: auto;
-    margin: 0 20px;
-    outline: 1px solid red;
+    max-width: 45%;
+    margin-top: 60px;
+    font-family: 'Montserrat', serif;
 }
 
 .me #description-self {
@@ -186,7 +222,7 @@ hr {
 
 }
 
-.me #description-appended {
+.me .descriptionLine #description-appended {
 
 }
 
@@ -197,7 +233,7 @@ hr {
     align-self: center;
 
     padding: 0;
-    display: inline;
+    display: inline;"
 }
 
 .profile-image {
@@ -210,6 +246,18 @@ hr {
 
 #resetButton {
     display: none;
+}
+
+
+@media screen and (max-width: 1000px) {
+    #me .me-content {
+        width: 95%;
+    }
+
+    #me .self-description-block {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 /**************************************************/
@@ -831,4 +879,11 @@ hr {
     padding: 20px 10px;
 }
 
-/********************  ********************/
+/**************************************************/
+/******************* Changeable *******************/
+/**************************************************/
+
+#education #undergrad .timeframe .year::after {
+    content: " : (expected)";
+}
+

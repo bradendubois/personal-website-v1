@@ -18,8 +18,6 @@ function calculateUptime(date) {
         days += 30;
     }
 
-    /** MONTHS CORRECTION REMOVED
-
     // Correct negative months (can occur from day correction or the current month
     // being earlier than the specified month)
     if (months < 0) {
@@ -27,11 +25,9 @@ function calculateUptime(date) {
         months += 12;
     }
 
-     **/
-
     // NOTE - This is only used to calculate time since my birthday, and as such there is no correction
     // for a negative year since this should never occur
 
     // Return string built from info retrieved
-    return years.toString() + " years, " + months.toString() + " months, " + days.toString() + " days";
+    return years.toString() + " years, " + months.toString() + " months";// + days.toString() + " days";
 }
