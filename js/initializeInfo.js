@@ -3,6 +3,7 @@ function initializeInfo() {
   setTimeout(showPlus, 750);
 
   // TODO - Hide all of these lines until it's been loaded
+  document.getElementById("description-plus").innerText = '\&nbsp';
   document.getElementById("description-appended").innerText = "\&nbsp";
   document.getElementById("description-appended").setAttribute("style", "color: transparent");
   setTimeout(changeDescriptorLabels, 1500);
@@ -33,7 +34,7 @@ function changeDescriptorLabels() {
     return;
   }
 
-  let labels = ["designer", "student", "computer science major", "avid reader", "philosophy student", "coffee-snob    " + '\u2615'];
+  let labels = ["designer", "student", "computer science major", "avid reader", "philosophy student", "coffee-snob\&nbsp\u2615"];
 
   messageArea.innerHTML = labels[labelNumber];
   messageArea.setAttribute("style", "color: revert");

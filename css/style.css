@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+a {
+    color: #171cc3;
 }
 
 ul {
@@ -38,7 +44,7 @@ hr {
     /* font-family: 'Vesper Libre', serif; */
     font-family: 'BebasNeue-Regular', 'Times New Roman', sans-serif;
     font-weight: 500;
-    font-size: 24pt;
+    font-size: 30pt;
     padding: 30px 20px 20px 20px;
 }
 
@@ -63,6 +69,8 @@ hr {
 .header {
     background: #346c85;
     width: 100%;
+    height: 8vh;
+    min-height: 70px;
     display: inline-block;
     box-shadow: 0 3px 5px #295062;
 }
@@ -105,6 +113,7 @@ hr {
 #me .me-content {
     position: relative;
     width: 80%;
+    height: 92vh;
     text-align: center;
 }
 
@@ -135,7 +144,7 @@ hr {
 #me .neofetch-block {
     width: auto;
     height: auto;
-    margin: 0 20px 0 0;
+    margin: 30px 20px 0 0;
     float: left;
     display: inline-block;
     background: #1f1f1f;
@@ -210,8 +219,18 @@ hr {
     float: right;
     width: auto;
     max-width: 45%;
-    margin-top: 60px;
+    margin-top: 0;
     font-family: 'Montserrat', serif;
+}
+
+#me .self-description-block p:nth-last-of-type(2) {
+    text-align: center;
+    margin: 15px 0 30px 0;
+}
+
+#me .self-description-block p:last-of-type {
+    text-align: center;
+    margin-top: 40px;
 }
 
 .me #description-self {
@@ -226,9 +245,7 @@ hr {
 
 }
 
-.profile-image-row {
-    outline: 1px solid black;
-    margin: auto;
+#me .self-description-block .profile-image-row {
     align-content: center;
     align-self: center;
 
@@ -237,11 +254,15 @@ hr {
 }
 
 .profile-image {
-    border: 1px solid grey;
     border-radius: 50%;
     max-width: 12vw;
+    max-height: 120px;
     display: inline-block;
     margin: 0 10px;
+}
+
+.profile-image-row :last-child {
+    border-radius: 0;
 }
 
 #resetButton {
@@ -542,7 +563,7 @@ hr {
 /**************************************************/
 
 #skills {
-    background: #eaeaea;
+    background: #2d8bb7;
 }
 
 .skills-content {
@@ -550,7 +571,7 @@ hr {
 }
 
 #skills-grid {
-    margin-top: 40px;
+    margin: 40px 0;
 }
 
 #skills-grid .skill-box {
@@ -560,7 +581,7 @@ hr {
     width: 100%;
 
     border: 1px solid #222222; /* */
-    box-shadow: 0 0 1px black;
+    box-shadow: 0 2px 4px black;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 13pt;
@@ -568,13 +589,14 @@ hr {
 }
 
 #skills-grid .skill-title {
-    background: #2d8bb7;
+    background: #205480;
+    color: #c8c8c8;
     width: 100%;
     text-align: center;
     font-weight: 600;
     margin: 0;
-    font-size: 14pt;
-    padding: 3px;
+    font-size: 18pt;
+    padding: 13px;
 }
 
 #skills-grid .skill-description {
@@ -643,7 +665,8 @@ hr {
 /**************************************************/
 
 #projects {
-    background: #494949;
+    /* background: #494949; /* Old */
+    background: #205480; /* New - from 'Skills' section */
 }
 
 #projects .section-title {
@@ -669,7 +692,7 @@ hr {
     font-family: 'Montserrat', serif;
     font-size: 14pt;
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     margin: 0 auto;
 }
 
@@ -679,12 +702,48 @@ hr {
     padding: 0;
 }
 
-#projects .project-title {
+/* Title */
+
+#projects .project-title-info {
     text-align: center;
-    background: #5f7c6c;
-    padding: 5px;
-    font-weight: 600;
+    background: #b4b5b8;
+    padding: 15px;
+    overflow: hidden;
+    position: relative;
+    display: block;
 }
+
+#projects .project-title-info a {
+    width: 50px;
+    height: 50px;
+    float: left;
+    display: inline;
+}
+
+#projects .project-title-info a img {
+    border-radius: 10%;
+}
+
+#projects .project-title-info p + a {
+    float: right;
+}
+
+#projects .project-title-info .external-project-link-image {
+    width: 48px;
+    height: 48px;
+    margin: auto;
+}
+
+#projects .project-title-info p {
+    padding: auto;
+    font-weight: 500;
+    font-size: 18pt;
+    text-align: center;
+    width: max-content;
+    display: inline;
+}
+
+/* *************/
 
 .external-project-link {
     position: relative;
@@ -693,11 +752,9 @@ hr {
 .cover-image {
     top: 0;
     left: 0;
-    width: 100%;
     position: absolute;
-    margin: auto;
     border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    background: lightgrey;
 }
 
 #projects .hidden-content {
@@ -710,7 +767,6 @@ hr {
     position: absolute;
     transition: .1s;
     opacity: 0;
-
     text-align: center;
     vertical-align: middle;
 }
@@ -745,18 +801,19 @@ hr {
     border: 1px solid;
     overflow: hidden;
     float: left;
-    padding: 6px 10px;
+    padding: 6px 10px 5px 10px;
     vertical-align: middle;
     border-radius: 5px;
     background: #585858;
     color: #b4bcd3;
     margin: 5px 4px;
-    font-size: 10pt;
+    font-size: 12pt;
     width: max-content;
     text-transform: uppercase;
     font-family: 'BebasNeue-Regular', serif;
     font-weight: 600;
 }
+
 
 /*********** Project Tag Colors ***********/
 
@@ -884,6 +941,11 @@ hr {
 /**************************************************/
 
 #education #undergrad .timeframe .year::after {
+    content: " : (expected)";
+}
+
+
+#education #certificate .timeframe .year::after {
     content: " : (expected)";
 }
 
