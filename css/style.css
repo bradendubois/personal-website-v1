@@ -2,8 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -48,6 +48,10 @@ hr {
     padding: 30px 20px 20px 20px;
 }
 
+.content {
+
+}
+
 .content div {
     padding: 5px;
 }
@@ -55,7 +59,8 @@ hr {
 .content div div {
     position: relative;
     margin: auto;
-    width: 65%;
+    width: 95%;
+    max-width: 1300px;
 }
 
 @media(max-width: 1000px) {
@@ -69,39 +74,40 @@ hr {
 .header {
     background: #346c85;
     width: 100%;
-    height: 8vh;
-    min-height: 70px;
     display: inline-block;
     box-shadow: 0 3px 5px #295062;
+    font-size: 2vh;
+    padding: 20px;
 }
 
 .header .me {
     padding: 15px 10px;
     float: left;
+    outline: 1px solid red;
+    margin: 0 auto 0 0;
 }
 
 .header .jump-tags {
-    float: right;
     padding: 10px 10px;
     display: flex;
+    width: max-content;
+    margin: 0 0 0 auto;
+    outline: 1px solid red;
 }
 
 .header .jump-tags div {
     padding: 10px;
     transition: 0.2s;
+    border-radius: 5px;
 }
 
 .header .jump-tags div:hover {
     background: #2d5e74;
-    border-radius: 5px;
 }
 
 .header .jump-tags a {
     font-family: 'Montserrat', 'Calibri', sans-serif;
     color: lightgrey;
-    font-size: 22pt;
-    text-decoration: none;
-    /** border: 1px black solid; **/
 }
 
 /******************** Me ********************/
@@ -112,8 +118,9 @@ hr {
 
 #me .me-content {
     position: relative;
-    width: 80%;
-    height: 92vh;
+    min-height: 95vh;
+    max-width: 2000px;
+    outline: 1px solid red;
     text-align: center;
 }
 
@@ -125,7 +132,8 @@ hr {
 #me .description {
     overflow: hidden;
     width: 100%;
-    margin-top: 75px;
+    max-width: 100%;
+    outline: 1px solid blue;
 }
 
 #me .quick-intro {
@@ -144,9 +152,9 @@ hr {
 #me .neofetch-block {
     width: auto;
     height: auto;
-    margin: 30px 20px 0 0;
+    margin: auto;
     float: left;
-    display: inline-block;
+    max-width: 770px;
     background: #1f1f1f;
     padding: 40px;
     overflow: hidden;
@@ -216,11 +224,11 @@ hr {
 
 #me .self-description-block {
     display: inline-block;
-    float: right;
     width: auto;
     max-width: 45%;
     margin-top: 0;
     font-family: 'Montserrat', serif;
+    outline: 1px solid blue;
 }
 
 #me .self-description-block p:nth-last-of-type(2) {
@@ -231,18 +239,6 @@ hr {
 #me .self-description-block p:last-of-type {
     text-align: center;
     margin-top: 40px;
-}
-
-.me #description-self {
-
-}
-
-.me #description-plus {
-
-}
-
-.me .descriptionLine #description-appended {
-
 }
 
 #me .self-description-block .profile-image-row {
@@ -286,7 +282,7 @@ hr {
 /**************************************************/
 
 #education {
-    background: #BFBFBF;
+    background: #b3b3b3;
 }
 
 #education .entry {
@@ -422,18 +418,6 @@ hr {
     grid-row-gap: 10px;
 }
 
-@media screen and (max-width: 500px) {
-    .entry {
-        display: grid;
-
-        grid-template-columns: 1fr;
-        grid-template-rows: 3vh repeat(3, auto);
-        grid-gap: 15px;
-
-        margin: 0 auto;
-    }
-}
-
 @media screen and (max-width: 1000px) {
     .entry {
         display: grid;
@@ -447,6 +431,20 @@ hr {
         margin: 0 auto;
     }
 }
+@media screen and (max-width: 500px) {
+    .entry {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 3vh repeat(5, auto);
+
+        grid-column-gap: 0;
+        grid-row-gap: 5px;
+
+        margin: 0;
+    }
+}
+
 
 /** Undergrad Entry **/
 #undergrad hr {
@@ -479,21 +477,6 @@ hr {
             "undergrad_logo undergrad_title undergrad_title undergrad_timeframe"
             ". undergrad_courses undergrad_detail ."
 }
-
-@media screen and (max-width: 500px) {
-    #undergrad_logo #undergrad_timeframe {
-        display: none;
-    }
-
-    #undergrad {
-        grid-template-areas:
-                "hr"
-                "undergrad_title"
-                "undergrad_courses"
-                "undergrad_detail"
-    }
-}
-
 @media screen and (max-width: 1000px) {
     #undergrad {
         grid-template-areas:
@@ -503,9 +486,22 @@ hr {
     }
 }
 
+@media screen and (max-width: 500px) {
+    #undergrad {
+        grid-template-areas:
+                "hr hr"
+                "undergrad_logo undergrad_timeframe"
+                "undergrad_title undergrad_title"
+                "undergrad_courses undergrad_courses"
+                "undergrad_detail undergrad_detail"
+    }
+}
+
+
+
 /** Certificate Entry **/
 #certificate hr {
-    grid-area: hr;
+    grid-area: certificate_hr;
 }
 
 #certificate .entry-logo {
@@ -530,33 +526,32 @@ hr {
 
 #certificate {
     grid-template-areas:
-        ". hr hr hr"
+        ". certificate_hr certificate_hr certificate_hr"
         "certificate_logo certificate_title certificate_title certificate_timeframe"
         ". certificate_courses certificate_detail ."
-}
-
-@media screen and (max-width: 500px) {
-    #certificate_logo #certificate_timeframe {
-        display: none;
-    }
-
-    #certificate {
-        grid-template-areas:
-                "hr"
-                "certificate_title"
-                "certificate_courses"
-                "certificate_detail"
-    }
 }
 
 @media screen and (max-width: 1000px) {
     #certificate {
         grid-template-areas:
-                "hr hr hr hr"
+                "certificate_hr certificate_hr certificate_hr certificate_hr"
                 "certificate_logo certificate_title certificate_title certificate_timeframe"
                 "certificate_courses certificate_courses certificate_detail certificate_detail"
     }
 }
+
+@media screen and (max-width: 500px) {
+    #certificate {
+        grid-template-areas:
+                "certificate_hr certificate_hr"
+                "certificate_logo certificate_timeframe"
+                "certificate_title certificate_title"
+                "certificate_courses certificate_courses"
+                "certificate_detail certificate_detail"
+    }
+}
+
+
 
 /**************************************************/
 /******************** Skills ********************/
