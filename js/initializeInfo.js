@@ -3,8 +3,7 @@ function initializeInfo() {
   setTimeout(showPlus, 750);
 
   // TODO - Hide all of these lines until it's been loaded
-  document.getElementById("description-plus").innerText = '\&nbsp';
-  document.getElementById("description-appended").innerText = "\&nbsp";
+  document.getElementById("description-appended").innerText = " \&nbsp";
   document.getElementById("description-appended").setAttribute("style", "color: transparent");
   setTimeout(changeDescriptorLabels, 1500);
   displayUptime();

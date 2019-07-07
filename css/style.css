@@ -7,7 +7,7 @@
 }
 
 a {
-    color: #171cc3;
+    color: #191eec;
 }
 
 ul {
@@ -72,55 +72,57 @@ hr {
 /******************** Header ********************/
 
 .header {
-    background: #346c85;
+    min-width: 500px;
     width: 100%;
-    display: inline-block;
-    box-shadow: 0 3px 5px #295062;
-    font-size: 2vh;
-    padding: 20px;
+
+    background: #3f5a6e;
+    box-shadow: 0 3px 5px #425e73;
+    font-size: 16pt;
+    padding: 0 10px;
+
+    display: inline-flex;
+    font-family: 'Montserrat', 'Calibri', sans-serif;
+
 }
 
-.header .me {
-    padding: 15px 10px;
-    float: left;
-    outline: 1px solid red;
-    margin: 0 auto 0 0;
+.header :last-child {
+    margin-left: auto;
 }
 
-.header .jump-tags {
-    padding: 10px 10px;
+.header div {
     display: flex;
     width: max-content;
-    margin: 0 0 0 auto;
-    outline: 1px solid red;
 }
 
-.header .jump-tags div {
-    padding: 10px;
+.header a {
+    color: lightgrey;
+    margin: 10px 10px;
+}
+
+.header a :hover {
+    background: #3b5467;
+}
+
+.jump-tag {
     transition: 0.2s;
     border-radius: 5px;
-}
-
-.header .jump-tags div:hover {
-    background: #2d5e74;
-}
-
-.header .jump-tags a {
-    font-family: 'Montserrat', 'Calibri', sans-serif;
-    color: lightgrey;
+    width: max-content;
+    display: flex;
+    padding: 10px;
 }
 
 /******************** Me ********************/
 
 #me {
-    background: #b4bcd3;
+    /* background: #b4bcd3; /* Old */
+    background: linear-gradient(#81a5bf, #557A95);
 }
 
 #me .me-content {
     position: relative;
     min-height: 95vh;
-    max-width: 2000px;
-    outline: 1px solid red;
+    max-height: 2000px;
+    max-width: 1700px;
     text-align: center;
 }
 
@@ -133,15 +135,14 @@ hr {
     overflow: hidden;
     width: 100%;
     max-width: 100%;
-    outline: 1px solid blue;
 }
 
-#me .quick-intro {
-    width: 100%;
-    clear: both;
-    font-weight: bold;
-
+@media screen and (min-width: 1500px) {
+    #me .description {
+        padding: 10vh 0 50px 0;
+    }
 }
+
 
 #me .self-description-block p {
     margin: 10px 0;
@@ -150,15 +151,20 @@ hr {
 }
 
 #me .neofetch-block {
-    width: auto;
+    width: max-content;
     height: auto;
     margin: auto;
-    float: left;
     max-width: 770px;
     background: #1f1f1f;
     padding: 40px;
     overflow: hidden;
     font-family: 'Roboto Mono', monospace;
+}
+
+@media screen and (min-width: 1500px) {
+    #me .neofetch-block {
+        float: left;
+    }
 }
 
 #me .neofetch-image {
@@ -172,13 +178,14 @@ hr {
 #me .neofetch-image img {
     vertical-align: middle;
     max-width: 300px;
+    width: 20vw;
 }
 
 #me .neofetch-content {
     display: inline-block;
     margin: 0 60px;
     padding: 0;
-    /* float: left; */
+    float: left;
     width: auto;
     text-align: left;
     color: #d0d4cf;
@@ -225,10 +232,9 @@ hr {
 #me .self-description-block {
     display: inline-block;
     width: auto;
-    max-width: 45%;
+    max-width: 600px;
     margin-top: 0;
     font-family: 'Montserrat', serif;
-    outline: 1px solid blue;
 }
 
 #me .self-description-block p:nth-last-of-type(2) {
@@ -265,7 +271,20 @@ hr {
     display: none;
 }
 
+@media screen and (max-width: 1000px) {
+    #me .neofetch-image {
+        margin-bottom: 20px;
+    }
+}
 
+@media screen and (max-width: 700px) {
+    #me .neofetch-content {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/*
 @media screen and (max-width: 1000px) {
     #me .me-content {
         width: 95%;
@@ -275,14 +294,18 @@ hr {
         width: 100%;
         max-width: 100%;
     }
-}
+}*/
 
 /**************************************************/
 /******************** Education ********************/
 /**************************************************/
 
 #education {
-    background: #b3b3b3;
+    background: #aeaeae;
+}
+
+#education .education-content {
+    padding-bottom: 50px;
 }
 
 #education .entry {
@@ -418,6 +441,13 @@ hr {
     grid-row-gap: 10px;
 }
 
+#undergrad {
+    grid-template-areas:
+            ". hr hr hr"
+            "undergrad_logo undergrad_title undergrad_title undergrad_timeframe"
+            ". undergrad_courses undergrad_detail ."
+}
+
 @media screen and (max-width: 1000px) {
     .entry {
         display: grid;
@@ -430,7 +460,15 @@ hr {
 
         margin: 0 auto;
     }
+
+    #undergrad {
+        grid-template-areas:
+                "hr hr hr hr"
+                "undergrad_logo undergrad_title undergrad_title undergrad_timeframe"
+                "undergrad_courses undergrad_courses undergrad_detail undergrad_detail"
+    }
 }
+
 @media screen and (max-width: 500px) {
     .entry {
         display: grid;
@@ -441,10 +479,23 @@ hr {
         grid-column-gap: 0;
         grid-row-gap: 5px;
 
+
+        width: 100%;
+        max-width: 100%;
         margin: 0;
+
+        outline: 1px solid red;
+    }
+
+    #undergrad {
+        grid-template-areas:
+                "hr hr"
+                "undergrad_logo undergrad_timeframe"
+                "undergrad_title undergrad_title"
+                "undergrad_courses undergrad_courses"
+                "undergrad_detail undergrad_detail"
     }
 }
-
 
 /** Undergrad Entry **/
 #undergrad hr {
@@ -470,34 +521,6 @@ hr {
 #undergrad .additional-program-info {
     grid-area: undergrad_detail;
 }
-
-#undergrad {
-    grid-template-areas:
-            ". hr hr hr"
-            "undergrad_logo undergrad_title undergrad_title undergrad_timeframe"
-            ". undergrad_courses undergrad_detail ."
-}
-@media screen and (max-width: 1000px) {
-    #undergrad {
-        grid-template-areas:
-                "hr hr hr hr"
-                "undergrad_logo undergrad_title undergrad_title undergrad_timeframe"
-                "undergrad_courses undergrad_courses undergrad_detail undergrad_detail"
-    }
-}
-
-@media screen and (max-width: 500px) {
-    #undergrad {
-        grid-template-areas:
-                "hr hr"
-                "undergrad_logo undergrad_timeframe"
-                "undergrad_title undergrad_title"
-                "undergrad_courses undergrad_courses"
-                "undergrad_detail undergrad_detail"
-    }
-}
-
-
 
 /** Certificate Entry **/
 #certificate hr {
@@ -943,4 +966,3 @@ hr {
 #education #certificate .timeframe .year::after {
     content: " : (expected)";
 }
-
