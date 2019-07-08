@@ -18,9 +18,12 @@
     <link href="https://fonts.googleapis.com/css?family=Vesper+Libre&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <style>
 
+    </style>
 </head>
 <body onload="initializeInfo()">
+    <!--
     <div class="header">
         <div>
             <a ><div class="jump-tag drop-down">Resume</div></a>
@@ -28,66 +31,90 @@
         <div>
             <a href="#me"><div class="jump-tag">Me</div></a>
             <a href="#education"><div class="jump-tag">Education</div></a>
-            <!--
+            <--
             <a href="#skills"><div>Skills</div></a>
-            -->
+            ->
             <a href="#projects"><div class="jump-tag">Projects</div></a>
             <a href="#experience"><div class="jump-tag">Experience</div></a>
             <a href="#current"><div class="jump-tag">Current</div></a>
         </div>
     </div>
+    -->
+
+    <div class="navigation">
+        <div class="section-title">
+            <p>Braden Dubois</p>
+        </div>
+        <div class="content-tags">
+            <a id="me-jump" href="#me"><div>Me</div></a>
+            <a id="education-jump" href="#education"><div>Education</div></a>
+            <!--
+            <a href="#skills"><div>Skills</div></a>
+            -->
+            <a id="projects-jump" href="#projects"><div>Projects</div></a>
+            <a id="experience-jump" href="#experience"><div>Experience</div></a>
+            <a id="current-jump" href="#current"><div>Current</div></a>
+        </div>
+    </div>
     <div class="content">
         <div id="me">
             <div class="me-content">
-                <h1 class="section-title" style="font-size: 40pt">Braden Dubois</h1>
-                <div class="description">
-                    <div class="neofetch-block">
-                        <div class="neofetch-image">
-                            <img src="img/bunny.jpg" alt="placeholder" title="I'm quite handsome.">
-                        </div>
-                        <div class="neofetch-content">
-                            <p class="title">braden<span style="color: #d0d4cf">@</span>earth</p>
-                            <p style="color: #d0d4cf">---------</p>
-                            <p><span class="title attribute">OS</span><span class="value">Saskatchewan, Canada</span></p>
-                            <p><span class="title attribute">Host</span><span class="value">Human Male</span></p>
-                            <p><span class="title attribute">Uptime</span><span class="value" id="uptime"></span></p>
-                            <p><span class="title attribute">Packages</span><span class="value">206</span></p>
-                            <p><span class="title attribute">Resolution</span><span class="value">Corrected to 20/20</span></p>
-                            <p><span class="title attribute">CPU</span><span class="value">Brain</span></p>
-                            <p><span class="title attribute">GPU</span><span class="value">Eye (x2)</span></p>
-                            <p><span class="title attribute">Memory</span><span class="value">Pretty Good</span></p>
+                <!--
+                <div class="quick-intro">
 
-                            <div class="color-row">
-                                <div class="color-box" style="background: #76daff"></div>
-                                <div class="color-box" style="background: #4c6d91"></div>
-                                <div class="color-box" style="background: #d48dd3"></div>
-                                <div class="color-box" style="background: #935d92"></div>
-                                <div class="color-box" style="background: #d0d4cf"></div>
-                                <div class="color-box" style="background: #68d485;"></div>
-                                <div class="color-box" style="background: #505050;"></div>
-                            </div>
-                        </div>
-                        <div class="neofetch-command">
-                            <p><span style="color: #4c6d91">braden</span> <span style="color: #935d92">~/projects/neofetch</span> <span style="color: #658bb5; font-size: 18pt;">> &#x25AE;</span></p>
+                    <p class="descriptionLine" id="description-self">I'm a developer</p>
+                    <p class="descriptionLine" id="description-plus"></p>
+                    <a class="descriptionLine" id="description-appended" hired="false" label=0 loops=0></a>
+                </div>
+                -->
+                <h1 class="section-title" id="me-title" style="height: 50px; padding: auto; margin: 0 auto 30px auto;">&nbsp;</h1>
+                <div class="neofetch-block">
+                    <div class="neofetch-image">
+                        <img src="img/bunny.jpg" alt="placeholder" title="I'm quite handsome.">
+                    </div>
+                    <div class="neofetch-content">
+                        <p><span class="title">braden</span>@<span class="title">earth</span></p>
+                        <p>---------</p>
+                        <p><span class="title attribute">Host</span><span class="value">Saskatchewan, Canada</span></p>
+                        <p><span class="title attribute">Uptime</span><span class="value" id="uptime"></span></p>
+                        <p><span class="title attribute">Education</span><span class="value">University of Saskatchewan</span></p>
+                        <p><span class="title attribute">Major</span>['<span class="value">Computer Science</span>', '<span class="value">Philosophy</span>']</p>
+                        <p><span class="title attribute">Packages</span><span class="value">206</span></p>
+                        <p><span class="title attribute">Resolution</span><span class="value">Corrected to 20/20</span></p>
+                        <p><span class="title attribute">CPU</span><span class="value">Brain</span></p>
+                        <p><span class="title attribute">GPU</span><span class="value">Eye (x2)</span></p>
+                        <br>
+                        <p><span class="title attribute">Resume</span>['<span class="value"><a>pdf</a></span>', '<span class="value"><a>docx</a></span>']</p>
+
+
+                        <div class="color-row">
+                            <div class="color-box" style="background: #76daff"></div>
+                            <div class="color-box" style="background: #4c6d91"></div>
+                            <div class="color-box" style="background: #d48dd3"></div>
+                            <div class="color-box" style="background: #935d92"></div>
+                            <div class="color-box" style="background: #d0d4cf"></div>
+                            <div class="color-box" style="background: #68d485;"></div>
+                            <div class="color-box" style="background: #505050;"></div>
                         </div>
                     </div>
-                    <div class="self-description-block">
-                        <div class="quick-intro">
-                            <!-- TODO - Get the + centered and fixed so the added text doesn't adjust the horizontal alignment -->
-                            <p class="descriptionLine" id="description-self">I'm a developer</p>
-                            <p class="descriptionLine" id="description-plus"></p>
-                            <a class="descriptionLine" id="description-appended" hired="false" label=0 loops=0></a>
-                        </div>
-
-                        <p>I'm currently an undergraduate student at the University of Saskatchewan, studying for a B.Sc. (Double Honours), majoring in Computer Science and Philosophy.</p>
-                        <p>I'm always open to new projects, so feel free to <a href="mailto:braden.dubois@usask.ca">get in touch</a>!</p>
-                        <div class="profile-image-row">
-                            <a href="https://github.com/drab3n/" target="_blank"><img class="profile-image" src="img/github/GitHub-Mark-120px-plus.png" alt="placeholder"></a>
-                            <a href="mailto:braden.dubois@usask.ca" target="_blank"><img class="profile-image" src="img/email.png" alt="placeholder"></a>
-                            <a href="https://www.linkedin.com/in/braden-dubois-2453b8149/" target="_blank"><img class="profile-image" src="img/linkedin.png" alt="placeholder"></a>
-                        </div>
-                        <p>What am I up to <a href="#current">currently</a>?</p>
+                    <div class="neofetch-command">
+                        <p><span style="color: #4c6d91">braden</span> <span style="color: #935d92">~/cool-projects/neofetch</span> <span style="color: #658bb5; font-size: 18pt;">> &#x25AE;</span></p>
                     </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="self-description">
+            <div class="self-description-block">
+                <div>
+                    <p>I'm currently an undergraduate student at the University of Saskatchewan, studying for a B.Sc. (Double Honours), majoring in Computer Science and Philosophy.</p>
+                    <p>I'm always open to new projects, so feel free to <a href="mailto:braden.dubois@usask.ca">get in touch</a>!</p>
+                    <div class="profile-image-row">
+                        <a href="https://github.com/drab3n/" target="_blank"><img class="profile-image" src="img/github/GitHub-Mark-120px-plus.png" alt="placeholder"></a>
+                        <a href="mailto:braden.dubois@usask.ca" target="_blank"><img class="profile-image" src="img/email.png" alt="placeholder"></a>
+                        <a href="https://www.linkedin.com/in/braden-dubois-2453b8149/" target="_blank"><img class="profile-image" src="img/linkedin.png" alt="placeholder"></a>
+                    </div>
+                    <p>What am I up to <a href="#current">currently</a>?</p>
                 </div>
             </div>
         </div>
@@ -411,10 +438,10 @@
     -->
 
     <!-- JavaScript -->
-
-    <script type="text/javascript" src="js/uptimeBirthdate.js"></script>
-    <script type="text/javascript" src="js/incrementTextDisplayed.js"></script>
-    <script type="text/javascript" src="js/initializeInfo.js"></script>
+    <script type="text/javascript" src="js/selfheader.js"></script>
     <script type="text/javascript" src="js/selfDescription.js"></script>
+    <script type="text/javascript" src="js/uptimeBirthdate.js"></script>
+    <script type="text/javascript" src="js/initializeInfo.js"></script>
+
   </body>
 </html>

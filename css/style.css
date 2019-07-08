@@ -7,7 +7,7 @@
 }
 
 a {
-    color: #191eec;
+    /* color: #191eec; */
 }
 
 ul {
@@ -22,6 +22,11 @@ ul li {
 
 hr {
     border-top: 1px solid #8c8b8b;
+}
+
+h1 {
+    font-family: 'Montserrat', serif;
+    font-size: 24pt;
 }
 
 @font-face {
@@ -46,6 +51,7 @@ hr {
     font-weight: 500;
     font-size: 30pt;
     padding: 30px 20px 20px 20px;
+    width: 100%;
 }
 
 .content {
@@ -54,6 +60,10 @@ hr {
 
 .content div {
     padding: 5px;
+}
+
+.content div :first-of-type {
+    padding: 0;
 }
 
 .content div div {
@@ -71,62 +81,118 @@ hr {
 
 /******************** Header ********************/
 
-.header {
-    min-width: 500px;
+.navigation {
     width: 100%;
-
-    background: #3f5a6e;
-    box-shadow: 0 3px 5px #425e73;
-    font-size: 16pt;
-    padding: 0 10px;
-
+    margin: auto;
+    text-align: center;
+    /* background: linear-gradient(35deg, #05386B 25%, #45A29E 45%, #45A29E); */
+    /* background: linear-gradient(to right, whitesmoke 25%, #003152 65%); */
+    background: white;
+    box-shadow: -1px 0 8px black;
+    border-top: 3px solid #353535;
+    border-left: 3px solid #353535;
+    border-bottom: 3px solid #353535;
     display: inline-flex;
     font-family: 'Montserrat', 'Calibri', sans-serif;
-
 }
 
-.header :last-child {
-    margin-left: auto;
-}
-
-.header div {
-    display: flex;
+.navigation .section-title {
     width: max-content;
+    display: inline-flex;
+    margin: auto auto auto 0;
+    padding: 15px;
+    color: #003152;
 }
 
-.header a {
-    color: lightgrey;
-    margin: 10px 10px;
+.section-title {
+    padding: 10px;
 }
 
-.header a :hover {
-    background: #3b5467;
+.content-tags {
+    width: max-content;
+    display: inline-flex;
+    margin: auto 15px auto auto;
+    background: #f6f1f8;
+    color: #858585;
+    border: 1px solid whitesmoke;
+    font-weight: 500;
+    border-radius: 7px;
 }
 
-.jump-tag {
+.content-tags #me-jump :hover {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.content-tags #current-jump :hover {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.content-tags a {
     transition: 0.2s;
-    border-radius: 5px;
+    margin: 0;
+}
+
+.content-tags a :hover {
+    transition: 0.2s;
+}
+
+.content-tags a div {
     width: max-content;
     display: flex;
     padding: 10px;
+    color: #000000;
+}
+
+#me-jump :hover {
+    background: #294855;
+    color: white;
+}
+
+#education-jump :hover {
+    background: #aeaeae;
+    color: white;
+
+}
+
+#projects-jump :hover {
+    background: #205480;
+    color: white;
+}
+
+#experience-jump :hover {
+    background: #181818;
+    color: white;
+}
+
+#current-jump :hover {
+    background: #fcfcfc;
 }
 
 /******************** Me ********************/
 
 #me {
     /* background: #b4bcd3; /* Old */
-    background: linear-gradient(#81a5bf, #557A95);
+    background: #4682B4;
+    padding-top: 40px;
 }
 
 #me .me-content {
     position: relative;
-    min-height: 95vh;
-    max-height: 2000px;
-    max-width: 1700px;
+    /* min-height: 95vh; */
     text-align: center;
+    margin: auto;
+    padding-bottom: 50px;
 }
 
-.me-content .descriptionLine {
+#me .quick-intro {
+    font-family: 'Montserrat', serif;
+    margin: 30px auto;
+    width: max-content;
+}
+
+.quick-intro .descriptionLine {
     display: inline-block;
     text-decoration: none;
 }
@@ -154,18 +220,13 @@ hr {
     width: max-content;
     height: auto;
     margin: auto;
-    max-width: 770px;
     background: #1f1f1f;
     padding: 40px;
     overflow: hidden;
     font-family: 'Roboto Mono', monospace;
+    color: #d0d4cf
 }
 
-@media screen and (min-width: 1500px) {
-    #me .neofetch-block {
-        float: left;
-    }
-}
 
 #me .neofetch-image {
     margin: auto;
@@ -183,13 +244,17 @@ hr {
 
 #me .neofetch-content {
     display: inline-block;
-    margin: 0 60px;
+    margin: 0 0 0 60px;
     padding: 0;
     float: left;
     width: auto;
     text-align: left;
     color: #d0d4cf;
     font-size: 11pt;
+}
+
+.neofetch-content a {
+    color: #956394;
 }
 
 #me .color-row {
@@ -223,16 +288,22 @@ hr {
 
 #me .attribute::after {
     content: ": ";
+    color: #d0d4cf;
 }
 
 #me .value {
     color: #d48dd3;
 }
 
+#me .default {
+    color: #d0d4cf
+}
+
 #me .self-description-block {
-    display: inline-block;
-    width: auto;
-    max-width: 600px;
+    display: block;
+    width: 100%;
+    outline: 1px solid red;
+    max-width: 100%;
     margin-top: 0;
     font-family: 'Montserrat', serif;
 }
@@ -933,8 +1004,8 @@ hr {
 /******************** Hobbies ********************/
 /**************************************************/
 
-#hobbies {
-  background: #BFBFBF;
+#current {
+  background: #fcfcfc;
 }
 
 /**************************************************/
