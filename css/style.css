@@ -62,10 +62,6 @@ h1 {
     padding: 5px;
 }
 
-.content div :first-of-type {
-    padding: 0;
-}
-
 .content div div {
     position: relative;
     margin: auto;
@@ -93,6 +89,9 @@ h1 {
     border-left: 3px solid #353535;
     border-bottom: 3px solid #353535;
     display: inline-flex;
+    position: sticky;
+    top: 0;
+    z-index: 5;
     font-family: 'Montserrat', 'Calibri', sans-serif;
 }
 
@@ -102,6 +101,9 @@ h1 {
     margin: auto auto auto 0;
     padding: 15px;
     color: #003152;
+    font-family: "Nunito", sans-serif;
+    font-size: 20pt;
+    font-weight: 500;
 }
 
 .section-title {
