@@ -1,13 +1,26 @@
+/**********************************************/
+/****************** Defaults ******************/
+/**********************************************/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     scroll-behavior: smooth;
+    /* TODO - Need a Safari-supported scroll */
 }
 
 a {
-    /* color: #191eec; */
+    /* Remove the default red dashed outline on a click */
+    outline: 0;
+}
+
+
+a :active, a :focus {
+    /* Alternative outline on click/focus */
+    /* Style but *do not* remove - accessibility */
+    outline: 1px solid lightblue;
 }
 
 ul {
@@ -28,6 +41,10 @@ h1 {
     font-family: 'Montserrat', serif;
     font-size: 24pt;
 }
+
+/**********************************************/
+/******************* Fonts ********************/
+/**********************************************/
 
 @font-face {
     font-family: 'BebasNeue-Bold';
@@ -62,10 +79,10 @@ h1 {
     padding: 5px;
 }
 
+/* The "content" block of each section */
 .content div div {
     position: relative;
     margin: auto;
-    width: 95%;
     max-width: 1300px;
 }
 
@@ -75,7 +92,9 @@ h1 {
     }
 }
 
-/******************** Variables ********************/
+/**********************************************/
+/***************** Variables ******************/
+/**********************************************/
 
 :root {
     --me-section-color: #4682B4;
@@ -84,9 +103,37 @@ h1 {
     --projects-section-color: #205480;
     --experience-section-color: #181818;
     --current-section-color: #fcfcfc;
+
+    /* TODO - Get more specific colors */
+    /*********** Project Tag Colors ***********/
+    --java-color: deepskyblue;
+    --objective-c-color: white;
+    --python-color: darkblue;
+    --javascript-color: yellow;
+    --html-color: orange;
+    --css-color: orange;
+    --php-color: rebeccapurple;
+    --shell-color: grey;
+    --git-color: orangered;
 }
 
+
+/**************************************************/
+/******************* Changeable *******************/
+/**************************************************/
+
+#education #undergrad .timeframe .year::after {
+    content: " : (expected)";
+}
+
+
+#education #certificate .timeframe .year::after {
+    content: " : (expected)";
+}
+
+/************************************************/
 /******************** Header ********************/
+/************************************************/
 
 .navigation {
     width: 100%;
@@ -104,6 +151,12 @@ h1 {
     top: 0;
     z-index: 5;
     font-family: 'Montserrat', 'Calibri', sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+    .navigation {
+        overflow: scroll;
+    }
 }
 
 .navigation .section-title {
@@ -194,8 +247,10 @@ h1 {
 
 #me .section-title {
     font-family: "Montserrat", serif;
+    height: 50px;
     font-size: 20pt;
     padding: 10px;
+    margin: 0 auto 30px auto;
 }
 
 #me .me-content {
@@ -701,6 +756,7 @@ h1 {
 /******************** Skills ********************/
 /**************************************************/
 
+/*
 #skills {
     background: #2d8bb7;
 }
@@ -719,7 +775,7 @@ h1 {
     max-width: 500px;
     width: 100%;
 
-    border: 1px solid #222222; /* */
+    border: 1px solid #222222;
     box-shadow: 0 2px 4px black;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -799,6 +855,8 @@ h1 {
     }
 }
 
+*/
+
 /**************************************************/
 /******************** Projects ********************/
 /**************************************************/
@@ -808,23 +866,20 @@ h1 {
     background: var(--projects-section-color); /* New - from 'Skills' section */
 }
 
-#projects .section-title {
-    color: #e4e4e4;
-}
 
 #projects .projects-content {
     width: 80%;
 }
 
-#projects .project-grid {
-    margin-top: 40px;
-    display: inline-flex;
+#projects .section-title {
+    color: #e4e4e4;
 }
 
-#projects .project-grid * {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+#projects .project-grid {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #projects .project-entry {
@@ -841,7 +896,7 @@ h1 {
     padding: 0;
 }
 
-/* Title */
+/********************** Title *********************/
 
 #projects .project-title-info {
     text-align: center;
@@ -849,7 +904,12 @@ h1 {
     padding: 15px;
     overflow: hidden;
     position: relative;
-    display: block;
+    display: flex;
+    justify-content: space-between;
+}
+
+#projects .project-title-info div {
+    padding: 0;
 }
 
 #projects .project-title-info a {
@@ -861,42 +921,46 @@ h1 {
 
 #projects .project-title-info a img {
     border-radius: 10%;
+    width: 48px;
+    height: 48px;
+    margin: auto;
 }
 
 #projects .project-title-info p + a {
     float: right;
 }
 
-#projects .project-title-info .external-project-link-image {
-    width: 48px;
-    height: 48px;
-    margin: auto;
-}
 
-#projects .project-title-info p {
-    padding: auto;
+.project-title-info p {
     font-weight: 500;
     font-size: 18pt;
-    text-align: center;
-    width: max-content;
     display: inline;
 }
 
-/* *************/
-
-.external-project-link {
-    position: relative;
+.project-title-info .title {
+    margin: auto 20px;
 }
 
-.cover-image {
-    top: 0;
-    left: 0;
-    position: absolute;
-    border-top: 1px solid grey;
+/**************** Detail Section ******************/
+
+#projects .external-project-link {
+    position: relative;
+    padding: 0;
+}
+
+#projects .cover-image {
+    padding: 0;
     background: lightgrey;
 }
 
+#projects .cover-image img {
+    width: 100%;
+    outline: 1px solid black;
+}
+
+
 #projects .hidden-content {
+    float: left;
     top: 0;
     left: 0;
     width: 100%;
@@ -907,28 +971,27 @@ h1 {
     transition: .1s;
     opacity: 0;
     text-align: center;
-    vertical-align: middle;
+
+    display: none;
 }
 
 #projects .hidden-content:hover {
     opacity: .8;
     transition: .2s;
-    height: 100%;
     background: #e8f3f9;
     color: black;
-    position: absolute;
     padding: 60px 10px;
 }
 
-#projects .hidden-content img {
-    max-width: 75px;
-    border-radius: 5px;
-}
-
 #projects .project-description {
+    position: relative;
     padding: 7px;
     background: lightgrey;
+    margin: 0;
 }
+
+
+/****************** Project Tags *******************/
 
 #projects .project-tags {
     height: auto;
@@ -957,89 +1020,44 @@ h1 {
 /*********** Project Tag Colors ***********/
 
 #projects .java-tag {
-    border-color: deepskyblue;
+    border-color: var(--java-color);
 }
 
 #projects .objective-c-tag {
-    border-color: white;
+    border-color: var(--objective-c-color);
 }
 
 #projects .python-tag {
-    border-color: darkblue;
+    border-color: var(--python-color);
 }
 
 #projects .javascript-tag {
-    border-color: yellow;
+    border-color: var(--javascript-color);
 }
 
 #projects .html-tag {
-    border-color: orange;
+    border-color: var(--html-color);
 }
 
 #projects .css-tag {
-    border-color: orange;
+    border-color: var(--css-color);
 }
 
 #projects .php-tag {
-    border-color: rebeccapurple    ;
+    border-color: var(--php-color);
 }
 
 #projects .shell-tag {
-    border-color: grey;
+    border-color: var(--shell-color);
 }
 
 #projects .git-tag {
-    border-color: orangered;
+    border-color: var(--git-color);
 }
 
-/*********** Project Grid Tags ***********/
-
-#projects #personal-website {
-    grid-area: personal_website;
-}
-
-#projects #tic-tac-toe {
-    grid-area: tic_tac_toe;
-}
-
-#projects #sandbox {
-    grid-area: sandbox;
-}
-
-#projects .project-grid {
-
-    width: 100%;
-    display: grid;
-    margin: 25px auto;
-
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(1, auto);
-
-    grid-row-gap: 70px;
-
-    grid-template-areas:
-            "personal_website tic_tac_toe sandbox"
-}
-
-@media screen and (max-width: 500px) {
-    #projects .project-grid {
-        width: 90%;
-
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, auto);
-        grid-row-gap: 15px;
-        margin: 0;
-
-        grid-template-areas:
-                "personal_website"
-                "tic-tac-toe"
-                "sandbox"
-    }
-}
 
 /**************************************************/
-/******************** Experience ********************/
+/******************** Experience ******************/
 /**************************************************/
 
 #experience {
@@ -1073,17 +1091,4 @@ h1 {
     font-family: 'Aileron-Regular', serif;
     margin: auto;
     padding: 20px 10px;
-}
-
-/**************************************************/
-/******************* Changeable *******************/
-/**************************************************/
-
-#education #undergrad .timeframe .year::after {
-    content: " : (expected)";
-}
-
-
-#education #certificate .timeframe .year::after {
-    content: " : (expected)";
 }

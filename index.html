@@ -43,6 +43,7 @@
     </div>
     -->
 
+    <!-- Navigation / Header -->
     <div class="navigation">
         <div class="section-title">
             <p>Braden Dubois</p>
@@ -58,8 +59,12 @@
             <a id="current-jump" href="#current"><div>Current</div></a>
         </div>
     </div>
+
+    <!-- main content -->
     <div class="content">
-        <div id="me">
+
+        <!-- Me -->
+        <div id="me" class="section-anchor">
             <div class="me-content">
                 <!--
                 <div class="quick-intro">
@@ -69,7 +74,7 @@
                     <a class="descriptionLine" id="description-appended" hired="false" label=0 loops=0></a>
                 </div>
                 -->
-                <h1 class="section-title" id="me-title" style="height: 50px; padding: auto; margin: 0 auto 30px auto;">&nbsp;</h1>
+                <h1 class="section-title" id="me-title">&nbsp;</h1>
                 <div class="neofetch-block">
                     <div class="neofetch-image">
                         <img src="img/bunny.jpg" alt="placeholder" title="I'm quite handsome.">
@@ -107,6 +112,8 @@
 
             </div>
         </div>
+
+        <!-- Self-Description -->
         <div id="self-description">
             <div class="self-description-block">
                 <p>I'm currently an undergraduate student at the University of Saskatchewan, studying for a B.Sc. (Double Honours), majoring in Computer Science and Philosophy.</p>
@@ -118,12 +125,15 @@
                 <a href="https://www.linkedin.com/in/braden-dubois-2453b8149/" target="_blank"><img class="profile-image" src="img/linkedin.png" alt="placeholder"></a>
             </div>
         </div>
+
+        <!-- Education -->
         <div id="education">
             <div class="education-content">
                 <h1 class="section-title">Education</h1>
 
                 <!-- Undergraduate entry -->
                 <div class="entry" id="undergrad">
+
                     <hr>
                     <!-- header information : logo, title, timeframe -->
                     <div class="entry-logo entry-item">
@@ -141,8 +151,11 @@
                         <p class="location">Saskatoon, SK</p>
                     </div>
 
+                    <!-- courses -->
                     <div class="courses entry-item">
                         <p class="education-content-title">Relevant Courses</p>
+
+                        <!-- CS -->
                         <p class="major">Computer Science</p>
                         <ul>
                             <li>Mathematical Logic and Computing</li>
@@ -159,7 +172,10 @@
                             <li>Full-Stack Web Programming</li>
                             <li>Machine Learning</li>
                         </ul>
+
                         <br>
+
+                        <!-- Philosophy -->
                         <p class="major">Philosophy</p>
                         <ul>
                             <li>Professional Ethics in CS</li>
@@ -173,7 +189,10 @@
                         </ul>
                     </div>
 
+                    <!-- detailed info -->
                     <div class="additional-program-info entry-item">
+
+                        <!-- blurb -->
                         <p class="education-content-title">Undergraduate Info</p>
                         <ul>
                             <li class="description-info" style="text-align: justify;">
@@ -182,10 +201,11 @@
                                 development, and maintenance skills involved in software development.
                                 Majoring in Philosophy has given me has changed my understanding of technology,
                                 obligations, ethics, improved my communications skills, and changed how I develop projects.
-                            </li>
+                            </li>personal
                         </ul>
                         <br>
 
+                        <!-- work at/during Undergrad -->
                         <p class="education-content-title">Work</p>
                         <ul>
                             <li class="description-info">Work as a TA for labs</li>
@@ -193,8 +213,10 @@
                         </ul>
                         <br>
 
+                        <!-- volunteer work at/during Undergrad -->
                         <p class="education-content-title">Volunteer Experience</p>
                         <ul>
+                            <!-- ASSU information -->
                             <li class="description-info">Arts and Science Students' Union</li>
                             <ul>
                                 <li class="description-info-detail">Technical Manager</li>
@@ -205,9 +227,12 @@
                     </div>
                 </div>
 
-                <!-- one specific entry : undergrad, certificate, masters, etc -->
+                <!-- Certificate entry -->
                 <div class="entry" id="certificate">
+
                     <hr>
+
+                    <!-- header information : logo, title, timeframe -->
                     <div class="entry-logo entry-item" >
                         <a href="https://www.usask.ca" target="_blank">
                             <img src="img/usask.jpg" alt="logo of the University of Saskatchewan">
@@ -223,6 +248,7 @@
                         <p class="location">Saskatoon, SK</p>
                     </div>
 
+                    <!-- courses -->
                     <div class="courses entry-item">
                         <p class="education-content-title" style="margin-bottom: 3px;">Courses</p>
                         <ul>
@@ -234,6 +260,7 @@
                         </ul>
                     </div>
 
+                    <!-- blurb -->
                     <div class="additional-program-info entry-item">
                         <p class="education-content-title">Certificate Info</p>
                         <ul>
@@ -243,7 +270,10 @@
                 </div>
             </div>
         </div>
-        <!-- Can maybe rework into my 'current' section
+
+        <!-- Removed - Potentially reworking into "Current" section
+        <! -- Skills -->
+        <!--
         <div id="skills">
             <div class="skills-content">
                 <h1 class="section-title">Skills</h1>
@@ -283,69 +313,115 @@
           </div>
         </div>
         -->
-        <div id="projects">
+
+        <!-- Projects -->
+        <div id="projects" class="section-anchor">
             <div class="projects-content">
                 <h1 class="section-title">Projects</h1>
 
+                <!-- all projects -->
                 <div class="project-grid">
 
                     <!-- Personal Website -->
                     <div class="project-entry" id="personal-website">
+
+                        <!-- project main info -->
                         <div class="project-info">
+
+                            <!-- title info & links -->
                             <div class="project-title-info">
-                                <a href="https://github.com/drab3n/PersonalWebsite">
-                                    <img class="external-project-link-image" src="img/github/GitHub-Mark-Light-64px.png" alt="GitHub logo">
-                                </a>
-                                <p class="project-title">Personal Website</p>
-                                <a href="https://bradendubois.dev">
-                                    <img class="external-project-link-image" src="img/external_link.png" alt="External link icon">
-                                </a>
+
+                                <!-- source code link -->
+                                <div>
+                                    <a href="https://github.com/drab3n/PersonalWebsite">
+                                        <img class="external-project-link-image" src="img/github/GitHub-Mark-Light-64px.png" alt="GitHub logo">
+                                    </a>
+                                </div>
+                                <!-- title of project -->
+                                <div class="title">
+                                    <p>Personal Website</p>
+                                </div>
+                                <!-- view result link -->
+                                <div>
+                                    <a href="https://bradendubois.dev" target="_blank">
+                                        <img class="external-project-link-image" src="img/external_link.png" alt="External link icon">
+                                    </a>
+                                </div>
                             </div>
+
+                            <!-- extra project description -->
                             <div class="external-project-link">
+                                <!-- cover image for project -->
                                 <div class="cover-image">
                                     <img src="img/bunny.jpg" alt="placeholder">
                                 </div>
+                                <!-- content shown on hover -->
                                 <div class="hidden-content">
-                                    <!-- TODO change to include github logo as the clickable part -->
                                     <p>More description here</p>
                                 </div>
                             </div>
+
+                            <!-- primary project description -->
                             <div class="project-description">
                                 <p>Description of the project</p>
                             </div>
                         </div>
+
+                        <!-- tags below the project -->
                         <div class="project-tags">
                             <p class="project-tag html-tag">HTML</p>
-                            <p class="project-tag css-tag">(S)CSS</p>
+                            <p class="project-tag css-tag">CSS</p>
                             <p class="project-tag javascript-tag">JS</p>
                             <p class="project-tag git-tag">Git</p>
                         </div>
                     </div>
 
-                    <!-- Tic-Tac-Toe project -->
+                    <!-- Tic Tac Toe -->
                     <div class="project-entry" id="tic-tac-toe">
+
+                        <!-- project main info -->
                         <div class="project-info">
+
+                            <!-- title info & links -->
                             <div class="project-title-info">
-                                <a>
-                                    <img class="external-project-link-image" src="img/github/GitHub-Mark-Light-64px.png" alt="GitHub logo">
-                                </a>
-                                <p class="project-title">Tic-Tac-Toe Bot</p>
-                                <a>
-                                    <img class="external-project-link-image" src="img/external_link.png" alt="External link icon">
-                                </a>
+
+                                <!-- source code link -->
+                                <div>
+                                    <a href="https://github.com/drab3n/TicTacToeBot">
+                                        <img class="external-project-link-image" src="img/github/GitHub-Mark-Light-64px.png" alt="GitHub logo">
+                                    </a>
+                                </div>
+                                <!-- title of project -->
+                                <div class="title">
+                                    <p>Tic-Tac-Toe Bot</p>
+                                </div>
+                                <!-- view result link -->
+                                <div>
+                                    <a>
+                                        <img class="external-project-link-image" src="img/external_link.png" alt="External link icon" style="display: none;">
+                                    </a>
+                                </div>
                             </div>
+
+                            <!-- extra project description -->
                             <div class="external-project-link">
+                                <!-- cover image for project -->
                                 <div class="cover-image">
                                     <img src="img/bunny.jpg" alt="placeholder">
                                 </div>
+                                <!-- content shown on hover -->
                                 <div class="hidden-content">
                                     <p>More description here</p>
                                 </div>
                             </div>
+
+                            <!-- primary project description -->
                             <div class="project-description">
                                 <p>Description of the project</p>
                             </div>
                         </div>
+
+                        <!-- tags below the project -->
                         <div class="project-tags">
                             <p class="project-tag java-tag">Java</p>
                             <p class="project-tag git-tag">Git</p>
@@ -354,42 +430,61 @@
 
                     <!-- Coding Sandbox -->
                     <div class="project-entry" id="sandbox">
+
+                        <!-- project main info -->
                         <div class="project-info">
+
+                            <!-- title info & links -->
                             <div class="project-title-info">
-                                <a>
-                                    <img class="external-project-link-image" src="img/github/GitHub-Mark-Light-64px.png" alt="GitHub logo">
-                                </a>
-                                <p class="project-title">Coding Sandbox</p>
-                                <a>
-                                    <img class="external-project-link-image" src="img/external_link.png" alt="External link icon">
-                                </a>
+
+                                <!-- source code link -->
+                                <div>
+                                    <a href="https://github.com/drab3n/CodingSandbox">
+                                        <img class="external-project-link-image" src="img/github/GitHub-Mark-Light-64px.png" alt="GitHub logo">
+                                    </a>
+                                </div>
+                                <!-- title of project -->
+                                <div class="title">
+                                    <p>Coding Sandbox</p>
+                                </div>
+                                <!-- view result link -->
+                                <div>
+                                    <a>
+                                        <img class="external-project-link-image" src="img/external_link.png" alt="External link icon" style="display: none;">
+                                    </a>
+                                </div>
                             </div>
+
+                            <!-- extra project description -->
                             <div class="external-project-link">
+                                <!-- cover image for project -->
                                 <div class="cover-image">
                                     <img src="img/bunny.jpg" alt="placeholder">
                                 </div>
+                                <!-- content shown on hover -->
                                 <div class="hidden-content">
                                     <p>More description here</p>
                                 </div>
                             </div>
+
+                            <!-- primary project description -->
                             <div class="project-description">
                                 <p>Description of the project</p>
                             </div>
                         </div>
+
+                        <!-- tags below the project -->
                         <div class="project-tags">
                             <p class="project-tag java-tag">Java</p>
                             <p class="project-tag python-tag">Python 3</p>
                         </div>
                     </div>
-
-
-
                 </div>
 
 
             </div>
         </div>
-        <div id="experience">
+        <div id="experience" class="section-anchor">
             <div class="experience-content">
                 <h1 class="section-title">Experience</h1>
 
@@ -413,7 +508,7 @@
 
             </div>
         </div>
-        <div id="current">
+        <div id="current" class="section-anchor">
             <div class="current-content">
                 <h1 class="section-title">Current</h1>
 
@@ -449,7 +544,6 @@
 
     <!-- JavaScript -->
     <script type="text/javascript" src="js/selfheader.js"></script>
-    <script type="text/javascript" src="js/selfDescription.js"></script>
     <script type="text/javascript" src="js/uptimeBirthdate.js"></script>
     <script type="text/javascript" src="js/initializeInfo.js"></script>
 
