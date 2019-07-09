@@ -75,6 +75,17 @@ h1 {
     }
 }
 
+/******************** Variables ********************/
+
+:root {
+    --me-section-color: #4682B4;
+    --self-description-section-color: #e4eafd;
+    --education-section-color: #aeaeae;
+    --projects-section-color: #205480;
+    --experience-section-color: #181818;
+    --current-section-color: #fcfcfc;
+}
+
 /******************** Header ********************/
 
 .navigation {
@@ -107,7 +118,7 @@ h1 {
 }
 
 .section-title {
-    padding: 10px;
+    padding: 30px 10px 10px 10px;
 }
 
 .content-tags {
@@ -148,39 +159,47 @@ h1 {
 }
 
 #me-jump :hover {
-    background: #294855;
+    background: var(--me-section-color);
     color: white;
 }
 
 #education-jump :hover {
-    background: #aeaeae;
+    background: var(--education-section-color);
     color: white;
 
 }
 
 #projects-jump :hover {
-    background: #205480;
+    background: var(--projects-section-color);
     color: white;
 }
 
 #experience-jump :hover {
-    background: #181818;
+    background: var(--experience-section-color);
     color: white;
 }
 
 #current-jump :hover {
-    background: #fcfcfc;
+    background: var(--current-section-color);
 }
 
+/********************************************/
 /******************** Me ********************/
+/********************************************/
 
 #me {
     /* background: #b4bcd3; /* Old */
-    background: #4682B4;
-    padding-top: 40px;
+    background: var(--me-section-color);
+}
+
+#me .section-title {
+    font-family: "Montserrat", serif;
+    font-size: 20pt;
+    padding: 10px;
 }
 
 #me .me-content {
+    padding-top: 10px;
     position: relative;
     /* min-height: 95vh; */
     text-align: center;
@@ -256,7 +275,7 @@ h1 {
 }
 
 .neofetch-content a {
-    color: #956394;
+    color: #68d485;
 }
 
 #me .color-row {
@@ -328,18 +347,6 @@ h1 {
     display: inline;"
 }
 
-.profile-image {
-    border-radius: 50%;
-    max-width: 12vw;
-    max-height: 120px;
-    display: inline-block;
-    margin: 0 10px;
-}
-
-.profile-image-row :last-child {
-    border-radius: 0;
-}
-
 #resetButton {
     display: none;
 }
@@ -370,11 +377,52 @@ h1 {
 }*/
 
 /**************************************************/
-/******************** Education ********************/
+/**************** Self-Description ****************/
+/**************************************************/
+
+#self-description {
+    background: var(--self-description-section-color);
+    font-family: 'Montserrat', serif;
+    display: flex;
+    flex-direction: column;
+}
+
+#self-description .self-description-block {
+    width: 75%;
+    max-width: 1000px;
+    text-align: center;
+    padding: 25px;
+}
+
+#self-description p {
+    padding: 15px;
+}
+
+#self-description .profile-image-row {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+}
+
+#self-description .profile-image {
+    border-radius: 50%;
+    max-width: 12vw;
+    max-height: 120px;
+    display: inline-block;
+    margin: 0 10px 30px 10px;
+}
+
+#self-description .profile-image-row :last-child {
+    border-radius: 0;
+}
+
+/**************************************************/
+/******************** Education *******************/
 /**************************************************/
 
 #education {
-    background: #aeaeae;
+    background: var(--education-section-color);
 }
 
 #education .education-content {
@@ -510,7 +558,7 @@ h1 {
     grid-template-columns: 130px 4fr 3fr auto;
     grid-template-rows: 3vh auto auto;
 
-    grid-column-gap: 5px;
+    grid-column-gap: 10px;
     grid-row-gap: 10px;
 }
 
@@ -757,11 +805,11 @@ h1 {
 
 #projects {
     /* background: #494949; /* Old */
-    background: #205480; /* New - from 'Skills' section */
+    background: var(--projects-section-color); /* New - from 'Skills' section */
 }
 
 #projects .section-title {
-    color: lightgrey;
+    color: #e4e4e4;
 }
 
 #projects .projects-content {
@@ -995,7 +1043,7 @@ h1 {
 /**************************************************/
 
 #experience {
-    background: #181818;
+    background: var(--experience-section-color);
 }
 
 #experience .section-title {
@@ -1007,7 +1055,7 @@ h1 {
 /**************************************************/
 
 #current {
-  background: #fcfcfc;
+  background: var(--current-section-color);
 }
 
 /**************************************************/
