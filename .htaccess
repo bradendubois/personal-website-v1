@@ -1,0 +1,11 @@
+Options +MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+RedirectMatch 301 ^/css/$ /index.html
+RedirectMatch 301 ^/doc/$ /index.html
+RedirectMatch 301 ^/fonts/$ /index.html
+RedirectMatch 301 ^/img/$ /index.html
+RedirectMatch 301 ^/js/$ /index.html

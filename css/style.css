@@ -97,6 +97,7 @@ h1 {
 /**********************************************/
 
 :root {
+    --header-color: #FEFEFE;
     --me-section-color: #4682B4;
     --self-description-section-color: #e4eafd;
     --education-section-color: #aeaeae;
@@ -141,15 +142,13 @@ h1 {
     text-align: center;
     /* background: linear-gradient(35deg, #05386B 25%, #45A29E 45%, #45A29E); */
     /* background: linear-gradient(to right, whitesmoke 25%, #003152 65%); */
-    background: white;
+    background: var(--header-color);
     box-shadow: -1px 0 8px black;
     border-top: 3px solid #353535;
     border-left: 3px solid #353535;
     border-bottom: 3px solid #353535;
     display: inline-flex;
-    position: sticky;
-    top: 0;
-    z-index: 5;
+    z-index: 0;
     font-family: 'Montserrat', 'Calibri', sans-serif;
 }
 
@@ -160,7 +159,6 @@ h1 {
 }
 
 .navigation .section-title {
-    width: max-content;
     display: inline-flex;
     margin: auto auto auto 0;
     padding: 15px;
@@ -168,11 +166,34 @@ h1 {
     font-family: "Nunito", sans-serif;
     font-size: 20pt;
     font-weight: 500;
+
+    background: var(--header-color);
+    width: 100%;
 }
 
 .section-title {
     padding: 30px 10px 10px 10px;
 }
+
+.fixed-header-tags {
+    width: max-content;
+    padding: 10px 5px 10px 30px;
+    background: var(--header-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 25;
+    transition: 0.2s;
+    border-top: 3px solid #353535;
+}
+
+#fixed-header-tags.fixed-header-tags.free {
+    border-top: 3px solid #353535;
+    border-left: 3px solid #353535;
+    border-bottom: 3px solid #353535;
+    border-bottom-left-radius: 14px;
+}
+
 
 .content-tags {
     width: max-content;
@@ -180,19 +201,10 @@ h1 {
     margin: auto 15px auto auto;
     background: #f6f1f8;
     color: #858585;
-    border: 1px solid whitesmoke;
+    border: 3px solid whitesmoke;
     font-weight: 500;
     border-radius: 7px;
-}
-
-.content-tags #me-jump :hover {
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
-}
-
-.content-tags #current-jump :hover {
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px;
+    z-index: 5;
 }
 
 .content-tags a {
@@ -211,29 +223,50 @@ h1 {
     color: #000000;
 }
 
-#me-jump :hover {
+
+#me-jump:hover, #me-jump.closest {
     background: var(--me-section-color);
     color: white;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
 }
 
-#education-jump :hover {
+#me-jump:hover div, #me-jump.closest div {
+    color: white;
+}
+
+#education-jump:hover, #education-jump.closest {
     background: var(--education-section-color);
-    color: white;
-
 }
 
-#projects-jump :hover {
+#education-jump:hover div, #education-jump.closest div {
+    color: white;
+}
+
+#projects-jump:hover, #projects-jump.closest {
     background: var(--projects-section-color);
+}
+
+#projects-jump:hover div, #projects-jump.closest div {
     color: white;
 }
 
-#experience-jump :hover {
+#experience-jump:hover, #experience-jump.closest {
     background: var(--experience-section-color);
+}
+
+#experience-jump:hover div, #experience-jump.closest div {
     color: white;
 }
 
-#current-jump :hover {
+#current-jump:hover, #current-jump.closest {
     background: var(--current-section-color);
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+#current-jump.closest div {
+
 }
 
 /********************************************/
@@ -868,7 +901,8 @@ h1 {
 
 
 #projects .projects-content {
-    width: 80%;
+    width: 85%;
+    max-width: 100%;
 }
 
 #projects .section-title {
@@ -876,9 +910,12 @@ h1 {
 }
 
 #projects .project-grid {
+    width: 100%;
+    max-width: 1400px;
     margin-top: 40px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -887,7 +924,7 @@ h1 {
     font-size: 14pt;
     width: 100%;
     max-width: 400px;
-    margin: 0 auto;
+    margin: 0 30px 50px 30px;
 }
 
 #projects .project-info {
@@ -900,7 +937,7 @@ h1 {
 
 #projects .project-title-info {
     text-align: center;
-    background: #b4b5b8;
+    background: #dadbdf;
     padding: 15px;
     overflow: hidden;
     position: relative;
@@ -941,6 +978,18 @@ h1 {
     margin: auto 20px;
 }
 
+
+/* easily add a tag to mark that a project is ongoing! */
+#projects .ongoing .title p:after {
+    display: block;
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+    font-size: 10pt;
+    font-weight: 400;
+    content: "this project is ongoing!";
+}
+
 /**************** Detail Section ******************/
 
 #projects .external-project-link {
@@ -950,7 +999,7 @@ h1 {
 
 #projects .cover-image {
     padding: 0;
-    background: lightgrey;
+    background: #fefefe;
 }
 
 #projects .cover-image img {
@@ -978,16 +1027,19 @@ h1 {
 #projects .hidden-content:hover {
     opacity: .8;
     transition: .2s;
-    background: #e8f3f9;
+    background: #fefefe;
     color: black;
     padding: 60px 10px;
 }
 
 #projects .project-description {
     position: relative;
-    padding: 7px;
-    background: lightgrey;
+    padding: 10px;
+    background: #fefefe;
     margin: 0;
+    font-size: 11pt;
+    text-align: justify;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 
@@ -1003,17 +1055,17 @@ h1 {
     border: 1px solid;
     overflow: hidden;
     float: left;
-    padding: 6px 10px 5px 10px;
+    padding: 5px 10px;
     vertical-align: middle;
     border-radius: 5px;
     background: #585858;
     color: #b4bcd3;
-    margin: 5px 4px;
-    font-size: 12pt;
+    margin: 7px 4px;
+    font-size: 9pt;
     width: max-content;
     text-transform: uppercase;
-    font-family: 'BebasNeue-Regular', serif;
-    font-weight: 600;
+    font-family: 'Noto Sans JP', serif;
+    font-weight: 400;
 }
 
 

@@ -11,6 +11,8 @@
     <!-- icon used for page tab -->
     <link rel="icon" href="img/bunny.jpg">
 
+    <!-- TODO - Massively reduce reliance on Google Fonts -->
+
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
@@ -18,13 +20,15 @@
     <link href="https://fonts.googleapis.com/css?family=Vesper+Libre&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700i&display=swap" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
     <style>
 
     </style>
 </head>
-<body onload="initializeInfo()">
+<body onload="initializeInfo()" onscroll="detectFocus()">
     <!--
     <div class="header">
         <div>
@@ -44,19 +48,21 @@
     -->
 
     <!-- Navigation / Header -->
-    <div class="navigation">
+    <div id="navigation" class="navigation">
         <div class="section-title">
             <p>Braden Dubois</p>
         </div>
-        <div class="content-tags">
-            <a id="me-jump" href="#me"><div>Me</div></a>
-            <a id="education-jump" href="#education"><div>Education</div></a>
-            <!--
-            <a href="#skills"><div>Skills</div></a>
-            -->
-            <a id="projects-jump" href="#projects"><div>Projects</div></a>
-            <a id="experience-jump" href="#experience"><div>Experience</div></a>
-            <a id="current-jump" href="#current"><div>Current</div></a>
+        <div id="fixed-header-tags" class="fixed-header-tags">
+            <div class="content-tags">
+                <a id="me-jump" href="#me"><div>Me</div></a>
+                <a id="education-jump" href="#education"><div>Education</div></a>
+                <!--
+                <a href="#skills"><div>Skills</div></a>
+                -->
+                <a id="projects-jump" href="#projects"><div>Projects</div></a>
+                <a id="experience-jump" href="#experience"><div>Experience</div></a>
+                <a id="current-jump" href="#current"><div>Current</div></a>
+            </div>
         </div>
     </div>
 
@@ -199,9 +205,9 @@
                                 Majored in both Computer Science and Philosophy under a B.Sc. (with High Honours).
                                 Computer Science has given me the theoretical and practical understanding of design,
                                 development, and maintenance skills involved in software development.
-                                Majoring in Philosophy has given me has changed my understanding of technology,
-                                obligations, ethics, improved my communications skills, and changed how I develop projects.
-                            </li>personal
+                                Majoring in Philosophy has given me an improved understanding of technology, obligations,
+                                and ethics, improved my communications skills, and changed how I develop projects.
+                            </li>
                         </ul>
                         <br>
 
@@ -323,7 +329,7 @@
                 <div class="project-grid">
 
                     <!-- Personal Website -->
-                    <div class="project-entry" id="personal-website">
+                    <div class="project-entry ongoing" id="personal-website">
 
                         <!-- project main info -->
                         <div class="project-info">
@@ -357,13 +363,17 @@
                                 </div>
                                 <!-- content shown on hover -->
                                 <div class="hidden-content">
-                                    <p>More description here</p>
+                                    <p></p>
                                 </div>
                             </div>
 
                             <!-- primary project description -->
                             <div class="project-description">
-                                <p>Description of the project</p>
+                                <p>Made my own personal website (this one!),
+                                    writing my own HTML / CSS / JavaScript.
+                                    This is the first website work I've done since high school, so I'm
+                                    happy with how it turned out. This was also my first foray into
+                                    learning a bit of JavaScript.</p>
                             </div>
                         </div>
 
@@ -377,7 +387,7 @@
                     </div>
 
                     <!-- Tic Tac Toe -->
-                    <div class="project-entry" id="tic-tac-toe">
+                    <div class="project-entry ongoing" id="tic-tac-toe">
 
                         <!-- project main info -->
                         <div class="project-info">
@@ -407,7 +417,7 @@
                             <div class="external-project-link">
                                 <!-- cover image for project -->
                                 <div class="cover-image">
-                                    <img src="img/bunny.jpg" alt="placeholder">
+                                    <img src="img/tictactoe.png" alt="a photo of a game of Tic Tac Toe">
                                 </div>
                                 <!-- content shown on hover -->
                                 <div class="hidden-content">
@@ -484,6 +494,8 @@
 
             </div>
         </div>
+
+        <!-- Experience -->
         <div id="experience" class="section-anchor">
             <div class="experience-content">
                 <h1 class="section-title">Experience</h1>
@@ -508,6 +520,8 @@
 
             </div>
         </div>
+
+        <!-- Current -->
         <div id="current" class="section-anchor">
             <div class="current-content">
                 <h1 class="section-title">Current</h1>
@@ -534,7 +548,7 @@
         </div>
         <!-- TODO - Add a contact me / buy me a coffee/sponsor thing section -->
     </div>
-    <div class="footer">
+    <div id="footer" class="footer">
         <p>&copy;2019 - designed and developed by <a href="https://www.bradendubois.dev">me</a></p>
     </div>
 
@@ -543,6 +557,7 @@
     -->
 
     <!-- JavaScript -->
+    <script type="text/javascript" src="js/focussedWindow.js"></script>
     <script type="text/javascript" src="js/selfheader.js"></script>
     <script type="text/javascript" src="js/uptimeBirthdate.js"></script>
     <script type="text/javascript" src="js/initializeInfo.js"></script>

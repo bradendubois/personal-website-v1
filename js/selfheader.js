@@ -55,11 +55,11 @@ function inner_selfheader(first_message_slice, second_message_slice, second_mess
             */
             /* NOTE - Invocation is delayed by "delay" as well as an amount proportional to the length of the word shown,
                 as a longer word takes more time to delete, and with a fixed amount of a delay the deletion and word writing
-                can occur at the same time
+                can occur at the same time, as well as a pause where there is no message being written
             */
             setTimeout(function() {
                 inner_selfheader(first_message_slice, 0, ((second_message_index + 1) % second_message_set.length));
-            }, ((second_message_set[second_message_index].length * 150) + delay));
+            }, ((second_message_set[second_message_index].length * 40) + delay + 1000));
         }
     }
 }
@@ -75,6 +75,6 @@ function deleteAppendedMessage() {
         // "Delete" one character
         messageArea.innerHTML = messageArea.innerHTML.slice(0, messageArea.innerHTML.length - 1);
         // Call again in 50ms
-        setTimeout(deleteAppendedMessage, 50);
+        setTimeout(deleteAppendedMessage, 40);
     }
 }
