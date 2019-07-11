@@ -28,7 +28,7 @@
 
     </style>
 </head>
-<body onload="initializeInfo()" onscroll="detectFocus()">
+<body onload="initializeInfo()" onscroll="detectFocus()"> <!-- ; hideNavBar()"-->
     <!--
     <div class="header">
         <div>
@@ -154,7 +154,7 @@
                     </div>
                     <div class="timeframe entry-item">
                         <p class="year">2017-2022</p>
-                        <p class="location">Saskatoon, SK</p>
+                        <div class="location">Saskatoon, SK</div>
                     </div>
 
                     <!-- courses -->
@@ -361,15 +361,16 @@
                                 <div class="cover-image">
                                     <img src="img/bunny.jpg" alt="placeholder">
                                 </div>
-                                <!-- content shown on hover -->
+                                <!-- content shown on hover
                                 <div class="hidden-content">
                                     <p></p>
                                 </div>
+                                -->
                             </div>
 
                             <!-- primary project description -->
                             <div class="project-description">
-                                <p>Made my own personal website (this one!),
+                                <p><span class="short">Made my own personal website</span> (this one!),
                                     writing my own HTML / CSS / JavaScript.
                                     This is the first website work I've done since high school, so I'm
                                     happy with how it turned out. This was also my first foray into
@@ -419,15 +420,19 @@
                                 <div class="cover-image">
                                     <img src="img/tictactoe.png" alt="a photo of a game of Tic Tac Toe">
                                 </div>
-                                <!-- content shown on hover -->
+                                <!-- content shown on hover
                                 <div class="hidden-content">
                                     <p>More description here</p>
                                 </div>
+                                -->
                             </div>
 
                             <!-- primary project description -->
                             <div class="project-description">
-                                <p>Description of the project</p>
+                                <p><span class="short">A look at basic approaches to AI</span>, using the
+                                    classic game of Tic-Tac-Toe. This project was done before taking a Computer
+                                    Science course on AI at uSask.
+                                </p>
                             </div>
                         </div>
 
@@ -479,7 +484,9 @@
 
                             <!-- primary project description -->
                             <div class="project-description">
-                                <p>Description of the project</p>
+                                <p><span class="short">Used to test or learn different ideas</span> that
+                                    I turn into examples for myself or others to learn from or use.
+                                </p>
                             </div>
                         </div>
 
@@ -523,8 +530,45 @@
 
         <!-- Current -->
         <div id="current" class="section-anchor">
+            <h1 class="section-title">Current</h1>
             <div class="current-content">
-                <h1 class="section-title">Current</h1>
+                <div class="currently">
+
+                </div>
+                <div class="recent-work">
+                    <p>Recently, I've been working primarily with the following:</p>
+                    <div class="recent-tech">
+                        <ul>
+                            <li>Java</li>
+                            <li>HTML 5</li>
+                            <li>CSS 3</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <ul>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="close-out">
+                    <div class="links">
+                        <div class="contact-links">
+                            <a href="https://github.com/drab3n/" target="_blank"><img class="profile-image" src="img/github/GitHub-Mark-120px-plus.png" alt="placeholder"></a>
+                            <a href="mailto:braden.dubois@usask.ca" target="_blank"><img class="profile-image" src="img/email.png" alt="placeholder"></a>
+                            <a href="https://www.linkedin.com/in/braden-dubois-2453b8149/" target="_blank"><img class="profile-image" src="img/linkedin.png" alt="placeholder"></a>
+                        </div>
+                        <div class="support-links">
+                            <div id="ko-fi">
+                                <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
+                                <script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#46b798', 'A0A3YX1A');kofiwidget2.draw();</script>
+                            </div>
+                            <div id="bmc">
+                                <a href="https://www.buymeacoffee.com/VwCmOBgAk" target="_blank">
+                                    <img src="img/bmc-button.png" alt="'Buy Me a Coffee' Logo">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <br>
                 <br>
@@ -557,8 +601,13 @@
     -->
 
     <!-- JavaScript -->
+
+    <!--
+    <script type="text/javascript" src="js/hideNavBar.js"></script>
+    -->
+
     <script type="text/javascript" src="js/focussedWindow.js"></script>
-    <script type="text/javascript" src="js/selfheader.js"></script>
+    <script type="text/javascript" src="js/selfHeader.js"></script>
     <script type="text/javascript" src="js/uptimeBirthdate.js"></script>
     <script type="text/javascript" src="js/initializeInfo.js"></script>
 

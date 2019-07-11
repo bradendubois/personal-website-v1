@@ -8,7 +8,8 @@ function initializeInfo() {
   //document.getElementById("description-appended").setAttribute("style", "color: transparent");
   setTimeout(changeDescriptorLabels, 1500);
   displayUptime();
-  setTimeout(selfheader, 100)
+  detectFocus();
+  setTimeout(selfHeader, 100)
   //window.onload = initializeInfo;
 }
 

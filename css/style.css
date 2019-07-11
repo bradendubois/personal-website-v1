@@ -11,6 +11,10 @@
     /* TODO - Need a Safari-supported scroll */
 }
 
+body  {
+
+}
+
 a {
     /* Remove the default red dashed outline on a click */
     outline: 0;
@@ -19,7 +23,7 @@ a {
 
 a :active, a :focus {
     /* Alternative outline on click/focus */
-    /* Style but *do not* remove - accessibility */
+    /* Style but also *do not* remove - accessibility */
     outline: 1px solid lightblue;
 }
 
@@ -100,7 +104,7 @@ h1 {
     --header-color: #FEFEFE;
     --me-section-color: #4682B4;
     --self-description-section-color: #e4eafd;
-    --education-section-color: #aeaeae;
+    --education-section-color: #cdcdcd;
     --projects-section-color: #205480;
     --experience-section-color: #181818;
     --current-section-color: #fcfcfc;
@@ -194,6 +198,9 @@ h1 {
     border-bottom-left-radius: 14px;
 }
 
+#fixed-header-tags.fixed-header-tags.inactive {
+    right: -500px;
+}
 
 .content-tags {
     width: max-content;
@@ -223,10 +230,8 @@ h1 {
     color: #000000;
 }
 
-
 #me-jump:hover, #me-jump.closest {
     background: var(--me-section-color);
-    color: white;
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
 }
@@ -263,10 +268,6 @@ h1 {
     background: var(--current-section-color);
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
-}
-
-#current-jump.closest div {
-
 }
 
 /********************************************/
@@ -578,9 +579,8 @@ h1 {
 
 #education .location {
     font-weight: 400;
-    margin: 0;
     font-style: italic;
-    padding: 0;
+    margin-top: 5px;
 }
 
 #education {
@@ -899,7 +899,6 @@ h1 {
     background: var(--projects-section-color); /* New - from 'Skills' section */
 }
 
-
 #projects .projects-content {
     width: 85%;
     max-width: 100%;
@@ -933,8 +932,22 @@ h1 {
     padding: 0;
 }
 
-/********************** Title *********************/
 
+@media screen and (max-width: 1000px) {
+    #projects .projects-content {
+        width: 100%;
+    }
+
+    #projects .project-grid {
+        width: 100%;
+    }
+
+    #projects .project-entry {
+        margin: 10px auto;
+    }
+}
+
+/********************** Title *********************/
 #projects .project-title-info {
     text-align: center;
     background: #dadbdf;
@@ -943,6 +956,7 @@ h1 {
     position: relative;
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 #projects .project-title-info div {
@@ -992,14 +1006,17 @@ h1 {
 
 /**************** Detail Section ******************/
 
-#projects .external-project-link {
+#projects .project-info .external-project-link {
     position: relative;
     padding: 0;
+    margin: 0;
+    display: block;
 }
 
 #projects .cover-image {
     padding: 0;
     background: #fefefe;
+    width: 100%;
 }
 
 #projects .cover-image img {
@@ -1037,11 +1054,14 @@ h1 {
     padding: 10px;
     background: #fefefe;
     margin: 0;
-    font-size: 11pt;
+    font-size: 10pt;
     text-align: justify;
     font-family: 'Noto Sans JP', sans-serif;
 }
 
+#projects .project-description .short {
+    font-weight: 600;
+}
 
 /****************** Project Tags *******************/
 
@@ -1125,7 +1145,45 @@ h1 {
 /**************************************************/
 
 #current {
-  background: var(--current-section-color);
+    background: var(--current-section-color);
+}
+
+.current-content {
+    display: flex;
+}
+
+.current-content * {
+    outline: 1px solid red;
+}
+
+.close-out {
+    display: block;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+}
+
+.contact-links {
+    display: block;
+    margin-right: 30px;
+}
+
+.contact-links img {
+    max-height: 64px;
+    display: block;
+}
+
+.support-links {
+    padding: 10px;
+    margin: 0;
+    display: block;
+}
+
+#ko-fi, #bmc {
+    margin: 5px auto;
+    width: max-content;
 }
 
 /**************************************************/

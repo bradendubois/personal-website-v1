@@ -1,5 +1,5 @@
 /* Only function that should ever be called from outside this file */
-function selfheader() {
+function selfHeader() {
     // Call the inner function with starting values : start of first and second messages, first message in second set
     inner_selfheader(0, 0, 0);
 }
