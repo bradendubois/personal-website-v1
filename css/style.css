@@ -1270,6 +1270,7 @@ h1 {
 
 .footer p {
     font-family: 'Aileron-Regular', serif;
+    border-top: 1px solid black;
     margin: auto;
     padding: 20px 10px;
 }
