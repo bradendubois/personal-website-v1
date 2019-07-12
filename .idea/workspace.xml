@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08ac6b01-7eb0-49a0-8723-850f8756e803" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/bmc-button.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/hideNavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PersonalWebsite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PersonalWebsite.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/braden.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/braden.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/focussedWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/focussedWindow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/initializeInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/initializeInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/selfheader.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/selfHeader.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,8 +22,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="523">
-                  <caret line="487" column="99" selection-start-line="487" selection-start-column="99" selection-end-line="487" selection-end-column="99" />
+                <state relative-caret-position="436">
+                  <caret line="537" column="52" lean-forward="true" selection-start-line="537" selection-start-column="52" selection-end-line="537" selection-end-column="52" />
                   <folding>
                     <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
@@ -43,6 +35,7 @@
                     <element signature="n#div#0;n#div#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#div#1;n#div#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#div#1;n#div#0;n#div#2;n#div#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" />
                   </folding>
                 </state>
               </provider>
@@ -70,7 +63,7 @@
             <entry file="file://$PROJECT_DIR$/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="638">
-                  <caret line="872" column="38" selection-start-line="872" selection-start-column="38" selection-end-line="872" selection-end-column="38" />
+                  <caret line="873" column="38" selection-start-line="873" selection-start-column="38" selection-end-line="873" selection-end-column="38" />
                 </state>
               </provider>
             </entry>
@@ -82,17 +75,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="106" column="10" lean-forward="true" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="10" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/focussedWindow.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="987">
-                  <caret line="47" selection-start-line="47" selection-end-line="47" />
+                <state relative-caret-position="223">
+                  <caret line="1231" column="16" selection-start-line="1231" selection-start-column="16" selection-end-line="1231" selection-end-column="16" />
                 </state>
               </provider>
             </entry>
@@ -148,12 +132,12 @@
         <option value="$PROJECT_DIR$/js/uptimeBirthdate.js" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/js/selfheader.js" />
-        <option value="$PROJECT_DIR$/js/focussedWindow.js" />
         <option value="$PROJECT_DIR$/js/hideNavBar.js" />
         <option value="$PROJECT_DIR$/selfheader.js" />
         <option value="$PROJECT_DIR$/js/initializeInfo.js" />
-        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/js/focussedWindow.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
@@ -288,7 +272,7 @@
       <workItem from="1562690024454" duration="13873000" />
       <workItem from="1562711879957" duration="3297000" />
       <workItem from="1562715888115" duration="20377000" />
-      <workItem from="1562811848797" duration="10155000" />
+      <workItem from="1562811848797" duration="17969000" />
     </task>
     <task id="LOCAL-00001" summary="Changed some placeholder images">
       <created>1562295971827</created>
@@ -301,7 +285,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205404000" />
+    <option name="totallyTimeSpent" value="213218000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1920" height="1054" extended-state="6" />
@@ -380,13 +364,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/focussedWindow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="987">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/hideNavBar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -401,17 +378,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
+    <entry file="file://$PROJECT_DIR$/js/focussedWindow.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="872" column="38" selection-start-line="872" selection-start-column="38" selection-end-line="872" selection-end-column="38" />
+        <state relative-caret-position="454">
+          <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="487" column="99" selection-start-line="487" selection-start-column="99" selection-end-line="487" selection-end-column="99" />
+        <state relative-caret-position="436">
+          <caret line="537" column="52" lean-forward="true" selection-start-line="537" selection-start-column="52" selection-end-line="537" selection-end-column="52" />
           <folding>
             <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" />
@@ -423,7 +400,15 @@
             <element signature="n#div#0;n#div#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#2;n#div#0;n#div#5;n#div#1;n#body#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="1231" column="16" selection-start-line="1231" selection-start-column="16" selection-end-line="1231" selection-end-column="16" />
         </state>
       </provider>
     </entry>

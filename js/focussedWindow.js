@@ -59,7 +59,7 @@ function detectFocus() {
 
     // Override - If the bottom of the last window is visible, override to highlight the bottom
     // in case it is a large screen but the user has scrolled to the bottom
-    if (innerHeight - bottoms[buttons.length-1] >= 0) {
+    if (innerHeight - bottoms[bottoms.length-1] >= 0) {
         closestIndex = buttons.length-1;
     }
 

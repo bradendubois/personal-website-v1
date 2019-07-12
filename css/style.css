@@ -103,11 +103,12 @@ h1 {
 :root {
     --header-color: #FEFEFE;
     --me-section-color: #4682B4;
-    --self-description-section-color: #e4eafd;
+    --self-description-section-color: #f5f9fe;
     --education-section-color: #cdcdcd;
     --projects-section-color: #205480;
     --experience-section-color: #181818;
     --current-section-color: #fcfcfc;
+    --footer-color: darkgrey;
 
     /* TODO - Get more specific colors */
     /*********** Project Tag Colors ***********/
@@ -1146,15 +1147,94 @@ h1 {
 
 #current {
     background: var(--current-section-color);
-}
-
-.current-content {
     display: flex;
+    min-height: 500px;
+    padding: 0;
+    position: relative;
+    align-content: flex-start;
 }
 
-.current-content * {
+
+#current * {
+
+}
+
+#current .vertical-tag {
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    display: inline-flex;
+    flex-flow: column;
+    position: relative;
     outline: 1px solid red;
 }
+
+
+#current .vertical-tag .hr-div {
+    flex-grow: 1;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.vertical-tag .hr-div hr {
+    width: 1px;
+    height: 100%;
+}
+
+
+.vertical-tag .hr-div {
+    border-left: 5px solid linear-gradient(var(--experience-section-color), black);
+}
+
+
+.vertical-tag .hr-div + .contact-links {
+    border: 5px solid linear-gradient(to bottom, black, var(--footer-color));
+}
+
+.contact-links {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-links a {
+    max-width: max-content;
+}
+
+.contact-links img {
+    max-height: 64px;
+    display: block;
+    margin: 0;
+}
+
+.contact-links :first-child a {
+    margin-top: 0;
+}
+
+.contact-links :last-child a {
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+#current .current-content {
+    position: relative;
+    display: inline-block;
+    margin: 0 20% 0 0;
+    width: 80%;
+    max-width: 100%;
+    flex: 1;
+}
+
 
 .close-out {
     display: block;
@@ -1165,15 +1245,6 @@ h1 {
     display: flex;
 }
 
-.contact-links {
-    display: block;
-    margin-right: 30px;
-}
-
-.contact-links img {
-    max-height: 64px;
-    display: block;
-}
 
 .support-links {
     padding: 10px;
@@ -1191,7 +1262,7 @@ h1 {
 /**************************************************/
 
 .footer {
-    background: darkgrey;
+    background: var(--footer-color);
     text-align: center;
     margin: auto;
     padding: auto;
