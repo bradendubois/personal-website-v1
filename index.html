@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 
     <title>Braden Dubois | Developer</title>
 
@@ -11,42 +11,18 @@
     <!-- icon used for page tab -->
     <link rel="icon" href="img/bunny.jpg">
 
-    <!-- TODO - Massively reduce reliance on Google Fonts -->
-
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Scope+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Vesper+Libre&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700i&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+    <!-- to apply any temporary styling -->
     <style>
 
     </style>
 </head>
 <body onload="initializeInfo()" onscroll="detectFocus()"> <!-- ; hideNavBar()"-->
-    <!--
-    <div class="header">
-        <div>
-            <a ><div class="jump-tag drop-down">Resume</div></a>
-        </div>
-        <div>
-            <a href="#me"><div class="jump-tag">Me</div></a>
-            <a href="#education"><div class="jump-tag">Education</div></a>
-            <--
-            <a href="#skills"><div>Skills</div></a>
-            ->
-            <a href="#projects"><div class="jump-tag">Projects</div></a>
-            <a href="#experience"><div class="jump-tag">Experience</div></a>
-            <a href="#current"><div class="jump-tag">Current</div></a>
-        </div>
-    </div>
-    -->
-
     <!-- Navigation / Header -->
     <div id="navigation" class="navigation">
         <div class="section-title">
@@ -86,31 +62,31 @@
                         <img src="img/bunny.jpg" alt="placeholder" title="I'm quite handsome.">
                     </div>
                     <div class="neofetch-content">
-                        <p><span class="title">braden</span>@<span class="title">earth</span></p>
-                        <p>---------</p>
-                        <p><span class="title attribute">Host</span><span class="value">Saskatchewan, Canada</span></p>
-                        <!-- Uptime is calculated using  uptimeBirthdate.js -->
-                        <p><span class="title attribute">Uptime</span><span class="value" id="uptime"></span></p>
-                        <p><span class="title attribute">Education</span><span class="value">University of Saskatchewan</span></p>
-                        <p><span class="title attribute">Major</span>['<span class="value">Computer Science</span>', '<span class="value">Philosophy</span>']</p>
-                        <p><span class="title attribute">Packages</span><span class="value">206</span></p>
-                        <p><span class="title attribute">Resolution</span><span class="value">Corrected to 20/20</span></p>
-                        <p><span class="title attribute">CPU</span><span class="value">Brain</span></p>
-                        <p><span class="title attribute">GPU</span><span class="value">Eye (x2)</span></p>
-                        <br>
-                        <p><span class="title attribute">Resume</span>['<span class="value"><a href="doc/resume.pdf" target="_blank">pdf</a></span>', '<span class="value"><a href="doc/resume.docx" target="_blank">docx</a></span>']</p>
+                    <p><span class="title">braden</span>@<span class="title">earth</span></p>
+                    <p>---------</p>
+                    <p><span class="title attribute">Host</span><span class="value">Saskatchewan, Canada</span></p>
+                    <!-- Uptime is calculated using  uptimeBirthdate.js -->
+                    <p><span class="title attribute">Uptime</span><span class="value" id="uptime"></span></p>
+                    <p><span class="title attribute">Education</span><span class="value">University of Saskatchewan</span></p>
+                    <p><span class="title attribute">Major</span>['<span class="value">Computer Science</span>', '<span class="value">Philosophy</span>']</p>
+                    <p><span class="title attribute">Packages</span><span class="value">206</span></p>
+                    <p><span class="title attribute">Resolution</span><span class="value">Corrected to 20/20</span></p>
+                    <p><span class="title attribute">CPU</span><span class="value">Brain</span></p>
+                    <p><span class="title attribute">GPU</span><span class="value">Eye (x2)</span></p>
+                    <br>
+                    <p><span class="title attribute">Resume</span>['<span class="value"><a href="doc/resume.pdf" target="_blank">pdf</a></span>', '<span class="value"><a href="doc/resume.docx" target="_blank">docx</a></span>']</p>
 
 
-                        <div class="color-row">
-                            <div class="color-box" style="background: #76daff"></div>
-                            <div class="color-box" style="background: #4c6d91"></div>
-                            <div class="color-box" style="background: #d48dd3"></div>
-                            <div class="color-box" style="background: #935d92"></div>
-                            <div class="color-box" style="background: #d0d4cf"></div>
-                            <div class="color-box" style="background: #68d485;"></div>
-                            <div class="color-box" style="background: #505050;"></div>
-                        </div>
+                    <div class="color-row">
+                        <div class="color-box" style="background: #76daff"></div>
+                        <div class="color-box" style="background: #4c6d91"></div>
+                        <div class="color-box" style="background: #d48dd3"></div>
+                        <div class="color-box" style="background: #935d92"></div>
+                        <div class="color-box" style="background: #d0d4cf"></div>
+                        <div class="color-box" style="background: #68d485;"></div>
+                        <div class="color-box" style="background: #505050;"></div>
                     </div>
+                </div>
                     <div class="neofetch-command">
                         <p><span style="color: #4c6d91">braden</span> <span style="color: #935d92">~/cool-projects/neofetch</span> <span style="color: #658bb5; font-size: 18pt;">> &#x25AE;</span></p>
                     </div>
@@ -124,11 +100,6 @@
             <div class="self-description-block">
                 <p>I'm currently an undergraduate student at the University of Saskatchewan, studying for a B.Sc. (Double Honours), majoring in Computer Science and Philosophy.</p>
                 <p>I'm always open to new projects, so feel free to <a href="mailto:braden.dubois@usask.ca">get in touch</a>!</p>
-            </div>
-            <div class="profile-image-row">
-                <a href="https://github.com/drab3n/" target="_blank"><img class="profile-image" src="img/github/GitHub-Mark-120px-plus.png" alt="placeholder"></a>
-                <a href="mailto:braden.dubois@usask.ca" target="_blank"><img class="profile-image" src="img/email.png" alt="placeholder"></a>
-                <a href="https://www.linkedin.com/in/braden-dubois-2453b8149/" target="_blank"><img class="profile-image" src="img/linkedin.png" alt="placeholder"></a>
             </div>
         </div>
 
@@ -229,6 +200,13 @@
                                 <li class="description-info-detail">Sept. 2017 - Present</li>
                                 <li class="description-info-detail">Maintained the ASSU's website (Cascade CMS) and general technical support.</li>
                             </ul>
+
+                            <!-- Digitized information -->
+                            <li class="description-info">Digitized</li>
+                            <ul>
+                                <li class="description-info-detail">Game Workshop Volunteer</li>
+                                <li class="description-info-detail">May 2019</li>
+                            </ul>
                         </ul>
                     </div>
                 </div>
@@ -276,49 +254,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Removed - Potentially reworking into "Current" section
-        <! -- Skills -->
-        <!--
-        <div id="skills">
-            <div class="skills-content">
-                <h1 class="section-title">Skills</h1>
-                <div id="skills-grid">
-                    <div class="skill-box" id="languages">
-                        <div class="skill-title">Languages</div>
-                        <ul class="skill-description">
-                            <li id="java">Java</li>
-                            <li id="objective-c">Objective-C</li>
-                            <li id="python-3">Python 3</li>
-                            <li id="javascript">JavaScript</li>
-                            <li id="html5">HTML 5 & CSS 3</li>
-                            <li id="php">PHP</li>
-                            <li id="shell">Shell Scripting</li>
-                        </ul>
-                    </div>
-                    <div class="skill-box" id="technologies">
-                        <div class="skill-title">Technologies</div>
-                        <ul class="skill-description">
-                            <li></li>
-                        </ul>
-                    </div>
-                    <div class="skill-box" id="concepts">
-                        <div class="skill-title">Concepts</div>
-                        <ul class="skill-description">
-                            <li>Object-Oriented Programming</li>
-                            <li>Front-End Web Design</li>
-                        </ul>
-                    </div>
-                    <div class="skill-box" id="soft-skills">
-                        <div class="skill-title">Soft Skills</div>
-                        <ul class="skill-description">
-                            <li>Time-Management</li>
-                        </ul>
-                    </div>
-                </div>
-          </div>
-        </div>
-        -->
 
         <!-- Projects -->
         <div id="projects" class="section-anchor">
@@ -460,7 +395,7 @@
                                 </div>
                                 <!-- title of project -->
                                 <div class="title">
-                                    <p>Coding Sandbox</p>
+                                    <p>Sandbox</p>
                                 </div>
                                 <!-- view result link -->
                                 <div>
@@ -476,6 +411,7 @@
                                 <div class="cover-image">
                                     <img src="img/bunny.jpg" alt="placeholder">
                                 </div>
+
                                 <!-- content shown on hover -->
                                 <div class="hidden-content">
                                     <p>More description here</p>
@@ -485,7 +421,8 @@
                             <!-- primary project description -->
                             <div class="project-description">
                                 <p><span class="short">Used to test or learn different ideas</span> that
-                                    I turn into examples for myself or others to learn from or use.
+                                    I turn into examples for myself or others to learn from or use. Also
+                                    contains <span class="short">many mini-projects</span>.
                                 </p>
                             </div>
                         </div>
@@ -566,8 +503,9 @@
                     <div class="links">
                         <div class="support-links">
                             <div id="ko-fi">
-                                <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
-                                <script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#46b798', 'A0A3YX1A');kofiwidget2.draw();</script>
+                                <a href='https://ko-fi.com/A0A3YX1A' target='_blank'>
+                                    <img height='36' style='border:0;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' />
+                                </a>
                             </div>
                             <div id="bmc">
                                 <a href="https://www.buymeacoffee.com/VwCmOBgAk" target="_blank">
