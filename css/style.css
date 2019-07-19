@@ -231,7 +231,7 @@ h1 {
 
     .navigation .section-title {
         display: block;
-        margin: 5px auto 0 auto;
+        margin: 0 auto;
         padding: 15px;
         color: #003152;
         font-family: "Nunito", sans-serif;
@@ -391,12 +391,6 @@ h1 {
     color: #d0d4cf
 }
 
-#me .neofetch-main {
-    padding: 0;
-    display: block;
-    outline: 5px solid blue;
-}
-
 #me .neofetch-image {
     margin: 0 auto auto 0;
     padding: 0;
@@ -506,7 +500,7 @@ h1 {
     }
 
     #me .neofetch-command {
-        font-size: 10pt;
+        font-size: 8pt;
     }
 
     #me .color-box {
@@ -544,6 +538,12 @@ h1 {
     max-width: 800px;
     text-align: center;
     margin: 25px auto;
+}
+
+@media screen and (max-width: 800px) {
+    #self-description .self-description-block {
+        max-width: 90%;
+    }
 }
 
 #self-description p {
@@ -713,6 +713,31 @@ h1 {
     grid-row-gap: 10px;
 }
 
+/** Undergrad Entry **/
+#undergrad hr {
+    grid-area: hr;
+}
+
+#undergrad .entry-logo {
+    grid-area: undergrad_logo;
+}
+
+#undergrad .entry-title {
+    grid-area: undergrad_title;
+}
+
+#undergrad .timeframe {
+    grid-area: undergrad_timeframe;
+}
+
+#undergrad .courses {
+    grid-area: undergrad_courses;
+}
+
+#undergrad .additional-program-info {
+    grid-area: undergrad_detail;
+}
+
 #undergrad {
     grid-template-areas:
             ". hr hr hr"
@@ -721,7 +746,7 @@ h1 {
 }
 
 @media screen and (max-width: 1000px) {
-    .entry {
+    #education .entry {
         display: grid;
 
         grid-template-columns: repeat(4, auto);
@@ -733,7 +758,7 @@ h1 {
         margin: 0 auto;
     }
 
-    .entry * {
+    #education .entry * {
         /* outline: 1px solid red; /* */
     }
 
@@ -791,7 +816,23 @@ h1 {
 }
 
 @media screen and (max-width: 500px) {
-    .entry {
+
+    #education {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #education .education-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #education .entry {
+        width: 90%;
+        max-width: 90%;
+    }
+
+    #education .entry {
         display: grid;
 
         grid-template-columns: 1fr 1fr;
@@ -801,52 +842,34 @@ h1 {
         grid-row-gap: 5px;
 
 
+        align-items: center;
         width: 100%;
         max-width: 100%;
         margin: 0;
+        padding: 0;
 
-        outline: 1px solid red;
+
     }
 
-    .entry * {
+    #education .entry-title {
         margin: 0;
-        padding: 0;
+    }
+
+    #education .additional-program-info {
+        padding-right: 20px;
     }
 
     #undergrad {
         grid-template-areas:
                 "hr hr"
                 "undergrad_logo undergrad_timeframe"
-                "undergrad_title undergrad_title"
+                "undergrad_title undergrad_title "
                 "undergrad_courses undergrad_courses"
                 "undergrad_detail undergrad_detail"
     }
 }
 
-/** Undergrad Entry **/
-#undergrad hr {
-    grid-area: hr;
-}
 
-#undergrad .entry-logo {
-    grid-area: undergrad_logo;
-}
-
-#undergrad .entry-title {
-    grid-area: undergrad_title;
-}
-
-#undergrad .timeframe {
-    grid-area: undergrad_timeframe;
-}
-
-#undergrad .courses {
-    grid-area: undergrad_courses;
-}
-
-#undergrad .additional-program-info {
-    grid-area: undergrad_detail;
-}
 
 /** Certificate Entry **/
 #certificate hr {
@@ -956,7 +979,7 @@ h1 {
 
     #projects .project-entry {
         padding: 0;
-        margin: 10px auto;
+        margin: 0 auto 40px auto;
     }
 
     #projects .project-entry * {
@@ -1185,7 +1208,7 @@ h1 {
     display: inline-flex;
     flex-flow: column;
     position: relative;
-    outline: 1px solid red;
+    /* outline: 1px solid red; /* */
 }
 
 
@@ -1218,6 +1241,20 @@ h1 {
 
 .contact-links a {
     max-width: max-content;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    padding-left: 0;
+    margin: 20px auto;
+}
+
+
+.contact-links a :hover {
+    padding-left: 40px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
 }
 
 .contact-links img {
