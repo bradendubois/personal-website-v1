@@ -99,7 +99,7 @@ h1 {
     --header-color: #FEFEFE;
     --me-section-color: #4682B4;
     --self-description-section-color: #f5f9fe;
-    --education-section-color: #cdcdcd;
+    --education-section-color: #e8e8e8;
     --projects-section-color: #205480;
     --experience-section-color: #181818;
     --current-section-color: #fcfcfc;
@@ -951,6 +951,10 @@ h1 {
 
 /* Project Collections */
 
+.trove-container .project-tags {
+    padding: 0 auto;
+}
+
 #projects .project-collections {
     width: 100%;
     display: flex;
@@ -1172,15 +1176,14 @@ h1 {
 /****************** Project Tags *******************/
 
 #projects .project-tags {
+    width: 100%;
+    display: flex;
     height: auto;
-    padding: 0 6px;
-    overflow: hidden;
+    padding: 0 auto;
 }
 
 #projects .project-tag {
     border: 1px solid;
-    overflow: hidden;
-    float: left;
     padding: 5px 10px;
     vertical-align: middle;
     border-radius: 5px;

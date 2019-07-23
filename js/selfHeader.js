@@ -44,7 +44,7 @@ function inner_selfheader(first_message_slice, second_message_slice, second_mess
 
             // If the last message is the one shown (typically "...") the delay is increased
             if (second_message_index === second_message_set.length - 1) {
-                delay = 10000;
+                delay = 5000;
             }
 
             // Begin deleting the word after the delay

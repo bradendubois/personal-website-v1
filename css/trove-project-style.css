@@ -1,0 +1,56 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+div {
+    padding: 0;
+    margin: 0;
+}
+
+div a p {
+    padding: 0;
+    margin: 0;
+    font-size: 16pt;
+}
+
+div a, div a:active, div a:visited {
+    color: #292929;
+    text-decoration: none;
+}
+
+#gitLink {
+    padding: 0;
+    width: max-content;
+    border: 2px solid #292929;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #292929;
+    transition: 0.2s;
+}
+
+#gitLink:hover {
+    background: #efefef;
+}
+
+#gitLink a div {
+    padding: 10px;
+}
+
+div p {
+    color: #292929;
+}
+
+h1 {
+    font-size: 16pt;
+}
+
+p {
+    font-size: 12pt;
+}
+
+li {
+    font-size: 12pt;
+}
