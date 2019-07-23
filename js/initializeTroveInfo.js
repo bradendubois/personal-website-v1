@@ -26,7 +26,7 @@ function initializeTrove() {
 
 function loadProject(projectName) {
     let projectWindow = document.getElementById("projectWindow");
-    let projectFileName = "trove/" + projectName + ".html";
+    let projectFileName = "doc/trove/" + projectName + ".html";
     projectWindow.innerHTML = '<object data="'+ projectFileName +'" />';
 }
 

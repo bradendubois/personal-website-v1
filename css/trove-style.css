@@ -50,6 +50,10 @@ a :active, a :focus {
     margin: 0 0 10px 0;
 }
 
+#header div. #header a {
+    outline: none;
+}
+
 #header a {
     padding: 0;
     margin: 0;
