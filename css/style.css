@@ -978,9 +978,14 @@ h1 {
     color: black;
 }
 
+#projects .project-collections a:active {
+    color: black;
+}
+
 #projects .collection {
     font-family: 'Nunito', sans-serif;
     border: none;
+    color: black;
 }
 
 #projects .collection-title {

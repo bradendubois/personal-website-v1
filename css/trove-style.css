@@ -11,125 +11,35 @@
     /* TODO - Need a Safari-supported scroll */
 }
 
-body  {
-
-}
-
 a {
     /* Remove the default red dashed outline on a click */
     outline: 0;
 }
 
+/* TODO - Change to dim the box on click/hover */
 
 a :active, a :focus {
     /* Alternative outline on click/focus */
     /* Style but also *do not* remove - accessibility */
-    outline: 1px solid lightblue;
-}
-
-ul {
-    margin-left: 10px;
-    list-style-type: circle;
-    list-style-position: inside;
-}
-
-ul li {
-    padding-left: 10px;
-}
-
-hr {
-    border-top: 1px solid #8c8b8b;
-}
-
-h1 {
-    font-family: 'Montserrat', serif;
-    font-size: 24pt;
-}
-
-/**********************************************/
-/******************* Fonts ********************/
-/**********************************************/
-
-@font-face {
-    font-family: 'BebasNeue-Regular';
-    src:url("../fonts/bebas_neue/BebasNeue-Regular.ttf");
-}
-
-@font-face {
-    font-family: 'Aileron-Regular';
-    src:url("../fonts/aileron/Aileron-Regular.otf");
-}
-
-.section-title {
-    text-align: center;
-    /* font-family: 'Vesper Libre', serif; */
-    font-family: 'BebasNeue-Regular', 'Times New Roman', sans-serif;
-    font-weight: 500;
-    font-size: 30pt;
-    padding: 30px 20px 20px 20px;
-    width: 100%;
-}
-
-.content {
-
-}
-
-.content div {
-    padding: 5px;
-}
-
-/* The "content" block of each section */
-.content div div {
-    position: relative;
-    margin: auto;
-    max-width: 1300px;
-}
-
-@media(max-width: 1000px) {
-    .content div div {
-        width: 95%;
-    }
-}
-
-/**********************************************/
-/***************** Variables ******************/
-/**********************************************/
-
-:root {
-    --header-color: #FEFEFE;
-    --me-section-color: #4682B4;
-    --self-description-section-color: #f5f9fe;
-    --education-section-color: #cdcdcd;
-    --projects-section-color: #205480;
-    --experience-section-color: #181818;
-    --current-section-color: #fcfcfc;
-    --footer-color: #f0f0f0;
-
-    /* TODO - Get more specific colors */
-    /*********** Project Tag Colors ***********/
-    --java-color: deepskyblue;
-    --objective-c-color: white;
-    --python-color: darkblue;
-    --javascript-color: yellow;
-    --html-color: orange;
-    --css-color: orange;
-    --php-color: rebeccapurple;
-    --shell-color: grey;
-    --git-color: orangered;
+    outline: 1px solid black;
 }
 
 /**********************************************/
 /***************** Main Style *****************/
 /**********************************************/
 
-#content, #footer {
+#container {
+    display: flex;
     width: 100%;
-    font-family: 'Nunito', sans-serif;
-    font-size: 12pt;
+    background: #fdfdfd;
+}
+* {
+    /* outline: 1px solid blue; /* */
 }
 
 #header {
-    padding: 10px;
+    padding: 0;
+    margin: 0 0 10px 0;
 }
 
 #header a {
@@ -138,33 +48,104 @@ h1 {
     font-size: 16pt;
 }
 
+#header a, #header a:active, #header a:visited {
+    color: #707070;
+}
+
 #header div {
     padding: 10px 40px;
     width: max-content;
-    border: 2px solid #d6d6d6;
+    border: 2px solid #535353;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-}
-
-#content {
-    overflow: hidden;
+    font-weight: 500;
+    color: #4d4d4d;
 }
 
 #sidebar {
     padding: 10px;
+    margin: 10px;
     float: left;
-    width: max-content;
+    height: max-content;
+    width: 150px;
+    border-left: 2px solid #4d4d4d;
+    border-radius: 5px;
+    flex-grow: 0;
 }
 
-#project {
+#sidebar p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+    margin: 5px 0 0 0;
+    border-left: 2px solid #4d4d4d;
+    border-radius: 5px;
+}
+
+li {
+    font-size: 8pt;
+    list-style-type: none;
+    padding-left: 8px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    font-family: 'Source Code Pro', sans-serif;
+}
+
+li:hover {
+    padding-left: 14px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+
+ul li a, ul li a:visited {
+     color: #3f6392;
+}
+
+li:active {
+    padding-left: 20px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+
+
+#projectWindow {
+    padding: 15px;
+    margin: 10px 30px;
+    height: auto;
     width: auto;
-    padding: 10px;
+    flex-grow: 1;
+    min-height: 90vh;
+    border-left: 2px solid #4d4d4d;
+    border-radius: 5px;
+}
+
+#default-info {
+    padding: 20px;
+    font: 14pt 'Montserrat', sans-serif;
+}
+
+#projectWindow object {
+    width: 100%;
+    height: 100%;
 }
 
 #footer {
     margin: auto;
+    padding: 5px auto;
     clear: both;
+    width: 100%;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: 9pt;
+    text-align: center;
 }
