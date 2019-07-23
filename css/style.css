@@ -103,7 +103,7 @@ h1 {
     --projects-section-color: #205480;
     --experience-section-color: #181818;
     --current-section-color: #fcfcfc;
-    --footer-color: darkgrey;
+    --footer-color: #f0f0f0;
 
     /* TODO - Get more specific colors */
     /*********** Project Tag Colors ***********/
@@ -204,7 +204,7 @@ h1 {
     margin: 0;
 }
 
-.content-tags a :hover {
+.content-tags a:hover {
     transition: 0.2s;
 }
 
@@ -414,7 +414,7 @@ h1 {
     font-size: 11pt;
 }
 
-.neofetch-content a {
+#me .neofetch-content a {
     color: #68d485;
 }
 
@@ -440,6 +440,10 @@ h1 {
     margin: 20px auto 0 0;
     text-align: left;
     padding: 0;
+}
+
+#me .appended-neofetch-command {
+    font-size: 18pt;
 }
 
 #me .title {
@@ -476,6 +480,10 @@ h1 {
 
     #me .neofetch-command {
         font-size: 10pt;
+    }
+
+    #me .appended-neofetch-command {
+        font-size: 14pt;
     }
 }
 
@@ -941,6 +949,57 @@ h1 {
     color: #e4e4e4;
 }
 
+/* Project Collections */
+
+#projects .project-collections {
+    width: 100%;
+    display: flex;
+    margin: 10px auto 0 auto;
+}
+
+#projects .project-collections a {
+    border: 2px solid #b3b4ab;
+    background: #dadbdf;
+    transition: 0.3s;
+    width: max-content;
+    padding: 0;
+    min-width: 200px;
+    max-width: 520px;
+    margin: 0 auto auto;
+    border-radius: 5px;
+}
+
+#projects .project-collections a:hover {
+    background: #a7a8ab;
+    transition: 0.3s;
+}
+
+#projects .project-collections a:visited {
+    color: black;
+}
+
+#projects .collection {
+    font-family: 'Nunito', sans-serif;
+    border: none;
+}
+
+#projects .collection-title {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 16pt;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 500px) {
+    #projects .project-collections a {
+        max-width: 470px;
+        margin: 0 auto;
+    }
+}
+
+/* Major Project Grid */
+
 #projects .project-grid {
     width: 100%;
     max-width: 1400px;
@@ -1098,7 +1157,7 @@ h1 {
     margin: 0;
     font-size: 10pt;
     text-align: justify;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 #projects .project-description .short {
@@ -1190,95 +1249,116 @@ h1 {
     background: var(--current-section-color);
     display: flex;
     min-height: 500px;
+    height: 100%;
     padding: 0;
     position: relative;
-    align-content: flex-start;
+    overflow: hidden;
+    justify-content: flex-start;
+    flex-direction: row;
 }
 
+/* Vertical Contact Columns  */
 
 #current * {
-
+    outline: 1px solid blue;
 }
 
-#current .vertical-tag {
-    width: 20%;
-    margin: 0;
+#current .link-column {
+    width: 240px;
     padding: 0;
-    height: auto;
-    display: inline-flex;
-    flex-flow: column;
     position: relative;
-    /* outline: 1px solid red; /* */
+    flex: 1;
 }
 
-
-#current .vertical-tag .hr-div {
+#current .hr {
+    padding: 0 auto;
+    margin: 0;
     flex-grow: 1;
-    margin: 0 auto;
-    padding: 0;
+    width: 100%;
 }
 
-.vertical-tag .hr-div hr {
+#current .link-column hr {
+    margin: 0 auto;
     width: 1px;
     height: 100%;
-}
-
-
-.vertical-tag .hr-div {
     border-left: 5px solid linear-gradient(var(--experience-section-color), black);
 }
 
 
-.vertical-tag .hr-div + .contact-links {
+#current .link-column hr + .links {
     border: 5px solid linear-gradient(to bottom, black, var(--footer-color));
 }
 
-.contact-links {
+#current .links {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+#current .links a {
+    width: max-content;
+    padding-left: 0;
+    margin: 5px auto;
+}
+
+#current .links img {
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+
+    max-height: 64px;
     display: block;
     margin: 0;
     padding: 0;
 }
 
-.contact-links a {
-    max-width: max-content;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    padding-left: 0;
-    margin: 20px auto;
+#current .links a:first-of-type {
+    margin-top: 3px;
 }
 
+#current .links:last-child a {
+    margin-bottom: 3px;
+}
 
-.contact-links a :hover {
+#current .contact {
+    float: left;
+}
+
+#current .social {
+    float: right;
+}
+
+#current .contact img:hover {
     padding-left: 40px;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
+    padding-right: 0;
 }
 
-.contact-links img {
-    max-height: 64px;
-    display: block;
-    margin: 0;
+#current .social img:hover {
+    padding-right: 40px;
+    padding-left: 0;
 }
 
-.contact-links :first-child a {
-    margin-top: 0;
-}
-
-.contact-links :last-child a {
-    margin-bottom: 0;
-}
 
 @media screen and (max-width: 500px) {
 
 }
 
 
+/* Main Current Content */
 
+.recent-tech {
+    display: flex;
+}
 
+.recent-work ul {
+    margin: 0 30px;
+}
 
+.recent-work {
+    font-family: 'Nunito', sans-serif;
+}
 
 
 
@@ -1286,33 +1366,12 @@ h1 {
 #current .current-content {
     position: relative;
     display: inline-block;
-    margin: 0 20% 0 0;
-    width: 80%;
     max-width: 100%;
+    width: fit-content;
     flex: 1;
 }
 
 
-.close-out {
-    display: block;
-}
-
-.links {
-    width: 100%;
-    display: flex;
-}
-
-
-.support-links {
-    padding: 10px;
-    margin: 0;
-    display: block;
-}
-
-#ko-fi, #bmc {
-    margin: 5px auto;
-    width: max-content;
-}
 
 /**************************************************/
 /******************** Footer ********************/
@@ -1320,14 +1379,44 @@ h1 {
 
 .footer {
     background: var(--footer-color);
-    text-align: center;
-    margin: auto;
-    padding: auto;
+    font-family: 'Nunito', serif;
+    border-top: 1px solid #cbcbcb;
+    display: flex;
+    flex-direction: column;
+    font-size: 11pt;
 }
 
 .footer p {
-    font-family: 'Aileron-Regular', serif;
-    border-top: 1px solid black;
-    margin: auto;
-    padding: 20px 10px;
+    margin: 2px auto;
+    width: max-content;
+}
+
+.footer p:first-of-type {
+    margin-top: 12px;
+}
+
+.footer p:last-of-type {
+    margin-bottom: 8px;
+    font-size: 9pt;
+}
+/*
+.footer p:first-child:before {
+    content: "contacts = { ";
+}
+
+.footer p:first-child:after {
+    content: " }";
+}*/
+
+.footer a {
+    color: darkcyan;
+}
+
+.footer a:visited {
+    color: darkcyan;
+}
+
+.footer p a:not(:last-child):after {
+    content: " & ";
+    color: black;
 }

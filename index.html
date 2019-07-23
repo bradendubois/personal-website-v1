@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-    <meta name="description" content="Portfolio/Resume/Landing page of software developer Braden Dubois.">
 
-    <link rel="canonical" href="https://www.bradendubois.dev/" />
+<!-- meta information -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+<meta name="description" content="Portfolio/Resume/Landing page of software developer Braden Dubois.">
+<meta name="keywords" content="Braden, Dubois, Software, Developer, Computer, Science, Portfolio, Resume">
+<meta name="author" content="Braden Dubois">
 
-    <title>Braden Dubois | Developer</title>
+<link rel="canonical" href="https://www.bradendubois.dev/" />
 
+<title>Braden Dubois | Developer</title>
 
-    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
 
-    <!-- icon used for page tab -->
-    <link rel="icon" href="img/bunny.jpg">
+<!-- icon used for page tab -->
+<link rel="icon" href="img/bunny.jpg"> <!-- bunny photo is a placeholder -->
 
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+<!-- Google fonts -->
+<link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
 
-    <!-- to apply any temporary styling -->
-    <style>
-
-    </style>
-</head>
 <body onload="initializeInfo()" onscroll="detectFocus()"> <!-- ; hideNavBar()"-->
     <!-- Navigation / Header -->
     <div id="navigation" class="navigation">
@@ -36,9 +33,6 @@
             <div class="content-tags">
                 <a id="me-jump" href="#me"><div>Me</div></a>
                 <a id="education-jump" href="#education"><div>Education</div></a>
-                <!--
-                <a href="#skills"><div>Skills</div></a>
-                -->
                 <a id="projects-jump" href="#projects"><div>Projects</div></a>
                 <a id="experience-jump" href="#experience"><div>Experience</div></a>
                 <a id="current-jump" href="#current"><div>Current</div></a>
@@ -52,14 +46,6 @@
         <!-- Me -->
         <div id="me" class="section-anchor">
             <div class="me-content">
-                <!--
-                <div class="quick-intro">
-
-                    <p class="descriptionLine" id="description-self">I'm a developer</p>
-                    <p class="descriptionLine" id="description-plus"></p>
-                    <a class="descriptionLine" id="description-appended" hired="false" label=0 loops=0></a>
-                </div>
-                -->
                 <h1 class="section-title" id="me-title">&nbsp;</h1>
                 <div class="neofetch-block">
                     <div class="neofetch-image">
@@ -78,8 +64,7 @@
                         <p><span class="title attribute">CPU</span><span class="value">Brain</span></p>
                         <p><span class="title attribute">GPU</span><span class="value">Eye (x2)</span></p>
                         <br>
-                        <p><span class="title attribute">Resume</span>['<span class="value"><a href="doc/resume.pdf" target="_blank">pdf</a></span>', '<span class="value"><a href="doc/resume.docx" target="_blank">docx</a></span>']</p>
-
+                        <p><span class="title attribute">Resume</span>['<span class="value"><a href="doc/resume.pdf" target="_blank">pdf</a></span>', '<span class="value"><a href="doc/resume.docx" target="_blank">docx</a></span>', '<span class="value"><a href="https://www.linkedin.com/in/bradendubois" target="_blank">linkedin</a></span>']    </p>
 
                         <div class="color-row">
                             <div class="color-box" style="background: #76daff"></div>
@@ -92,7 +77,7 @@
                         </div>
                     </div>
                     <div class="neofetch-command">
-                        <p><span style="color: #4c6d91">braden</span> <span style="color: #935d92">~/cool-projects/neofetch</span> <span style="color: #658bb5; font-size: 18pt;">> &#x25AE;</span></p>
+                        <p><span style="color: #4c6d91">braden</span> <span style="color: #935d92">~/cool-projects/neofetch</span> <span class="appended-neofetch-command" style="color: #658bb5;">> &#x25AE;</span></p>
                     </div>
                 </div>
 
@@ -103,6 +88,7 @@
         <div id="self-description">
             <div class="self-description-block">
                 <p>I'm currently an undergraduate student at the University of Saskatchewan, studying for a B.Sc. (Double Honours), majoring in Computer Science and Philosophy.</p>
+                <p></p>
             </div>
         </div>
 
@@ -185,13 +171,15 @@
                         </ul>
                         <br>
 
-                        <!-- work at/during Undergrad -->
+                        <!-- work at/during Undergrad - *applied*: was here as a placeholder to test out
+                        the formatting of this education section
                         <p class="education-content-title">Work</p>
                         <ul>
                             <li class="description-info">Work as a TA for labs</li>
                             <li class="description-info">Work as a marker for classes</li>
                         </ul>
                         <br>
+                        -->
 
                         <!-- volunteer work at/during Undergrad -->
                         <p class="education-content-title">Volunteer Experience</p>
@@ -227,7 +215,7 @@
                     </div>
                     <div class="entry-title entry-item">
                         <p class="institution">University of Saskatchewan</p>
-                        <p class="program">Certificate</p>
+                        <p class="program">Certificate of Proficiency</p>
                         <p class="major-title">Ethics, Justice, Law</p>
                     </div>
                     <div class="timeframe entry-item">
@@ -251,7 +239,7 @@
                     <div class="additional-program-info entry-item">
                         <p class="education-content-title">Certificate Info</p>
                         <ul>
-                            <li class="description-info" style="text-align: justify;">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</li>
+                            <li class="description-info" style="text-align: justify;">Provided study in fundamental ethical theory and its application in moral, legal, social, and technological contexts. Completed alongside B.Sc. degree.</li>
                         </ul>
                     </div>
                 </div>
@@ -263,7 +251,19 @@
             <div class="projects-content">
                 <h1 class="section-title">Projects</h1>
 
-                <!-- all projects -->
+                <!-- project collections -->
+
+                <div class="project-collections" id="code-trove">
+                    <a href="trove.html">
+                        <div class="collection">
+                            <p class="collection-title">Code Trove</p>
+                            <p class="collection-description">A collection of byte-sized projects, scripts, or similarly minor files that I've made!</p>
+                            <p><i>this is under construction!</i></p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- major projects -->
                 <div class="project-grid">
 
                     <!-- Personal Website -->
@@ -320,7 +320,7 @@
                         <div class="project-tags">
                             <p class="project-tag html-tag">HTML</p>
                             <p class="project-tag css-tag">CSS</p>
-                            <p class="project-tag javascript-tag">JS</p>
+                            <p class="project-tag javascript-tag">JavaScript</p>
                             <p class="project-tag git-tag">Git</p>
                         </div>
                     </div>
@@ -368,7 +368,7 @@
                             <!-- primary project description -->
                             <div class="project-description">
                                 <p><span class="short">A look at basic approaches to AI</span>, using the
-                                    classic game of Tic-Tac-Toe. This project was done before taking a Computer
+                                    classic game of <i>Tic-Tac-Toe</i>. This project was done before taking a Computer
                                     Science course on AI at uSask.
                                 </p>
                             </div>
@@ -424,8 +424,7 @@
                             <!-- primary project description -->
                             <div class="project-description">
                                 <p><span class="short">Used to test or learn different ideas</span> that
-                                    I turn into examples for myself or others to learn from or use. Also
-                                    contains <span class="short">many mini-projects</span>.
+                                    I turn into examples for myself or others to learn from or use.
                                 </p>
                             </div>
                         </div>
@@ -448,6 +447,8 @@
                 <h1 class="section-title">Experience</h1>
 
                 <br>
+
+                <p style="width: 100%; color: white;"><i><strong>anything passed here is under construction!</strong></i></p>
                 <br>
                 <br>
                 <br>
@@ -470,24 +471,26 @@
 
         <!-- Current -->
         <div id="current" class="section-anchor">
-            <div class="vertical-tag">
-                <div class="hr-div">
+
+            <!-- contact links -->
+            <div class="link-column contact">
+                <div class="hr">
                     <hr>
                 </div>
-                <div class="contact-links">
+                <div class="links">
                     <a href="https://github.com/drab3n/" target="_blank"><img class="profile-image" src="img/github/GitHub-Mark-120px-plus.png" alt="placeholder"></a>
+                    <a href="https://www.linkedin.com/in/bradendubois/" target="_blank"><img class="profile-image" src="img/linkedin.png" alt="placeholder"></a>
                     <a href="mailto:braden.dubois@usask.ca" target="_blank"><img class="profile-image" src="img/email.png" alt="placeholder"></a>
-                    <a href="https://www.linkedin.com/in/braden-dubois-2453b8149/" target="_blank"><img class="profile-image" src="img/linkedin.png" alt="placeholder"></a>
                 </div>
-                <div class="hr-div">
+                <div class="hr">
                     <hr>
                 </div>
             </div>
+
+            <!-- main content -->
             <div class="current-content">
                 <h1 class="section-title">Current</h1>
-                <div class="currently">
 
-                </div>
                 <div class="recent-work">
                     <p>Recently, I've been working primarily with the following:</p>
                     <div class="recent-tech">
@@ -498,31 +501,33 @@
                             <li>JavaScript</li>
                         </ul>
                         <ul>
-
+                            <li>WebStorm</li>
+                            <li>IntelliJ</li>
+                            <li>cPanel</li>
                         </ul>
                     </div>
                 </div>
-                <div class="close-out">
-                    <div class="links">
-                        <div class="support-links">
-                            <div id="ko-fi">
-                                <a href='https://ko-fi.com/A0A3YX1A' target='_blank'>
-                                    <img height='36' style='border:0;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' />
-                                </a>
-                            </div>
-                            <div id="bmc">
-                                <a href="https://www.buymeacoffee.com/VwCmOBgAk" target="_blank">
-                                    <img src="img/bmc-button.png" alt="'Buy Me a Coffee' Logo">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+
+            <!-- support links -->
+            <div class="link-column social">
+                <div class="hr">
+                    <hr>
+                </div>
+                <div class="links">
+                    <a href='https://ko-fi.com/A0A3YX1A' target='_blank'><img height='36' style='border:0;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+                    <a href="https://www.buymeacoffee.com/VwCmOBgAk" target="_blank"><img src="img/bmc-button.png" alt="'Buy Me a Coffee' Logo"></a>
+                </div>
+                <div class="hr">
+                    <hr>
                 </div>
             </div>
         </div>
     </div>
     <div id="footer" class="footer">
-        <p>&copy;2019 - designed and developed by <a href="https://www.bradendubois.dev">me</a></p>
+        <p>designed and developed by <a href="https://www.bradendubois.dev">me</a></p>
+        <p><a href="">github</a><a href="">linkedin</a><a href="">email</a><a href="">website</a></p>
+        <p>&copy;2019</p>
     </div>
 
     <!-- T

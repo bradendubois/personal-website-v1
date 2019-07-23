@@ -1,0 +1,170 @@
+/**********************************************/
+/****************** Defaults ******************/
+/**********************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    /* TODO - Need a Safari-supported scroll */
+}
+
+body  {
+
+}
+
+a {
+    /* Remove the default red dashed outline on a click */
+    outline: 0;
+}
+
+
+a :active, a :focus {
+    /* Alternative outline on click/focus */
+    /* Style but also *do not* remove - accessibility */
+    outline: 1px solid lightblue;
+}
+
+ul {
+    margin-left: 10px;
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+ul li {
+    padding-left: 10px;
+}
+
+hr {
+    border-top: 1px solid #8c8b8b;
+}
+
+h1 {
+    font-family: 'Montserrat', serif;
+    font-size: 24pt;
+}
+
+/**********************************************/
+/******************* Fonts ********************/
+/**********************************************/
+
+@font-face {
+    font-family: 'BebasNeue-Regular';
+    src:url("../fonts/bebas_neue/BebasNeue-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Aileron-Regular';
+    src:url("../fonts/aileron/Aileron-Regular.otf");
+}
+
+.section-title {
+    text-align: center;
+    /* font-family: 'Vesper Libre', serif; */
+    font-family: 'BebasNeue-Regular', 'Times New Roman', sans-serif;
+    font-weight: 500;
+    font-size: 30pt;
+    padding: 30px 20px 20px 20px;
+    width: 100%;
+}
+
+.content {
+
+}
+
+.content div {
+    padding: 5px;
+}
+
+/* The "content" block of each section */
+.content div div {
+    position: relative;
+    margin: auto;
+    max-width: 1300px;
+}
+
+@media(max-width: 1000px) {
+    .content div div {
+        width: 95%;
+    }
+}
+
+/**********************************************/
+/***************** Variables ******************/
+/**********************************************/
+
+:root {
+    --header-color: #FEFEFE;
+    --me-section-color: #4682B4;
+    --self-description-section-color: #f5f9fe;
+    --education-section-color: #cdcdcd;
+    --projects-section-color: #205480;
+    --experience-section-color: #181818;
+    --current-section-color: #fcfcfc;
+    --footer-color: #f0f0f0;
+
+    /* TODO - Get more specific colors */
+    /*********** Project Tag Colors ***********/
+    --java-color: deepskyblue;
+    --objective-c-color: white;
+    --python-color: darkblue;
+    --javascript-color: yellow;
+    --html-color: orange;
+    --css-color: orange;
+    --php-color: rebeccapurple;
+    --shell-color: grey;
+    --git-color: orangered;
+}
+
+/**********************************************/
+/***************** Main Style *****************/
+/**********************************************/
+
+#content, #footer {
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12pt;
+}
+
+#header {
+    padding: 10px;
+}
+
+#header a {
+    padding: 0;
+    margin: 0;
+    font-size: 16pt;
+}
+
+#header div {
+    padding: 10px 40px;
+    width: max-content;
+    border: 2px solid #d6d6d6;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+#content {
+    overflow: hidden;
+}
+
+#sidebar {
+    padding: 10px;
+    float: left;
+    width: max-content;
+}
+
+#project {
+    width: auto;
+    padding: 10px;
+}
+
+#footer {
+    margin: auto;
+    clear: both;
+}
