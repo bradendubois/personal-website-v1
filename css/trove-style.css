@@ -32,6 +32,10 @@ a :active, a :focus {
     outline: 1px solid black;
 }
 
+body {
+    background: #fdfdfd;
+}
+
 /**********************************************/
 /***************** Main Style *****************/
 /**********************************************/
@@ -121,7 +125,7 @@ ul > ul {
 }
 
 li {
-    font-size: 8pt;
+    font-size: 10pt;
     list-style-type: none;
     padding-left: 8px;
     -webkit-transition: 0.3s;
@@ -183,10 +187,5 @@ li:active {
     font-family: 'Roboto Mono', sans-serif;
     font-size: 9pt;
     text-align: center;
-}
-
-/***************************************/
-
-object * {
-    color: red;
+    background: #fdfdfd;
 }

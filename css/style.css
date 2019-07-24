@@ -758,12 +758,12 @@ h1 {
         display: grid;
 
         grid-template-columns: repeat(4, auto);
-        grid-template-rows: 3vh auto;
+        grid-template-rows: 3vh max-content max-content;
 
         grid-column-gap: 5px;
-        grid-row-gap: 100px;
+        grid-row-gap: 10px;
 
-        margin: 0 auto;
+        margin: 20px auto 30px auto;
     }
 
     #education .entry * {
@@ -792,7 +792,6 @@ h1 {
 
     #education .entry-title {
         font-size: 12pt;
-        margin-left: -60px;
     }
 
     #education .timeframe {
@@ -843,7 +842,7 @@ h1 {
     #education .entry {
         display: grid;
 
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: max-content 1fr;
         grid-template-rows: 3vh repeat(4, auto);
 
         grid-column-gap: 0;
