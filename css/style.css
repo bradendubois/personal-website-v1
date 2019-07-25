@@ -144,9 +144,9 @@ h1 {
     /* background: linear-gradient(to right, whitesmoke 25%, #003152 65%); */
     background: var(--header-color);
     box-shadow: -1px 0 8px black;
-    border-top: 3px solid #353535;
-    border-left: 3px solid #353535;
-    border-bottom: 3px solid #353535;
+    border-top: 2px solid #353535;
+    border-left: 2px solid #353535;
+    border-bottom: 2px solid #353535;
     display: inline-flex;
     z-index: 0;
     font-family: 'Montserrat', 'Calibri', sans-serif;
@@ -184,7 +184,7 @@ h1 {
     right: 0;
     z-index: 25;
     transition: 0.2s;
-    border-top: 3px solid #353535;
+    border-top: 2px solid #353535;
 }
 
 .content-tags {
@@ -269,9 +269,9 @@ h1 {
 
 @media screen and (min-width: 701px) {
     #fixed-header-tags.fixed-header-tags.free {
-        border-top: 3px solid #353535;
-        border-left: 3px solid #353535;
-        border-bottom: 3px solid #353535;
+        border-top: 2px solid #353535;
+        border-left: 2px solid #353535;
+        border-bottom: 2px solid #353535;
         border-bottom-left-radius: 14px;
     }
 
@@ -295,7 +295,7 @@ h1 {
 }
 
 #education-jump:hover div, #education-jump.closest div {
-    color: white;
+    color: #303030;
 }
 
 #projects-jump:hover, #projects-jump.closest {
@@ -558,6 +558,10 @@ h1 {
     padding: 15px;
 }
 
+#self-description a {
+    color: #68d485;
+}
+
 #self-description .profile-image-row {
     display: flex;
     justify-content: center;
@@ -658,6 +662,10 @@ h1 {
     /** outline: 1px solid black; **/
 }
 
+#education li {
+    font-size: 11pt;
+}
+
 #education .detailed-course-info {
 
 }
@@ -679,7 +687,7 @@ h1 {
 #education .description-info {
     list-style-type: circle;
     list-style-position: inside;
-    font-size: 12pt;
+    font-size: 11pt;
 }
 
 #education .description-info-detail {
@@ -940,7 +948,7 @@ h1 {
 }
 
 #projects .projects-content {
-    width: 85%;
+    width: 100%;
     max-width: 100%;
 }
 
@@ -1254,46 +1262,63 @@ h1 {
 
 #current {
     background: var(--current-section-color);
-    display: flex;
-    min-height: 500px;
+    display: block;
     height: 100%;
     padding: 0;
     position: relative;
     overflow: hidden;
-    justify-content: flex-start;
-    flex-direction: row;
+}
+
+
+
+#current .current-content {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: stretch;
+    padding: 0;
+    margin: 0;
+    min-height: 500px;
 }
 
 /* Vertical Contact Columns  */
-
-#current * {
-    outline: 1px solid blue;
-}
-
 #current .link-column {
     width: 240px;
-    padding: 0;
+    margin: 0;
     position: relative;
-    flex: 1;
+    flex-grow: 0;
+}
+
+#current .link-column:first-of-type {
+    margin-bottom: auto;
+}
+
+#current .link-column:last-of-type {
+    margin-top: auto;
 }
 
 #current .hr {
-    padding: 0 auto;
+    padding: 0;
     margin: 0;
     flex-grow: 1;
     width: 100%;
+    height: 150px;
+}
+
+#current .contact .hr:not(:first-of-type), #current .social .hr:not(:last-of-type) {
+    height: 10px;
+}
+
+#current .link-column {
+    margin: 0;
+    padding: 0;
 }
 
 #current .link-column hr {
     margin: 0 auto;
     width: 1px;
     height: 100%;
-    border-left: 5px solid linear-gradient(var(--experience-section-color), black);
-}
-
-
-#current .link-column hr + .links {
-    border: 5px solid linear-gradient(to bottom, black, var(--footer-color));
 }
 
 #current .links {
@@ -1330,11 +1355,11 @@ h1 {
 }
 
 #current .contact {
-    float: left;
+
 }
 
 #current .social {
-    float: right;
+
 }
 
 #current .contact img:hover {
@@ -1344,6 +1369,21 @@ h1 {
 
 #current .social img:hover {
     padding-right: 40px;
+    padding-left: 0;
+}
+
+/* Removed outline because the 'clicked' indication is the increased padding so outline is unnecessary */
+#current .link-column:active * {
+    outline: none;
+}
+
+#current .contact img:active {
+    padding-left: 60px;
+    padding-right: 0;
+}
+
+#current .social img:active {
+    padding-right: 60px;
     padding-left: 0;
 }
 
@@ -1363,20 +1403,17 @@ h1 {
     margin: 0 30px;
 }
 
-.recent-work {
+#current .recent-work {
     font-family: 'Nunito', sans-serif;
-}
-
-
-
-
-#current .current-content {
-    position: relative;
-    display: inline-block;
     max-width: 100%;
-    width: fit-content;
-    flex: 1;
+    flex-grow: 1;
+    margin: 0;
+    padding: 50px;
 }
+
+
+
+
 
 
 
