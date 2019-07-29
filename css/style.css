@@ -85,12 +85,6 @@ h1 {
     max-width: 1300px;
 }
 
-@media(max-width: 1000px) {
-    .content div div {
-        width: 95%;
-    }
-}
-
 /**********************************************/
 /***************** Variables ******************/
 /**********************************************/
@@ -347,37 +341,17 @@ h1 {
     padding-bottom: 50px;
 }
 
+
+
 #me .quick-intro {
     font-family: 'Montserrat', serif;
     margin: 30px auto;
     width: max-content;
 }
 
-.quick-intro .descriptionLine {
-    display: inline-block;
-    text-decoration: none;
-}
-
-#me .description {
-    overflow: hidden;
-    width: 100%;
-    max-width: 100%;
-}
-
-@media screen and (min-width: 1500px) {
-    #me .description {
-        padding: 10vh 0 50px 0;
-    }
-}
 
 #me .neofetch-block * {
     /* outline: 1px solid red; /* */
-}
-
-#me .self-description-block p {
-    margin: 10px 0;
-    text-align: justify;
-    font-size: 12pt;
 }
 
 #me .neofetch-block {
@@ -496,6 +470,7 @@ h1 {
 
     #me .neofetch-block {
         max-width: 95%;
+        width: 100%;
         margin: 0 auto;
         padding: 20px;
     }
@@ -559,7 +534,9 @@ h1 {
 }
 
 #self-description a {
-    color: #68d485;
+    color: #57ad6a;
+    text-decoration: underline;
+    text-decoration-color: #1f1f1f;
 }
 
 #self-description .profile-image-row {
@@ -1269,33 +1246,53 @@ h1 {
     overflow: hidden;
 }
 
-
+#current * {
+    /* outline: 1px solid blue; /* */
+}
 
 #current .current-content {
     position: relative;
     width: 100%;
-    max-width: 100%;
-    display: flex;
-    justify-content: stretch;
+    max-width: 1500px;
+    min-height: 600px;
     padding: 0;
-    margin: 0;
-    min-height: 500px;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: max-content 1fr max-content;
+    grid-template-rows: 100px auto;
+
+    grid-gap: 0;
+
+    grid-template-areas:
+            "contact_row current_title social_row"
+            "contact_row current_content social_row"
+}
+
+#current #current-title {
+    grid-area: current_title;
+}
+
+#current #contact {
+    grid-area: contact_row;
+}
+
+#current #current-main {
+    grid-area: current_content;
+}
+
+#current #social {
+    grid-area: social_row;
 }
 
 /* Vertical Contact Columns  */
 #current .link-column {
-    width: 240px;
+    width: 260px;
     margin: 0;
     position: relative;
     flex-grow: 0;
-}
-
-#current .link-column:first-of-type {
-    margin-bottom: auto;
-}
-
-#current .link-column:last-of-type {
-    margin-top: auto;
+    height: 100%;
 }
 
 #current .hr {
@@ -1306,13 +1303,19 @@ h1 {
     height: 150px;
 }
 
-#current .contact .hr:not(:first-of-type), #current .social .hr:not(:last-of-type) {
+#current #contact .hr:not(:first-of-type), #current #social .hr:not(:last-of-type) {
     height: 10px;
 }
 
 #current .link-column {
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#current .link-column * {
+    flex-grow: 0;
 }
 
 #current .link-column hr {
@@ -1354,68 +1357,241 @@ h1 {
     margin-bottom: 3px;
 }
 
-#current .contact {
-
-}
-
-#current .social {
-
-}
-
-#current .contact img:hover {
-    padding-left: 40px;
-    padding-right: 0;
-}
-
-#current .social img:hover {
-    padding-right: 40px;
-    padding-left: 0;
-}
-
 /* Removed outline because the 'clicked' indication is the increased padding so outline is unnecessary */
 #current .link-column:active * {
     outline: none;
 }
 
-#current .contact img:active {
+/********* Contact column ******/
+
+#current #contact {
+
+}
+
+#current #contact img:hover {
+    padding-left: 40px;
+    padding-right: 0;
+}
+
+#current #contact img:active {
     padding-left: 60px;
     padding-right: 0;
 }
 
-#current .social img:active {
+/********** Social column **********/
+
+#current #social {
+    padding: auto 0 0 0;
+}
+
+#current #social img:hover {
+    padding-right: 40px;
+    padding-left: 0;
+}
+
+
+#current #social div:first-of-type {
+    margin-top: auto;
+}
+
+
+#current #social img:active {
     padding-right: 60px;
     padding-left: 0;
 }
 
 
-@media screen and (max-width: 500px) {
 
+
+
+
+
+
+/********* Title and Main Content *********/
+
+#current #current-title {
+    grid-area: current_title;
+    padding: auto 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+
+
+#current #current-main {
+    grid-area: current_content;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
 }
 
 
 /* Main Current Content */
 
-.recent-tech {
+#current-main {
+    padding: 0;
+    margin: 0;
+    width: auto;
+    display: block;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+#current #current-title {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+#current-main div {
+    margin: 10px auto 0 auto;
+}
+
+#current-main div > div {
+    display: flex;
+    margin: 0 auto;
+    width: max-content;
+}
+
+#current-main p {
+    text-align: center;
+}
+
+#current-main a {
+    color: #57ad6a;
+    text-decoration: underline;
+    text-decoration-color: #1f1f1f;
+}
+
+
+#current-main .current-status {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#current-main .recent-tech {
     display: flex;
 }
 
-.recent-work ul {
+#current-main ul {
     margin: 0 30px;
 }
 
-#current .recent-work {
-    font-family: 'Nunito', sans-serif;
-    max-width: 100%;
-    flex-grow: 1;
-    margin: 0;
-    padding: 50px;
+@media screen and (max-width: 900px) {
+    #current .current-content {
+        display: grid;
+
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+
+        grid-template-areas:
+            "current_title"
+            "contact_row"
+            "current_content"
+            "social_row"
+    }
+
+
+    #current #contact, #current #social {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    #current .link-column {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        height: 130px;
+        flex-grow: 0;
+    }
+
+    #current .hr {
+        padding: auto 0;
+        margin: auto 0;
+        flex-grow: 1;
+        max-width: 200px;
+        height: 5px;
+    }
+
+    #current .link-column hr {
+        margin: auto 0;
+        width: 100%;
+        height: 1px;
+    }
+
+    #current .links {
+        width: max-content;
+        height: auto;
+        margin: 0;
+        padding: auto 0;
+    }
+
+    #current .link-column .links a {
+        width: max-content;
+        padding: auto 0;
+        margin: auto 3px;
+        height: max-content;
+        max-height: 100%;
+        display: block;
+    }
+
+    #current .links img {
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+
+        max-height: 64px;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    #current #contact a , #current #social a {
+        transition: 0.3s;
+    }
+
+    #current #contact a:hover {
+        padding: 40px 0 0 0;
+    }
+
+    #current #social a:hover {
+        padding: 0 0 40px 0;
+    }
+
+    #current #contact img:hover, #current #social img:hover {
+        padding: 0;
+    }
+
+    /* Removed outline because the 'clicked' indication is the increased padding so outline is unnecessary */
+    #current .link-column:active * {
+        outline: none;
+    }
+
+    #current #contact a:active {
+        padding: 60px 0 0 0;
+    }
+
+    #current #social a:active {
+        padding: 0 0 60px 0;
+    }
+
+    #current .current-content #contact .hr:not(:first-of-type), #current #social .hr:not(:last-of-type) {
+        max-width: 20px;
+    }
+
+    #current .current-content #contact .links:last-of-type {
+        margin: auto auto auto 0;
+        padding-right: 50px;
+    }
+
+    #current .current-content #social .links:first-of-type {
+        margin: auto 0 auto auto;
+        padding-left: 50px;
+    }
 }
-
-
-
-
-
-
 
 /**************************************************/
 /******************** Footer ********************/

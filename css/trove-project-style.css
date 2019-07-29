@@ -3,6 +3,22 @@
 }
 
 
+div p {
+    color: #292929;
+}
+
+h1 {
+    font-size: 16pt;
+}
+
+p {
+    font-size: 12pt;
+}
+
+li {
+    font-size: 12pt;
+}
+
 div {
     padding: 0;
     margin: 0;
@@ -37,20 +53,4 @@ div a, div a:active, div a:visited {
 
 #gitLink a div {
     padding: 10px;
-}
-
-div p {
-    color: #292929;
-}
-
-h1 {
-    font-size: 16pt;
-}
-
-p {
-    font-size: 12pt;
-}
-
-li {
-    font-size: 12pt;
 }
