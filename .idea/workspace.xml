@@ -2,24 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5672491e-374d-4268-b6e6-0417f6e71590" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/braden.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/trove/personal_website.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/icons/email_final.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/icons/github_final.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/icons/linkedin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/icons/linkedin_alt_final.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/icons/linkedin_final.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/trove/tic_tac_toe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/braden.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/braden.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/trove-project-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/trove-project-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/trove-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/trove-style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/trove/some_stats.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/trove/some_stats.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/trove/stacks_and_queues.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/trove/stacks_and_queues.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/trove/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/trove/template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/email.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/linkedin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/initializeTroveInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/initializeTroveInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icons/github_final.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/icons/github_final.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icons/linkedin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/icons/linkedin_final.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/trove.html" beforeDir="false" afterPath="$PROJECT_DIR$/trove.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,14 +49,14 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/doc/trove" />
-      <recent name="$PROJECT_DIR$/trove" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/img/icons" />
       <recent name="$PROJECT_DIR$/img" />
       <recent name="D:\Application Storage\Github Desktop\PersonalWebsite\doc" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/doc/trove" />
+      <recent name="$PROJECT_DIR$/trove" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -117,6 +109,9 @@
       <workItem from="1564167891222" duration="1573000" />
       <workItem from="1564258335815" duration="4957000" />
       <workItem from="1564432231507" duration="3439000" />
+      <workItem from="1564436498717" duration="5000" />
+      <workItem from="1564675276695" duration="3034000" />
+      <workItem from="1564691910410" duration="1200000" />
     </task>
     <servers />
   </component>

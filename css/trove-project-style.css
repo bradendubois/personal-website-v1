@@ -17,6 +17,7 @@ p {
 
 li {
     font-size: 12pt;
+    list-style-type: disc;
 }
 
 div {
@@ -53,4 +54,9 @@ div a, div a:active, div a:visited {
 
 #gitLink a div {
     padding: 10px;
+}
+
+
+ul {
+    margin: 5px 0;
 }
