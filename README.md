@@ -7,7 +7,7 @@ This is the code I wrote to make my own personal website.
 
 ## Acknowledgements
 
-#### Fonts
+### Fonts
 
 * 'Nunito', by Vernon Adams
 * 'Montserrat', by Julieta Ulanovsky, Sol Matas, Juan Pablo del Peral, Jacques Le Bailly
@@ -17,25 +17,25 @@ This is the code I wrote to make my own personal website.
 * 'Aileron', from Sora Sagano
 * 'Bebas Neue', by Ryoichi Tsunekawa
 
-#### Images
+### Images
 
-##### Logos
+#### Logos
 * The University of Saskatchewan
 * Buy Me a Coffee
 * Github
 
-##### Free for Reuse w/Modification
+#### Free for Reuse w/Modification
 * Tic Tac Toe
 * Sandbox
 * External Link
 * Hexagon Symbol GUI
 
-##### Created by Me
+#### Created by Me
 * Personal Website
 * Icons
     * Email
     * Github
     * LinkedIn
 
-##### Other
+#### Other
 * Bunny - A very cute photo of a bunny that was used as a placeholder in various places
