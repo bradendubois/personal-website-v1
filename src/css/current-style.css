@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+    /* TODO - Need a Safari-supported scroll */
+}
+
+* {
+     /* outline: 1px solid blue; /* */
+}
+
+.container {
+    min-height: 100vh;
+    padding-top: 10px;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+}
+
+#title {
+    width: max-content;
+    border-top: 2px solid black;
+}
+
+#back {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    padding: auto 0;
+}
+
+#back hr {
+    margin: auto 0;
+    width: 50px;
+    height: 2px;
+}
+
+#back a {
+    margin: auto 5px;
+}
+
+a, a:visited, a:active {
+    color: black;
+    outline: none;
+}
+
+a:hover {
+    color: grey;
+}
+
+
+#title div {
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    margin-left: 24px;
+    padding: 10px;
+}
+
+#title p {
+    font-size: 26pt;
+}
+
+.entry {
+    height: max-content;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.hr {
+    width: 2px;
+    height: 20px;
+    margin-left: 14px;
+}
+
+.hr hr {
+    height: 100%;
+    background: black;
+    width: 0;
+    border: 1px solid black;
+}
+
+.entry:last-of-type .hr:last-of-type {
+    display: none;
+}
+
+.entry {
+    height: max-content;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+}
+
+.text div {
+    overflow: hidden;
+    white-space: nowrap;
+
+    color: transparent;
+
+    min-width: 30px;
+    width: 30px;
+
+    height: 30px;
+
+    padding: 3px;
+
+    border: 2px solid black;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.text div p {
+    transition: 0.2s;
+}
+
+.text div:hover  {
+    color: black;
+    width: 170px;
+}
+
+.entry .text div + p {
+
+    transition: 0.2s;
+}
+
+.text div:hover + p {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+
+    transition: 0.2s;
+}
+
+.text p {
+    margin: auto 0 auto 5px;
+}
+
+#window {
+    width: auto;
+    height: 100%;
+}
