@@ -742,7 +742,7 @@ h1 {
     #education .entry {
         display: grid;
 
-        grid-template-columns: repeat(4, auto);
+        grid-template-columns: auto 1fr 1fr auto;
         grid-template-rows: 3vh max-content max-content;
 
         grid-column-gap: 5px;
@@ -1554,14 +1554,18 @@ h1 {
     }
 
     #current #contact a:hover {
-        padding: 40px 0 0 0;
+        padding: 0;
     }
 
     #current #social a:hover {
-        padding: 0 0 40px 0;
+        padding: 0;
     }
 
     #current #contact img:hover, #current #social img:hover {
+        padding: 0;
+    }
+
+    #current #contact img:active, #current #social img:active {
         padding: 0;
     }
 
@@ -1571,11 +1575,11 @@ h1 {
     }
 
     #current #contact a:active {
-        padding: 60px 0 0 0;
+        padding: 0;
     }
 
     #current #social a:active {
-        padding: 0 0 60px 0;
+        padding: 0;
     }
 
     #current .current-content #contact .hr:not(:first-of-type), #current #social .hr:not(:last-of-type) {
