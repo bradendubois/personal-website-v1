@@ -17,7 +17,7 @@ function initializeTrove() {
             link.innerHTML = projectID;
 
             // Set the a tag properties
-            link.onclick = function () {
+            link.onclick = () => {
                 loadProject(listID, projectID)
             };
             link.href = "#";

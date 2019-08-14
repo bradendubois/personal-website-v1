@@ -1,11 +1,11 @@
 Options +MultiViews
 
-DirectoryIndex index.html
-
-RewriteEngine On
+RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^.]+)$ $1.html [NC,L]
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html
+
+DirectoryIndex index.html
 
 RedirectMatch 301 ^/css/$ /
 RedirectMatch 301 ^/doc/$ /

@@ -92,7 +92,7 @@ a:hover {
 
 .entry {
     height: max-content;
-    width: 350px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     transition: 0.5s;
@@ -133,17 +133,17 @@ a:hover {
 }
 
 .entry .text div + p {
-
     transition: 0.2s;
 }
 
-.text div:hover + p {
+.text a:hover + p {
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
+    color: transparent;
 
     transition: 0.2s;
 }
@@ -152,7 +152,18 @@ a:hover {
     margin: auto 0 auto 5px;
 }
 
-#window {
-    width: auto;
-    height: 100%;
+#content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 80vh;
+}
+
+#entries {
+    min-height: available;
+}
+
+#window, #window object {
+    width: 100%;
+    min-height: 100%;
 }
