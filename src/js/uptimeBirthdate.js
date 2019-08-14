@@ -29,5 +29,5 @@ function calculateUptime(date) {
     // for a negative year since this should never occur
 
     // Return string built from info retrieved
-    return years.toString() + " years, " + months.toString() + " months";// + days.toString() + " days";
+    return years.toString() + " years, " + months.toString() + (months.toString() === "1" ? " month" : " months");// + days.toString() + " days";
 }

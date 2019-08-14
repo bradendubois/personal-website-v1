@@ -96,7 +96,7 @@ h1 {
 
 :root {
     --header-color: #FEFEFE;
-    --me-section-color: #4682B4;
+    --me-section-color: #4c8ec4;
     --self-description-section-color: #f5f9fe;
     --education-section-color: #e8e8e8;
     --projects-section-color: #205480;
@@ -166,8 +166,6 @@ h1 {
     color: #232323;
     font-family: "BebasNeue-Bold", sans-serif;
     font-size: 23pt;
-    font-weight: 700;
-    font-style: italic;
 
     background: var(--header-color);
     width: 100%;
@@ -655,9 +653,14 @@ h1 {
 
 }
 
-#education .courses .ongoing, #education .courses .upcoming {
+#education .courses .ongoing {
     /* font-style: italic; /* */
     color: #2a2a2a;
+}
+
+#education .courses .upcoming {
+    /* font-style: italic; /* */
+    color: #383838;
 }
 
 #education .courses .ongoing:after {

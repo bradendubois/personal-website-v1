@@ -16,7 +16,7 @@ function initializeList() {
         const hrBlock = '<div class="hr"><hr></div>';
         const text = '<div class="text"><a><div><p>'+ id[1] +'</p></div></a><p>'+ id[2] +'</p></div>';
 
-        entries[i].innerHTML = '<object>'+ hrBlock + text + hrBlock +'</object>';
+        entries[i].innerHTML = '<object class="entry">'+ hrBlock + text + hrBlock +'</object>';
         entries[i].getElementsByTagName("a")[0].href = "#";
         entries[i].getElementsByTagName("a")[0].onclick = () => {
             loadItem(id[0]);
@@ -27,5 +27,5 @@ function initializeList() {
 
 function loadItem(fileName) {
     let projectWindow = document.getElementById("window");
-    projectWindow.innerHTML = '<object data="doc/trove/' + fileName +'.html" />';
+    projectWindow.innerHTML = '<object data="doc/current/' + fileName +'.html" />';
 }
