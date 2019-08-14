@@ -56,6 +56,11 @@ h1 {
 }
 
 @font-face {
+    font-family: 'BebasNeue-Bold`';
+    src:url("../fonts/bebas_neue/BebasNeue-Bold.ttf");
+}
+
+@font-face {
     font-family: 'Aileron-Regular';
     src:url("../fonts/aileron/Aileron-Regular.otf");
 }
@@ -119,11 +124,13 @@ h1 {
 
 #education #undergrad .timeframe .year::after {
     content: " : (expected)";
+    color: #3b3b3b;
 }
 
 
 #education #certificate .timeframe .year::after {
     content: " : (expected)";
+    color: #3b3b3b;
 }
 
 /************************************************/
@@ -156,10 +163,11 @@ h1 {
     display: inline-flex;
     margin: auto auto auto 0;
     padding: 15px;
-    color: #003152;
-    font-family: "Nunito", sans-serif;
-    font-size: 20pt;
-    font-weight: 500;
+    color: #232323;
+    font-family: "BebasNeue-Bold", sans-serif;
+    font-size: 23pt;
+    font-weight: 700;
+    font-style: italic;
 
     background: var(--header-color);
     width: 100%;
@@ -647,8 +655,24 @@ h1 {
 
 }
 
-#education .courses {
+#education .courses .ongoing, #education .courses .upcoming {
+    /* font-style: italic; /* */
+    color: #2a2a2a;
+}
 
+#education .courses .ongoing:after {
+    content: " - in session";
+    font-style: italic;
+}
+
+#education .courses .upcoming:after {
+    content: " - planned";
+    font-style: italic;
+}
+
+#education .courses hr {
+    max-width: 300px;
+    margin: 10px auto 10px 23px;
 }
 
 #education .additional-program-info {
@@ -1476,6 +1500,36 @@ h1 {
 #current-main ul {
     margin: 0 30px;
 }
+
+#current-main .current-button {
+    text-decoration: none;
+    color: black;
+    font-size: 14pt;
+}
+
+#current-main .current-button div {
+    border: 2px solid black;
+    padding: 10px;
+    max-width: max-content;
+    margin: 10px auto;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+#current-main .current-button div:hover {
+    background: #d5d5d5;
+    transition: 0.3s;
+}
+
+#current-main .current-button div:active {
+    background: #c9c9c9;
+    transition: 0.3s;
+    outline: none;
+}
+
 
 @media screen and (max-width: 900px) {
     #current .current-content {
