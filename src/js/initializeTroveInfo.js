@@ -31,23 +31,13 @@ function loadProject(listID, projectName) {
     projectWindow.innerHTML = '<object data="'+ projectFileName +'" />';
 }
 
-function createGithubLink(inTrove) {
+function createGithubLink(gitLink) {
     let linkDiv = document.getElementById("gitLink");
+
+    linkDiv.innerHTML='<a><div><p>View On GitHub</p></div></a>';
+
     let link = linkDiv.getElementsByTagName("a")[0];
 
-    if (inTrove) {
-        link.href = "https://github.com/bradendubois/trove/blob/master/" + linkDiv.getAttribute("title");
-    } else  {
-        link.href = "https://github.com/bradendubois/" + linkDiv.getAttribute("title");
-    }
-
+    link.href = "https://github.com/bradendubois/" + gitLink.toString();
     link.target = "_blank";
-}
-
-function initializeTitle() {
-    let titleTag = document.getElementById("projectTitle");
-
-    if (titleTag.innerHTML.length === 0) {
-        titleTag.innerHTML = document.getElementById("gitLink").getAttribute("title");
-    }
 }

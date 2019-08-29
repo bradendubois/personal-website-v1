@@ -105,6 +105,7 @@ h1 {
     --footer-color: #f0f0f0;
 
     /* TODO - Get more specific colors */
+
     /*********** Project Tag Colors ***********/
     --java-color: deepskyblue;
     --objective-c-color: white;
@@ -113,7 +114,8 @@ h1 {
     --html-color: orange;
     --css-color: orange;
     --php-color: rebeccapurple;
-    --shell-color: grey;
+    --shell-color: lime;
+    --markdown-color: grey;
     --git-color: orangered;
 }
 
@@ -1125,6 +1127,17 @@ h1 {
     content: "this project is ongoing!";
 }
 
+/* easily add a tag to mark that a project is ongoing! */
+#projects .on-hold .title p:after {
+    display: block;
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+    font-size: 10pt;
+    font-weight: 400;
+    content: "this project is on hold!";
+}
+
 /**************** Detail Section ******************/
 
 #projects .project-info .external-project-link {
@@ -1241,6 +1254,10 @@ h1 {
 
 #projects .shell-tag {
     border-color: var(--shell-color);
+}
+
+#projects .markdown-tag {
+    border-color: var(--markdown-color);
 }
 
 #projects .git-tag {
