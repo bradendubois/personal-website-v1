@@ -26,7 +26,8 @@ This is the code I wrote to make my own personal website.
 
 #### Free for Reuse w/Modification
 * Tic Tac Toe
-* Sandbox
+* Arch Linux Logo
+  * https://commons.wikimedia.org/wiki/File:Archlinux-icon-crystal-64.svg
 * External Link
 * Hexagon Symbol GUI
 
