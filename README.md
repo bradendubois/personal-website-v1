@@ -1,5 +1,7 @@
 # Personal Website
 
+[![Website bradendubois.dev](https://img.shields.io/website-up-down-green-red/http/bradendubois.dev.svg)](https://www.bradendubois.dev/)
+
 This is the code I wrote to make my own personal website.
 * HTML 5
 * CSS 3
