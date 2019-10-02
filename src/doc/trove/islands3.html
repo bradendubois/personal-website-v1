@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trove File</title>
+    <link rel="stylesheet" href="../../css/trove-project-style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap" rel="stylesheet">
+</head>
+<body onload="createGithubLink('islands3')">
+    <div id="gitLink"></div>
+    <h1 id="projectTitle">Islands</h1>
+
+    This is problem #1 in (ideally) a series of programming problems I solve, perhaps daily.
+
+    <h2>Description & Attribution</h2>
+
+    <p>This problem is from <a href="https://open.kattis.com/" target="_blank">Kattis</a>, titled <a href="https://open.kattis.com/problems/islands3" target="_blank">"Islands"</a>, Problem ID "islands3".</p>
+
+    <h4>Difficulty: 2.5</h4>
+
+    <h2>Requirements:</h2>
+    <ul>
+        <li>CPU Time Limit: 1 second.</li>
+        <li>Memory Limit: 1024 MB</li>
+    </ul>
+
+    <h2>Approach & Solution</h2>
+
+    <p>If this problem were looking to <i>maximize</i> the number of potential islands, this would be a pretty quick problem, of course; we can just consider each "group" of <strong>L</strong> tiles as its own island, and the clouds that are potentially obscuring a connection between islands can be disregarded.</p>
+
+    <p>We're looking to <i>minimize</i>, however, so we must find a way to connect all islands that are adjacent to a cloud as one single island.</p>
+
+    <p>So, find an <strong>L</strong> tile that may lead to a cloud, and if the cloud(s) lead to another <strong>L</strong> tile, that's still the same island? Seems easy,
+    but how do we not end up just traversing back and forth looking at the same few tiles? We have to find some way to mark areas we've been at. Perhaps change the tile
+        to an <strong>X</strong>, for e<strong>x</strong>plored, and we mark each fresh, unexplored island we encounter!
+    </p>
+
+    <h3>Oct. 1, 2019</h3>
+
+    <script type="text/javascript" src="../../js/initializeTroveInfo.js"></script>
+</body>
+</html>

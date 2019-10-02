@@ -34,6 +34,12 @@ function loadProject(listID, projectName) {
 function createGithubLink(gitLink) {
     let linkDiv = document.getElementById("gitLink");
 
+    if (gitLink == null) {
+        linkDiv.setAttribute("style", "display: none;");
+        return
+    }
+
+
     linkDiv.innerHTML='<a><div><p>View On GitHub</p></div></a>';
 
     let link = linkDiv.getElementsByTagName("a")[0];
